@@ -1,0 +1,10 @@
+C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe.config
+C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe
+C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.pdb
+C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csprojResolveAssemblyReference.cache
+C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.MainMenu.resources
+C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Properties.Resources.resources
+C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Transport.TansportSub.resources
+C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csproj.GenerateResource.Cache
+C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.exe
+C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.pdb
