@@ -14,7 +14,6 @@ C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug
 C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe
 C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.pdb
 C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\bin\Debug\MySql.Data.dll
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csprojResolveAssemblyReference.cache
 C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Login.resources
 C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.MainMenu.resources
 C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Properties.Resources.resources
@@ -24,7 +23,7 @@ C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug
 C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\bin\Debug\Bunifu_UI_v1.4.dll
 C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.FinanceSub.resources
 C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Transport.TransportSub.resources
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Administrationion.AdministraionSub.resources
 C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Inventory.InventorySub.resources
 C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Production.ProductionSub.resources
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Administration.AdministrationSubSub.resources
+C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Administration.AdministrationSub.resources
+C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.EmployeeSub.resources
