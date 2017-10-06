@@ -32,6 +32,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.4">
+      <HintPath>D:\SLIIT EDU\Year2 Semester 2\ITP\Bunifu_UI_v1.4.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SLIIT EDU\Year2 Semester 2\ITP\bin\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -58,11 +65,53 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubInterface\Administration\AdministrationSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Administration\AdministrationSub.designer.cs">
+      <DependentUpon>AdministrationSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Employee\EmployeeSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Employee\EmployeeSub.designer.cs">
+      <DependentUpon>EmployeeSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Finance\FinanceSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Finance\FinanceSub.designer.cs">
+      <DependentUpon>FinanceSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Inventory\InventorySub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Inventory\InventorySub.designer.cs">
+      <DependentUpon>InventorySub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Production\ProductionSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Production\ProductionSub.designer.cs">
+      <DependentUpon>ProductionSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Sales\SalesSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Sales\SalesSub.Designer.cs">
+      <DependentUpon>SalesSub.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubInterface\Transport\TansportSub.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SubInterface\Transport\TansportSub.Designer.cs">
       <DependentUpon>TansportSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Transport\TransportSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Transport\TransportSub.designer.cs">
+      <DependentUpon>TransportSub.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -79,8 +128,29 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SubInterface\Administration\AdministrationSub.resx">
+      <DependentUpon>AdministrationSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Employee\EmployeeSub.resx">
+      <DependentUpon>EmployeeSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Finance\FinanceSub.resx">
+      <DependentUpon>FinanceSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Inventory\InventorySub.resx">
+      <DependentUpon>InventorySub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Production\ProductionSub.resx">
+      <DependentUpon>ProductionSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Sales\SalesSub.resx">
+      <DependentUpon>SalesSub.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Transport\TansportSub.resx">
       <DependentUpon>TansportSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Transport\TransportSub.resx">
+      <DependentUpon>TransportSub.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -95,13 +165,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="SubInterface\Administration\" />
-    <Folder Include="SubInterface\Employee\" />
-    <Folder Include="SubInterface\Finance\" />
-    <Folder Include="SubInterface\Inventory\" />
-    <Folder Include="SubInterface\Production\" />
-    <Folder Include="SubInterface\Sales\" />
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

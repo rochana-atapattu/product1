@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HarasaraSystem.SubInterface.Sales;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace HarasaraSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenu());
+            Application.Run(new SalesSub());
         }
     }
 }
