@@ -27,3 +27,7 @@ C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug
 C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Production.ProductionSub.resources
 C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Administration.AdministrationSub.resources
 C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.EmployeeSub.resources
+C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.CustomMsgBox.resources
+C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.Bill.resources
+C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.SalesOrders.resources
+C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csprojResolveAssemblyReference.cache
