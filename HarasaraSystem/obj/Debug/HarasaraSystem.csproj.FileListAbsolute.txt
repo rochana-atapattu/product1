@@ -27,6 +27,7 @@ C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug
 C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Production.ProductionSub.resources
 C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Administration.AdministrationSub.resources
 C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.EmployeeSub.resources
+<<<<<<< HEAD
 C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe.config
 C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.exe
 C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.pdb
@@ -52,3 +53,12 @@ C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.S
 C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.notifications.resources
 C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.search.resources
 C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.leaverequest.resources
+=======
+C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.CustomMsgBox.resources
+C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.Bill.resources
+C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.SalesOrders.resources
+C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csprojResolveAssemblyReference.cache
+>>>>>>> d86a5b7f5a15de2fba66224073cc804678b6dcc3
+C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.Bill.resources
+C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.CustomMsgBox.resources
+C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.SalesOrders.resources

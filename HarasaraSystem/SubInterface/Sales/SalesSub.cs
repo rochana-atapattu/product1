@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HarasaraSystem.SubInterface.Sales
+
 {
     public partial class SalesSub : Form
     {
-        public SalesSub()
+        public SalesSub(string user)
         {
             InitializeComponent();
+            label4.Text = user;
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)

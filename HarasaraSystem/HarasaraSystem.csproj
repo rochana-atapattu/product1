@@ -140,12 +140,32 @@
     <Compile Include="SubInterface\Production\ProductionSub.designer.cs">
       <DependentUpon>ProductionSub.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubInterface\Sales\Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Sales\Bill.designer.cs">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Sales\CustomMsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Sales\CustomMsgBox.designer.cs">
+      <DependentUpon>CustomMsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Sales\databaseAccess.cs" />
+    <Compile Include="SubInterface\Sales\SalesOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Sales\SalesOrders.designer.cs">
+      <DependentUpon>SalesOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubInterface\Sales\SalesSub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubInterface\Sales\SalesSub.Designer.cs">
+    <Compile Include="SubInterface\Sales\SalesSub.designer.cs">
       <DependentUpon>SalesSub.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubInterface\Sales\validation.cs" />
     <Compile Include="SubInterface\Transport\TansportSub.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +228,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Production\ProductionSub.resx">
       <DependentUpon>ProductionSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Sales\Bill.resx">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Sales\CustomMsgBox.resx">
+      <DependentUpon>CustomMsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Sales\SalesOrders.resx">
+      <DependentUpon>SalesOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Sales\SalesSub.resx">
       <DependentUpon>SalesSub.cs</DependentUpon>
