@@ -39,5 +39,89 @@ namespace HarasaraSystem.SubInterface.Employee
         {
             timer1.Start();
         }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Controls.Contains(details.Instance))
+            {
+                panel3.Controls.Add(details.Instance);
+                details.Instance.Dock = DockStyle.Fill;
+                details.Instance.BringToFront();
+            }
+
+            else
+                details.Instance.BringToFront(); 
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Controls.Contains(attendance.Instance))
+            {
+                panel3.Controls.Add(attendance.Instance);
+                attendance.Instance.Dock = DockStyle.Fill;
+                attendance.Instance.BringToFront();
+            }
+
+            else
+                attendance.Instance.BringToFront(); 
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+
+            if (!panel3.Controls.Contains(leave.Instance))
+            {
+                panel3.Controls.Add(leave.Instance);
+                leave.Instance.Dock = DockStyle.Fill;
+                leave.Instance.BringToFront();
+            }
+
+            else
+                leave.Instance.BringToFront(); 
+
+        }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Controls.Contains(payrolls.Instance))
+            {
+                panel3.Controls.Add(payrolls.Instance);
+                payrolls.Instance.Dock = DockStyle.Fill;
+                payrolls.Instance.BringToFront();
+            }
+
+            else
+                payrolls.Instance.BringToFront(); 
+
+        }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Controls.Contains(notifications.Instance))
+            {
+                panel3.Controls.Add(notifications.Instance);
+                notifications.Instance.Dock = DockStyle.Fill;
+                notifications.Instance.BringToFront();
+            }
+
+            else
+                notifications.Instance.BringToFront(); 
+
+
+        }
+
+        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Controls.Contains(search.Instance))
+            {
+                panel3.Controls.Add(search.Instance);
+                search.Instance.Dock = DockStyle.Fill;
+                search.Instance.BringToFront();
+            }
+
+            else
+                search.Instance.BringToFront(); 
+
+        }
     }
 }

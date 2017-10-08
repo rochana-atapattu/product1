@@ -17,7 +17,7 @@ namespace HarasaraSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SalesSub());
+            Application.Run(new SubInterface.Employee.EmployeeSub());
         }
     }
 }
