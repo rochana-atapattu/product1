@@ -12,9 +12,10 @@ namespace HarasaraSystem.SubInterface.Production
 {
     public partial class ProductionSub : Form
     {
-        public ProductionSub()
+        public ProductionSub(string pt)
         {
             InitializeComponent();
+            label4.Text = pt;
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)

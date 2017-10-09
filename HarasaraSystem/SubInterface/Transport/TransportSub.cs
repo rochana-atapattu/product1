@@ -13,9 +13,10 @@ namespace HarasaraSystem.SubInterface.Transport
 {
     public partial class TransportSub : Form
     {
-        public TransportSub()
+        public TransportSub(string pt)
         {
             InitializeComponent();
+            label4.Text = pt;
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)

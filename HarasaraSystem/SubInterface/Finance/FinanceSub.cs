@@ -12,9 +12,10 @@ namespace HarasaraSystem.SubInterface.Finance
 {
     public partial class FinanceSub : Form
     {
-        public FinanceSub()
+        public FinanceSub(string pt)
         {
             InitializeComponent();
+            label4.Text = pt;
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)

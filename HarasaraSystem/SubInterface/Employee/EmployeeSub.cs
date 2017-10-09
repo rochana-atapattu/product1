@@ -13,9 +13,10 @@ namespace HarasaraSystem.SubInterface.Employee
 {
     public partial class EmployeeSub : Form
     {
-        public EmployeeSub()
+        public EmployeeSub( string pt)
         {
             InitializeComponent();
+            label4.Text = pt;
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
@@ -121,6 +122,11 @@ namespace HarasaraSystem.SubInterface.Employee
 
             else
                 search.Instance.BringToFront(); 
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
 
         }
     }

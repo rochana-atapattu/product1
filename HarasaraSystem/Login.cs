@@ -39,9 +39,52 @@ namespace HarasaraSystem
 
                 if (x==1)
                 {
-                    SalesSub s1 = new SalesSub(textBox1.Text);
-                    s1.Show();
-                    this.Hide();
+                    if (position.Text == "Sales Manager")
+                    {
+                        SalesSub s1 = new SalesSub(textBox1.Text);
+                        s1.Show();
+                        this.Hide();
+                    }
+                    else if (position.Text == "HR Manager")
+                    {
+                        HarasaraSystem.SubInterface.Employee.EmployeeSub e1 = new HarasaraSystem.SubInterface.Employee.EmployeeSub(textBox1.Text);
+                        e1.Show();
+                        this.Hide();
+                    }
+                    else if (position.Text == "Adminstration")
+                    {
+                        HarasaraSystem.SubInterface.Administration.AdministrationSub a1 = new SubInterface.Administration.AdministrationSub(textBox1.Text);
+                        a1.Show();
+                        this.Hide();
+                    }
+                    else if (position.Text == "Finance")
+                    {
+                        HarasaraSystem.SubInterface.Finance.FinanceSub f1 = new SubInterface.Finance.FinanceSub(textBox1.Text);
+                        f1.Show();
+                        this.Hide();
+
+                    }
+                    else if (position.Text == "Products")
+                    {
+
+                        HarasaraSystem.SubInterface.Production.ProductionSub p1 = new SubInterface.Production.ProductionSub(textBox1.Text);
+                        p1.Show();
+                        this.Hide();
+
+                    }
+                    else if (position.Text == "Inventory")
+                    {
+                        HarasaraSystem.SubInterface.Inventory.InventorySub i1 = new SubInterface.Inventory.InventorySub(textBox1.Text);
+                        i1.Show();
+                        this.Hide();
+                    }
+
+                    else
+                    {
+                        HarasaraSystem.SubInterface.Transport.TransportSub t1 = new SubInterface.Transport.TransportSub(textBox1.Text);
+                        t1.Show();
+                        this.Hide();
+                    }
                 }
                 else
                 {

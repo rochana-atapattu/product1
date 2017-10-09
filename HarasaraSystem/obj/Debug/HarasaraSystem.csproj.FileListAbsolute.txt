@@ -1,64 +1,30 @@
-C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe.config
-C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe
-C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.pdb
-C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csprojResolveAssemblyReference.cache
-C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.MainMenu.resources
-C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Properties.Resources.resources
-C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Transport.TansportSub.resources
-C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csproj.GenerateResource.Cache
-C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.exe
-C:\Users\viraj\Desktop\System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.pdb
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe.config
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.exe
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.pdb
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.pdb
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\bin\Debug\MySql.Data.dll
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Login.resources
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.MainMenu.resources
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Properties.Resources.resources
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.SalesSub.resources
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Transport.TansportSub.resources
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csproj.GenerateResource.Cache
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\bin\Debug\Bunifu_UI_v1.4.dll
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.FinanceSub.resources
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Transport.TransportSub.resources
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Inventory.InventorySub.resources
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Production.ProductionSub.resources
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Administration.AdministrationSub.resources
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.EmployeeSub.resources
-<<<<<<< HEAD
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe.config
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.exe
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.pdb
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.pdb
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csprojResolveAssemblyReference.cache
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Login.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.MainMenu.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Properties.Resources.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Administration.AdministrationSub.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.EmployeeSub.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.FinanceSub.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Inventory.InventorySub.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Production.ProductionSub.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.SalesSub.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Transport.TansportSub.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Transport.TransportSub.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csproj.GenerateResource.Cache
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.details.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.attendance.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.leave.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.payrolls.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.notifications.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.search.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.leaverequest.resources
-=======
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.CustomMsgBox.resources
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.Bill.resources
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.SalesOrders.resources
-C:\Users\Nimesha\Desktop\Harasara System\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csprojResolveAssemblyReference.cache
->>>>>>> d86a5b7f5a15de2fba66224073cc804678b6dcc3
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.Bill.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.CustomMsgBox.resources
-C:\Users\Ruwini\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.SalesOrders.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Login.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.MainMenu.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Properties.Resources.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Administration.AdministrationSub.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.attendance.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.details.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.EmployeeSub.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.leave.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.leaverequest.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.notifications.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.payrolls.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.search.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.FinanceSub.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Inventory.InventorySub.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Production.ProductionSub.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.Bill.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.CustomMsgBox.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.SalesOrders.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.SalesSub.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Transport.TansportSub.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Transport.TransportSub.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csproj.GenerateResource.Cache
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe.config
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.pdb
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\bin\Debug\Bunifu_UI_v1.4.dll
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\bin\Debug\MySql.Data.dll
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.exe
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.pdb
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csprojResolveAssemblyReference.cache

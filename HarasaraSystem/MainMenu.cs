@@ -17,65 +17,66 @@ namespace HarasaraSystem
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void employees_Click(object sender, EventArgs e)
         {
-            SubInterface.Transport.TansportSub trafrm = new SubInterface.Transport.TansportSub();
-            trafrm.Show();
-        }
-
-        private void Employees_Click(object sender, EventArgs e)
-        {
-            Login l1 = new Login("Employees");
-            l1.Show();
-            this.Hide();
-
-        }
-
-        private void Leave_Click(object sender, EventArgs e)
-        {
-            Login l1 = new Login("Finance");
-            l1.Show();
-            this.Hide();
-        }
-
-        private void Request_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Inventory_Click(object sender, EventArgs e)
-        {
-            Login l1 = new Login("Inventory");
-            l1.Show();
+            Login m1 = new Login("HR Manager");
+            m1.Show();
             this.Hide();
         }
 
         private void Transport_Click(object sender, EventArgs e)
         {
-            Login l1 = new Login("Transport");
-            l1.Show();
+            Login m1 = new Login("Transport");
+            m1.Show();
             this.Hide();
         }
 
-        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        private void Leave_Click(object sender, EventArgs e)
         {
-            Login l1 = new Login("Sales Manager");
-            l1.Show();
+
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            Login m1 = new Login("Sales Manager");
+            m1.Show();
             this.Hide();
         }
 
-        private void Production_Click(object sender, EventArgs e)
+        private void Inventory_Click(object sender, EventArgs e)
         {
-            Login l1 = new Login("Products");
-            l1.Show();
+            Login m1 = new Login("Inventory");
+            m1.Show();
             this.Hide();
         }
 
-        private void SystemAdministration_Click(object sender, EventArgs e)
+        private void Finance_Click(object sender, EventArgs e)
         {
-            Login l1 = new Login("Adminstration");
-            l1.Show();
+            Login m1 = new Login("Finance");
+            m1.Show();
             this.Hide();
         }
+
+        private void production_Click(object sender, EventArgs e)
+        {
+            Login m1 = new Login("Products");
+            m1.Show();
+            this.Hide();
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            Login m1 = new Login("Adminstration");
+            m1.Show();
+            this.Hide();
+        }
+       
+
+       
+
+        
+        
+
+        
     }
 }

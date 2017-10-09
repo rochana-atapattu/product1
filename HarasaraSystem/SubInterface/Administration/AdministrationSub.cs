@@ -13,9 +13,10 @@ namespace HarasaraSystem.SubInterface.Administration
 {
     public partial class AdministrationSub : Form
     {
-        public AdministrationSub()
+        public AdministrationSub(string pt)
         {
             InitializeComponent();
+            label4.Text = pt;
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)

@@ -13,9 +13,10 @@ namespace HarasaraSystem.SubInterface.Inventory
 {
     public partial class InventorySub : Form
     {
-        public InventorySub()
+        public InventorySub(string pt)
         {
             InitializeComponent();
+            label4.Text = pt;
         }
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
