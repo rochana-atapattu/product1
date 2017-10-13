@@ -40,5 +40,77 @@ namespace HarasaraSystem.SubInterface.Sales
         {
             timer1.Start();
         }
+
+        private void SalesOrders_Click(object sender, EventArgs e)
+        {
+            if(!panel3.Controls.Contains(HarasaraSystem.SubInterface.Sales.SalesOrders.Instance))
+            {
+                panel3.Controls.Add(HarasaraSystem.SubInterface.Sales.SalesOrders.Instance);
+                HarasaraSystem.SubInterface.Sales.SalesOrders.Instance.Dock = DockStyle.Fill;
+                HarasaraSystem.SubInterface.Sales.SalesOrders.Instance.BringToFront();
+            }
+            else
+            {
+                HarasaraSystem.SubInterface.Sales.SalesOrders.Instance.BringToFront();
+            }
+        }
+
+        private void Purchasings_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Controls.Contains(HarasaraSystem.SubInterface.Sales.PurchasingOrders.Instance))
+            {
+                panel3.Controls.Add(HarasaraSystem.SubInterface.Sales.PurchasingOrders.Instance);
+                HarasaraSystem.SubInterface.Sales.PurchasingOrders.Instance.Dock = DockStyle.Fill;
+                HarasaraSystem.SubInterface.Sales.PurchasingOrders.Instance.BringToFront();
+            }
+            else
+            {
+                HarasaraSystem.SubInterface.Sales.PurchasingOrders.Instance.BringToFront();
+            }
+        }
+
+        private void Payments_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Controls.Contains(HarasaraSystem.SubInterface.Sales.payments.Instance))
+            {
+                panel3.Controls.Add(HarasaraSystem.SubInterface.Sales.payments.Instance);
+                HarasaraSystem.SubInterface.Sales.payments.Instance.Dock = DockStyle.Fill;
+                HarasaraSystem.SubInterface.Sales.payments.Instance.BringToFront();
+            }
+            else
+            {
+                HarasaraSystem.SubInterface.Sales.payments.Instance.BringToFront();
+            }
+
+        }
+
+        private void Reports_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Controls.Contains(HarasaraSystem.SubInterface.Sales.Reports.Instance))
+            {
+                panel3.Controls.Add(HarasaraSystem.SubInterface.Sales.Reports.Instance);
+                HarasaraSystem.SubInterface.Sales.Reports.Instance.Dock = DockStyle.Fill;
+                HarasaraSystem.SubInterface.Sales.Reports.Instance.BringToFront();
+            }
+            else
+            {
+                HarasaraSystem.SubInterface.Sales.payments.Instance.BringToFront();
+            }
+        }
+
+        private void People_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Controls.Contains(HarasaraSystem.SubInterface.Sales.setting.Instance))
+            {
+                panel3.Controls.Add(HarasaraSystem.SubInterface.Sales.setting.Instance);
+                HarasaraSystem.SubInterface.Sales.setting.Instance.Dock = DockStyle.Fill;
+                HarasaraSystem.SubInterface.Sales.setting.Instance.BringToFront();
+            }
+            else
+            {
+                HarasaraSystem.SubInterface.Sales.setting.Instance.BringToFront();
+            }
+
+        }
     }
 }

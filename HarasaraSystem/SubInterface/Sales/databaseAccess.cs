@@ -12,7 +12,7 @@ namespace HarasaraSystem.SubInterface.Sales
 {
     class databaseAccess
     {
-        MySqlConnection con = new MySqlConnection("server=localhost;user id=root");
+        MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=harasara");
         MySqlCommand cmd;
              
         public void InsertData(string Query)
@@ -27,15 +27,17 @@ namespace HarasaraSystem.SubInterface.Sales
                 cmd.CommandText = Query;
                 cmd.ExecuteNonQuery();
                 CustomMsgBox.Show("Added Succesfully", "OK");
+                con.Close();
 
             }
             catch(Exception ex)
             {
                 CustomMsgBox.Show(ex.Message,"OK");
+                con.Close();
                 //MessageBox.Show(ex.Message);
             }
 
-            con.Close();
+            
         }
         public void deleteData(string query)
         {
@@ -51,13 +53,14 @@ namespace HarasaraSystem.SubInterface.Sales
                 cmd.ExecuteNonQuery();
                 CustomMsgBox.Show("Cancellation was successfull","OK");
 
-                
+                con.Close();
             }
             catch(Exception ex)
             {
                 CustomMsgBox.Show(ex.Message,"OK");
+                con.Close();
             }
-            con.Close();
+           
       }
        
 
@@ -80,14 +83,16 @@ namespace HarasaraSystem.SubInterface.Sales
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 da.Fill(dt);
                 dw.DataSource = dt;
+                con.Close();
                 
             }
             catch(Exception ex)
             {
                 CustomMsgBox.Show(ex.Message,"OK");
+                con.Close();
 
             }
-            con.Close();
+            
         }
        public void deleteSelectedRow(DataGridView dw)
         {

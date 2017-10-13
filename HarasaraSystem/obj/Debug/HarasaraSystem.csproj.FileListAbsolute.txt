@@ -27,4 +27,8 @@ C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\bin\Debug\Bunifu_UI_v1.4.
 C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\bin\Debug\MySql.Data.dll
 C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.exe
 C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.pdb
-C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csprojResolveAssemblyReference.cache
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.PurchasingOrders.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.payments.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.PurchaseBill.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.Reports.resources
+C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.setting.resources

@@ -13,18 +13,9 @@ namespace HarasaraSystem.SubInterface.Sales
 {
     public partial class SalesOrders : UserControl
     {
-        
 
-        MySqlConnection con = new MySqlConnection("server=localhost;user id=root");
-        MySqlCommand cmd;
-        MySqlCommand cmd1;
-        MySqlCommand cmd2;
-        
-
-        
-        
-        
         private static SalesOrders _instance;
+
         public static SalesOrders Instance
         {
             get
@@ -35,8 +26,18 @@ namespace HarasaraSystem.SubInterface.Sales
                 return _instance;
 
             }
-            
         }
+
+        MySqlConnection con = new MySqlConnection("server=localhost;user id=root");
+        MySqlCommand cmd;
+        MySqlCommand cmd1;
+        MySqlCommand cmd2;
+        
+
+        
+        
+        
+     
         public SalesOrders()
         {
             

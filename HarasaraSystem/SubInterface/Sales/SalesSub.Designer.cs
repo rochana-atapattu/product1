@@ -210,6 +210,7 @@
             this.People.TabIndex = 0;
             this.People.Textcolor = System.Drawing.Color.White;
             this.People.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.People.Click += new System.EventHandler(this.People_Click);
             // 
             // label4
             // 
@@ -258,6 +259,7 @@
             this.Reports.TabIndex = 0;
             this.Reports.Textcolor = System.Drawing.Color.White;
             this.Reports.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reports.Click += new System.EventHandler(this.Reports_Click);
             // 
             // Payments
             // 
@@ -284,6 +286,7 @@
             this.Payments.TabIndex = 0;
             this.Payments.Textcolor = System.Drawing.Color.White;
             this.Payments.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Payments.Click += new System.EventHandler(this.Payments_Click);
             // 
             // Purchasings
             // 
@@ -310,6 +313,7 @@
             this.Purchasings.TabIndex = 0;
             this.Purchasings.Textcolor = System.Drawing.Color.White;
             this.Purchasings.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Purchasings.Click += new System.EventHandler(this.Purchasings_Click);
             // 
             // SalesOrders
             // 
@@ -336,6 +340,7 @@
             this.SalesOrders.TabIndex = 0;
             this.SalesOrders.Textcolor = System.Drawing.Color.White;
             this.SalesOrders.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalesOrders.Click += new System.EventHandler(this.SalesOrders_Click);
             // 
             // panel3
             // 

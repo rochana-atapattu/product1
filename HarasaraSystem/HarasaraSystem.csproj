@@ -152,6 +152,30 @@
       <DependentUpon>CustomMsgBox.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Sales\databaseAccess.cs" />
+    <Compile Include="SubInterface\Sales\payments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Sales\payments.designer.cs">
+      <DependentUpon>payments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Sales\PurchaseBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Sales\PurchaseBill.designer.cs">
+      <DependentUpon>PurchaseBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Sales\PurchasingOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Sales\PurchasingOrders.designer.cs">
+      <DependentUpon>PurchasingOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Sales\Reports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Sales\Reports.designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubInterface\Sales\SalesOrders.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -163,6 +187,12 @@
     </Compile>
     <Compile Include="SubInterface\Sales\SalesSub.designer.cs">
       <DependentUpon>SalesSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Sales\setting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Sales\setting.designer.cs">
+      <DependentUpon>setting.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Sales\validation.cs" />
     <Compile Include="SubInterface\Transport\TansportSub.cs">
@@ -234,11 +264,26 @@
     <EmbeddedResource Include="SubInterface\Sales\CustomMsgBox.resx">
       <DependentUpon>CustomMsgBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Sales\payments.resx">
+      <DependentUpon>payments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Sales\PurchaseBill.resx">
+      <DependentUpon>PurchaseBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Sales\PurchasingOrders.resx">
+      <DependentUpon>PurchasingOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Sales\Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Sales\SalesOrders.resx">
       <DependentUpon>SalesOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Sales\SalesSub.resx">
       <DependentUpon>SalesSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Sales\setting.resx">
+      <DependentUpon>setting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Transport\TansportSub.resx">
       <DependentUpon>TansportSub.cs</DependentUpon>
