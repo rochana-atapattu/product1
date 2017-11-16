@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -121,11 +122,66 @@
     <Compile Include="SubInterface\Employee\search.Designer.cs">
       <DependentUpon>search.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubInterface\Finance\AccountHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Finance\AccountHistory.Designer.cs">
+      <DependentUpon>AccountHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Finance\AccountHistoryUC_a.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Finance\AccountHistoryUC_a.Designer.cs">
+      <DependentUpon>AccountHistoryUC_a.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Finance\AccountsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Finance\AccountsUC.Designer.cs">
+      <DependentUpon>AccountsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Finance\Database.cs" />
+    <Compile Include="SubInterface\Finance\ExpenditureManagerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Finance\ExpenditureManagerUC.Designer.cs">
+      <DependentUpon>ExpenditureManagerUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubInterface\Finance\FinanceSub.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SubInterface\Finance\FinanceSub.designer.cs">
       <DependentUpon>FinanceSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Finance\PettyCashUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Finance\PettyCashUC.Designer.cs">
+      <DependentUpon>PettyCashUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Finance\PettyCashUC_Add.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Finance\PettyCashUC_Add.Designer.cs">
+      <DependentUpon>PettyCashUC_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Finance\PettyCashUC_Add_Edit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Finance\PettyCashUC_Add_Edit.Designer.cs">
+      <DependentUpon>PettyCashUC_Add_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Finance\PettyCashUC_Add_Summary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Finance\PettyCashUC_Add_Summary.Designer.cs">
+      <DependentUpon>PettyCashUC_Add_Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Finance\ProfitLossUC_Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Finance\ProfitLossUC_Main.Designer.cs">
+      <DependentUpon>ProfitLossUC_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Inventory\InventorySub.cs">
       <SubType>Form</SubType>
@@ -249,8 +305,35 @@
     <EmbeddedResource Include="SubInterface\Employee\search.resx">
       <DependentUpon>search.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Finance\AccountHistory.resx">
+      <DependentUpon>AccountHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Finance\AccountHistoryUC_a.resx">
+      <DependentUpon>AccountHistoryUC_a.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Finance\AccountsUC.resx">
+      <DependentUpon>AccountsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Finance\ExpenditureManagerUC.resx">
+      <DependentUpon>ExpenditureManagerUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Finance\FinanceSub.resx">
       <DependentUpon>FinanceSub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Finance\PettyCashUC.resx">
+      <DependentUpon>PettyCashUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Finance\PettyCashUC_Add.resx">
+      <DependentUpon>PettyCashUC_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Finance\PettyCashUC_Add_Edit.resx">
+      <DependentUpon>PettyCashUC_Add_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Finance\PettyCashUC_Add_Summary.resx">
+      <DependentUpon>PettyCashUC_Add_Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Finance\ProfitLossUC_Main.resx">
+      <DependentUpon>ProfitLossUC_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Inventory\InventorySub.resx">
       <DependentUpon>InventorySub.cs</DependentUpon>

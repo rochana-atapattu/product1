@@ -98,6 +98,9 @@ namespace HarasaraSystem
             }
                
 
+           /* HarasaraSystem.SubInterface.Finance.FinanceSub f1 = new SubInterface.Finance.FinanceSub(textBox1.Text);
+            f1.Show();
+            this.Hide();*/
 
         }
 
