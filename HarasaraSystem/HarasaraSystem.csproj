@@ -352,7 +352,7 @@
     <EmbeddedResource Include="SubInterface\Finance\FinanceSub.resx">
       <DependentUpon>FinanceSub.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
+ <HEAD>
     <EmbeddedResource Include="SubInterface\Inventory\AddItem.resx">
       <DependentUpon>AddItem.cs</DependentUpon>
     </EmbeddedResource>
