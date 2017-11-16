@@ -361,6 +361,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Inventory\FinStock.resx">
       <DependentUpon>FinStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Finance\PettyCashUC.resx">
       <DependentUpon>PettyCashUC.cs</DependentUpon>
     </EmbeddedResource>
