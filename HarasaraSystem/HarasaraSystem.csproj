@@ -153,7 +153,7 @@
     <Compile Include="SubInterface\Finance\FinanceSub.designer.cs">
       <DependentUpon>FinanceSub.cs</DependentUpon>
     </Compile>
-    <HEAD>
+    
     <Compile Include="SubInterface\Inventory\AddItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -177,7 +177,6 @@
     </Compile>
     <Compile Include="SubInterface\Inventory\FinStock.Designer.cs">
       <DependentUpon>FinStock.cs</DependentUpon>
-=======
     <Compile Include="SubInterface\Finance\PettyCashUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -207,7 +206,6 @@
     </Compile>
     <Compile Include="SubInterface\Finance\ProfitLossUC_Main.Designer.cs">
       <DependentUpon>ProfitLossUC_Main.cs</DependentUpon>
->>>>>>> 7f9fce80c5b6181dbf8745275caf6f43ec2d8480
     </Compile>
     <Compile Include="SubInterface\Inventory\InventorySub.cs">
       <SubType>Form</SubType>
@@ -352,7 +350,6 @@
     <EmbeddedResource Include="SubInterface\Finance\FinanceSub.resx">
       <DependentUpon>FinanceSub.cs</DependentUpon>
     </EmbeddedResource>
- <HEAD>
     <EmbeddedResource Include="SubInterface\Inventory\AddItem.resx">
       <DependentUpon>AddItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -364,7 +361,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Inventory\FinStock.resx">
       <DependentUpon>FinStock.cs</DependentUpon>
-=======
     <EmbeddedResource Include="SubInterface\Finance\PettyCashUC.resx">
       <DependentUpon>PettyCashUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -379,7 +375,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Finance\ProfitLossUC_Main.resx">
       <DependentUpon>ProfitLossUC_Main.cs</DependentUpon>
->>>>>>> 7f9fce80c5b6181dbf8745275caf6f43ec2d8480
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Inventory\InventorySub.resx">
       <DependentUpon>InventorySub.cs</DependentUpon>
