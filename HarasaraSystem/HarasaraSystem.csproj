@@ -153,12 +153,11 @@
     <Compile Include="SubInterface\Finance\FinanceSub.designer.cs">
       <DependentUpon>FinanceSub.cs</DependentUpon>
     </Compile>
-    
-    <Compile Include="SubInterface\Inventory\AddItem.cs">
+    <Compile Include="SubInterface\Inventory\FinStock.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SubInterface\Inventory\AddItem.Designer.cs">
-      <DependentUpon>AddItem.cs</DependentUpon>
+    <Compile Include="SubInterface\Inventory\FinStock.Designer.cs">
+      <DependentUpon>FinStock.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Inventory\AddStock.cs">
       <SubType>UserControl</SubType>
@@ -172,11 +171,11 @@
     <Compile Include="SubInterface\Inventory\CheckLevel.Designer.cs">
       <DependentUpon>CheckLevel.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubInterface\Inventory\FinStock.cs">
+    <Compile Include="SubInterface\Inventory\AddItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SubInterface\Inventory\FinStock.Designer.cs">
-      <DependentUpon>FinStock.cs</DependentUpon>
+    <Compile Include="SubInterface\Inventory\AddItem.Designer.cs">
+      <DependentUpon>AddItem.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Finance\PettyCashUC.cs">
       <SubType>UserControl</SubType>
@@ -351,8 +350,8 @@
     <EmbeddedResource Include="SubInterface\Finance\FinanceSub.resx">
       <DependentUpon>FinanceSub.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubInterface\Inventory\AddItem.resx">
-      <DependentUpon>AddItem.cs</DependentUpon>
+    <EmbeddedResource Include="SubInterface\Inventory\FinStock.resx">
+      <DependentUpon>FinStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Inventory\AddStock.resx">
       <DependentUpon>AddStock.cs</DependentUpon>
@@ -360,8 +359,8 @@
     <EmbeddedResource Include="SubInterface\Inventory\CheckLevel.resx">
       <DependentUpon>CheckLevel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubInterface\Inventory\FinStock.resx">
-      <DependentUpon>FinStock.cs</DependentUpon>
+    <EmbeddedResource Include="SubInterface\Inventory\AddItem.resx">
+      <DependentUpon>AddItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Finance\PettyCashUC.resx">
       <DependentUpon>PettyCashUC.cs</DependentUpon>

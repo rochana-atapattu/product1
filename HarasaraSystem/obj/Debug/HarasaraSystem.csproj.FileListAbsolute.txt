@@ -110,3 +110,6 @@ C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\Haras
 C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.PettyCashUC_Add_Edit.resources
 C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.PettyCashUC_Add_Summary.resources
 >>>>>>> 7f9fce80c5b6181dbf8745275caf6f43ec2d8480
+C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe.config
+C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.exe
+C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.pdb
