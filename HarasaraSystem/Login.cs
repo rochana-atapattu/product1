@@ -81,7 +81,7 @@ namespace HarasaraSystem
 
                     else
                     {
-                        HarasaraSystem.SubInterface.Transport.TransportSub t1 = new SubInterface.Transport.TransportSub(textBox1.Text);
+                        Transport.Main t1 = new Transport.Main();
                         t1.Show();
                         this.Hide();
                     }

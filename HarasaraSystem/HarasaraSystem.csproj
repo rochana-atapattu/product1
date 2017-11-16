@@ -282,18 +282,57 @@
       <DependentUpon>setting.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Sales\validation.cs" />
-    <Compile Include="SubInterface\Transport\TansportSub.cs">
+    <Compile Include="SubInterface\Transport\Database.cs" />
+    <Compile Include="SubInterface\Transport\dbconnect.cs" />
+    <Compile Include="SubInterface\Transport\driver.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubInterface\Transport\TansportSub.Designer.cs">
-      <DependentUpon>TansportSub.cs</DependentUpon>
+    <Compile Include="SubInterface\Transport\driver.Designer.cs">
+      <DependentUpon>driver.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubInterface\Transport\TransportSub.cs">
+    <Compile Include="SubInterface\Transport\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubInterface\Transport\TransportSub.designer.cs">
-      <DependentUpon>TransportSub.cs</DependentUpon>
+    <Compile Include="SubInterface\Transport\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubInterface\Transport\orderRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Transport\orderRoute.Designer.cs">
+      <DependentUpon>orderRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Transport\repair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Transport\repair.Designer.cs">
+      <DependentUpon>repair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Transport\report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Transport\report.Designer.cs">
+      <DependentUpon>report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Transport\route.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Transport\route.Designer.cs">
+      <DependentUpon>route.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Transport\SMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Transport\SMS.Designer.cs">
+      <DependentUpon>SMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Transport\vehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Transport\vehicle.Designer.cs">
+      <DependentUpon>vehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Transport\ViaNettSMS1.cs" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -414,11 +453,29 @@
     <EmbeddedResource Include="SubInterface\Sales\setting.resx">
       <DependentUpon>setting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubInterface\Transport\TansportSub.resx">
-      <DependentUpon>TansportSub.cs</DependentUpon>
+    <EmbeddedResource Include="SubInterface\Transport\driver.resx">
+      <DependentUpon>driver.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubInterface\Transport\TransportSub.resx">
-      <DependentUpon>TransportSub.cs</DependentUpon>
+    <EmbeddedResource Include="SubInterface\Transport\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Transport\orderRoute.resx">
+      <DependentUpon>orderRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Transport\repair.resx">
+      <DependentUpon>repair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Transport\report.resx">
+      <DependentUpon>report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Transport\route.resx">
+      <DependentUpon>route.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Transport\SMS.resx">
+      <DependentUpon>SMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Transport\vehicle.resx">
+      <DependentUpon>vehicle.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
