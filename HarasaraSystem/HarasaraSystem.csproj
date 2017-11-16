@@ -189,6 +189,7 @@
     <Compile Include="SubInterface\Finance\ProfitLossUC_Main.Designer.cs">
       <DependentUpon>ProfitLossUC_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubInterface\Inventory\dbconnect.cs" />
     <Compile Include="SubInterface\Inventory\InventorySub.cs">
       <SubType>Form</SubType>
     </Compile>

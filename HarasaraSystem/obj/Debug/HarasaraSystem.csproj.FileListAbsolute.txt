@@ -130,9 +130,6 @@ C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.AccountsUC.resources
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.ExpenditureManagerUC.resources
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.FinanceSub.resources
-C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Inventory.FinStock.resources
-C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Inventory.AddStock.resources
-C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Inventory.CheckLevel.resources
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Inventory.AddItem.resources
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.PettyCashUC.resources
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.PettyCashUC_Add.resources
@@ -140,7 +137,6 @@ C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.PettyCashUC_Add_Summary.resources
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.ProfitLossUC_Main.resources
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Inventory.InventorySub.resources
-C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Inventory.IssueStock.resources
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Production.ProductionSub.resources
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.Bill.resources
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.CustomMsgBox.resources
@@ -154,3 +150,7 @@ C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Transport.TansportSub.resources
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Transport.TransportSub.resources
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csproj.GenerateResource.Cache
+C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\BMS_harasara.inv_AddStock.resources
+C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\BMS_harasara.inv_CheckLevel.resources
+C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\BMS_harasara.inv_FinishStock.resources
+C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\BMS_harasara.inv_IssueStock.resources

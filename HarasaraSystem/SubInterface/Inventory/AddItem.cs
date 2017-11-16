@@ -12,6 +12,17 @@ namespace HarasaraSystem.SubInterface.Inventory
 {
     public partial class AddItem : UserControl
     {
+        private static AddItem _instance;
+
+        public static AddItem Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new AddItem();
+                return _instance;
+            }
+        }
         public AddItem()
         {
             InitializeComponent();
