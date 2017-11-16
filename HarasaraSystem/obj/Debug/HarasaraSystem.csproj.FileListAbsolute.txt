@@ -32,6 +32,7 @@ C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.
 C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.PurchaseBill.resources
 C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.Reports.resources
 C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.setting.resources
+<<<<<<< HEAD
 C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe.config
 C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe
 C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.pdb
@@ -65,3 +66,47 @@ C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\Harasa
 C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csproj.GenerateResource.Cache
 C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.exe
 C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.pdb
+=======
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe.config
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.exe
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.pdb
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csprojResolveAssemblyReference.cache
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Login.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.MainMenu.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Properties.Resources.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Administration.AdministrationSub.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.attendance.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.details.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.EmployeeSub.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.leave.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.leaverequest.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.notifications.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.payrolls.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.search.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.ExpenditureManagerUC.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.FinanceSub.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Inventory.InventorySub.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Production.ProductionSub.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.Bill.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.CustomMsgBox.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.payments.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.PurchaseBill.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.PurchasingOrders.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.Reports.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.SalesOrders.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.SalesSub.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.setting.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Transport.TansportSub.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Transport.TransportSub.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csproj.GenerateResource.Cache
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.pdb
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.AccountHistory.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.AccountHistoryUC_a.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.AccountsUC.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.ProfitLossUC_Main.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.PettyCashUC.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.PettyCashUC_Add.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.PettyCashUC_Add_Edit.resources
+C:\Users\kavindu\Desktop\Git part2\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.PettyCashUC_Add_Summary.resources
+>>>>>>> 7f9fce80c5b6181dbf8745275caf6f43ec2d8480

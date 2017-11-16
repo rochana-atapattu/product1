@@ -55,9 +55,11 @@ namespace HarasaraSystem
 
         private void Finance_Click(object sender, EventArgs e)
         {
-            Login m1 = new Login("Finance");
+           Login m1 = new Login("Finance");
             m1.Show();
             this.Hide();
+            
+            
         }
 
         private void production_Click(object sender, EventArgs e)
