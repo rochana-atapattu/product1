@@ -45,8 +45,11 @@ namespace HarasaraSystem
 
         private void Inventory_Click(object sender, EventArgs e)
         {
-            Login m1 = new Login("Inventory");
+            /*Login m1 = new Login("Inventory");
             m1.Show();
+            this.Hide();*/
+            SubInterface.Inventory.InventorySub ins = new SubInterface.Inventory.InventorySub("");
+            ins.Show();
             this.Hide();
         }
 

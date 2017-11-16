@@ -40,5 +40,12 @@ namespace HarasaraSystem.SubInterface.Inventory
         {
             timer1.Start();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainMenu mm = new MainMenu();
+            this.Hide();
+            mm.Show();
+        }
     }
 }

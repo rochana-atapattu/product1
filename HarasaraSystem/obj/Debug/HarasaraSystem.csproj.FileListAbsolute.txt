@@ -32,3 +32,36 @@ C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.
 C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.PurchaseBill.resources
 C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.Reports.resources
 C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.setting.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe.config
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.pdb
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csprojResolveAssemblyReference.cache
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Login.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.MainMenu.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Properties.Resources.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Administration.AdministrationSub.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.attendance.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.details.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.EmployeeSub.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.leave.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.leaverequest.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.notifications.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.payrolls.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.search.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.FinanceSub.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Inventory.InventorySub.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Production.ProductionSub.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.Bill.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.CustomMsgBox.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.payments.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.PurchaseBill.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.PurchasingOrders.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.Reports.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.SalesOrders.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.SalesSub.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.setting.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Transport.TansportSub.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Transport.TransportSub.resources
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csproj.GenerateResource.Cache
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.exe
+C:\Users\Viraj Malaka\Desktop\ITP\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.pdb

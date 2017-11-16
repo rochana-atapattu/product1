@@ -127,11 +127,41 @@
     <Compile Include="SubInterface\Finance\FinanceSub.designer.cs">
       <DependentUpon>FinanceSub.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubInterface\Inventory\AddItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Inventory\AddItem.Designer.cs">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Inventory\AddStock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Inventory\AddStock.Designer.cs">
+      <DependentUpon>AddStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Inventory\CheckLevel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Inventory\CheckLevel.Designer.cs">
+      <DependentUpon>CheckLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Inventory\FinStock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Inventory\FinStock.Designer.cs">
+      <DependentUpon>FinStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubInterface\Inventory\InventorySub.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SubInterface\Inventory\InventorySub.designer.cs">
       <DependentUpon>InventorySub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Inventory\IssueStock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Inventory\IssueStock.Designer.cs">
+      <DependentUpon>IssueStock.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Production\ProductionSub.cs">
       <SubType>Form</SubType>
@@ -252,8 +282,23 @@
     <EmbeddedResource Include="SubInterface\Finance\FinanceSub.resx">
       <DependentUpon>FinanceSub.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Inventory\AddItem.resx">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Inventory\AddStock.resx">
+      <DependentUpon>AddStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Inventory\CheckLevel.resx">
+      <DependentUpon>CheckLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Inventory\FinStock.resx">
+      <DependentUpon>FinStock.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Inventory\InventorySub.resx">
       <DependentUpon>InventorySub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Inventory\IssueStock.resx">
+      <DependentUpon>IssueStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Production\ProductionSub.resx">
       <DependentUpon>ProductionSub.cs</DependentUpon>
