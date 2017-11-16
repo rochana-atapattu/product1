@@ -177,6 +177,7 @@
     </Compile>
     <Compile Include="SubInterface\Inventory\FinStock.Designer.cs">
       <DependentUpon>FinStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubInterface\Finance\PettyCashUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
