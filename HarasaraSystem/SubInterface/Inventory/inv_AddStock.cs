@@ -84,7 +84,7 @@ namespace BMS_harasara
             String name=textBox1.Text;
             String ttype = "Receipt";
 
-            String datenw = DateTime.Now.ToString();
+            String datenw = DateTime.Today.Date.ToString("MM/dd/yyyy");
 
             string qry = "Select * from inventory where item_id='"+itemId+"';";
 
@@ -111,13 +111,13 @@ namespace BMS_harasara
                                          
                                         conn.ExQuery(qry1);
                                         conn.ExQuery(qry2);
-
+ 
                                         MessageBox.Show("Entry Added Success");
                                         textBox1.Text = "";
                                         textBox2.Text="";
                                         textBox3.Text = "";
                                         textBox4.Text = "";
-                                       
+
                                     }
                                     catch (Exception ex)
                                     {
@@ -129,12 +129,8 @@ namespace BMS_harasara
                                     }
                     
                 }
-                
-            
-            
 
-            
-            
+                        
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -174,21 +170,26 @@ namespace BMS_harasara
             textBox1.AutoCompleteCustomSource = coll2;
             connst.Close();
 
-            String loc = (String)comboBox1.SelectedItem;
-            connst.Open();
-            String qry3 = "SELECT * from inv_trans where location='"+loc+"' and type='Receipt' ";
-            //MySqlConnection connst = new MySqlConnection("server=localhost;user id=root;database=bms_harasaradb");
-            MySqlCommand cmd2 = new MySqlCommand(qry3, connst);
+            
+                String loc = (String)comboBox1.SelectedItem;
+                
+                connst.Open();
+                String qry3 = "SELECT * from inv_trans where location='"+loc+"' and type='Receipt' ";
+                //MySqlConnection connst = new MySqlConnection("server=localhost;user id=root;database=bms_harasaradb");
+                MySqlCommand cmd2 = new MySqlCommand(qry3, connst);
 
-            MySqlDataAdapter sda = new MySqlDataAdapter();
-            sda.SelectCommand = cmd2;
-            DataTable dbdataset = new DataTable();
-            sda.Fill(dbdataset);
-            BindingSource bsource = new BindingSource();
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = cmd2;
+                DataTable dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bsource = new BindingSource();
 
-            bsource.DataSource = dbdataset;
-            dataGridView2.DataSource = bsource;
-            sda.Update(dbdataset);
+                bsource.DataSource = dbdataset;
+                dataGridView2.DataSource = bsource;
+                sda.Update(dbdataset);
+           
+
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
