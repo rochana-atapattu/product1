@@ -16,6 +16,8 @@ namespace BMS_harasara
     {
         private static inv_FinishStock _instance;
 
+        
+
         public static inv_FinishStock Instance
         {
             get
@@ -34,12 +36,17 @@ namespace BMS_harasara
         void fillcombo()
         {
             String qry = "Select * From warehouse";
+            String qry1 = "Select DISTINCT(type) From fd_trans";
             MySqlConnection connst = new MySqlConnection("server=localhost;user id=root;database=harasara");
             MySqlCommand cmd1 = new MySqlCommand(qry, connst);
+            MySqlCommand cmd2 = new MySqlCommand(qry1, connst);
             MySqlDataReader reader;
+           
 
             comboBox1.Text = "<Select Warehouse>";
             comboBox2.Text = "<Select Warehouse>";
+            comboBox4.Text = "<Select Warehouse>";
+            comboBox3.Text = "<TRS Type>";
             try
             {
                 connst.Open();
@@ -49,12 +56,33 @@ namespace BMS_harasara
                     string location = reader.GetString("location");
                     comboBox1.Items.Add(location);
                     comboBox2.Items.Add(location);
+                    comboBox4.Items.Add(location);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "database error");
             }
+            
+            connst.Close();
+
+            MySqlDataReader reader1;
+            connst.Open();
+            try
+            {
+                reader1 = cmd2.ExecuteReader();
+                while (reader1.Read())
+                {
+                    string type = reader1.GetString("type");
+                    comboBox3.Items.Add(type);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "database error");
+            }
+            
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -117,25 +145,25 @@ namespace BMS_harasara
             int count = int.Parse(textBox2.Text);
             String loc = (String)comboBox1.SelectedItem;
             String typet = "Receipt";
-            String datenw = DateTime.Now.ToString();
+            String datenw = DateTime.Today.Date.ToString("yyyy-MM-dd");
+            String prodname = (String)textBox5.Text;
+            
+                String qry = "Select * from inventory_fd where productID='" + prodid + "'";
 
-            String qry = "Select * from inventory_fd where productID='" + prodid + "'";
+                MySqlConnection connst = new MySqlConnection("server=localhost;user id=root;database=harasara");
+                MySqlCommand cmd1 = new MySqlCommand(qry, connst);
+                MySqlDataReader reader;
 
-            MySqlConnection connst = new MySqlConnection("server=localhost;user id=root;database=harasara");
-            MySqlCommand cmd1 = new MySqlCommand(qry, connst);
-            MySqlDataReader reader;
-
-            connst.Open();
+                connst.Open();
                 reader = cmd1.ExecuteReader();
-                //while (reader.Read())
-                //{
-                reader.Read();
-                    Int32 countt = reader.GetInt32("Count");
-                    Int32 countf = countt + count;
+
+                reader.Read(); 
+                Int32 countt = reader.GetInt32("Count");            
+                Int32 countf = countt + count;
 
                     try
                     {
-                        String qry2 = "Insert into fd_trans(productID,count,location,type,date) values('" + prodid + "','" + count + "','" + loc + "','" + typet + "','" + datenw + "')";
+                        String qry2 = "Insert into fd_trans(productID,productName,count,location,type,date) values('" + prodid + "','" + prodname + "','" + count + "','" + loc + "','" + typet + "','"+datenw+"')";
                         String qry1 = "Update inventory_fd set count='" + countf + "' where productID='" + prodid + "'and location='" + loc + "'";
                         dbconnect conn = new dbconnect();
 
@@ -145,14 +173,18 @@ namespace BMS_harasara
                         textBox1.Text = "";
                         textBox2.Text = "";
 
-                        MessageBox.Show("Entry Added");
+                        MessageBox.Show("Success","Stock Added Successfully",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
                     }
                     catch (Exception ex)
                     {
 
                         MessageBox.Show(ex.Message, "Check database connection");
                     }
-                //}
+                    finally
+                    {
+                        MessageBox.Show("");
+                    }
+               
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -161,7 +193,8 @@ namespace BMS_harasara
             int count = int.Parse(textBox4.Text);
             String loc = (String)comboBox2.SelectedItem;
             String typet = "Issue";
-            String datenw = DateTime.Now.ToString();
+            String datenw = DateTime.Today.Date.ToString("yyyy-MM-dd");
+            String prodname = textBox6.Text;
 
             String qry = "Select * from inventory_fd where productID='" + prodid + "'";
 
@@ -179,7 +212,7 @@ namespace BMS_harasara
 
                 try
                 {
-                    String qry2 = "Insert into fd_trans(productID,count,location,type,date) values('" + prodid + "','" + count + "','" + loc + "','" + typet + "','" + datenw + "')";
+                    String qry2 = "Insert into fd_trans(productID,productName,count,location,type,date) values('" + prodid + "','" + prodname + "','" + count + "','" + loc + "','" + typet + "','" + datenw + "')";
                     String qry1 = "Update inventory_fd set count='" + countf + "' where productID='" + prodid + "'and location='" + loc + "'";
                     dbconnect conn = new dbconnect();
 
@@ -189,7 +222,7 @@ namespace BMS_harasara
                     textBox3.Text = "";
                     textBox4.Text = "";
 
-                    MessageBox.Show("Entry Added");
+                    MessageBox.Show("Success", "Stock Issued Successfully", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
                 catch (Exception ex)
                 {
@@ -245,6 +278,114 @@ namespace BMS_harasara
             bsource.DataSource = dbdataset;
             dataGridView2.DataSource = bsource;
             sda.Update(dbdataset);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            TextBox objTextBox = (TextBox)sender;
+            string theText = objTextBox.Text;
+            String loc = (String)comboBox1.SelectedItem;
+            string qry1 = "Select * from inventory_fd where productID = '" + theText + "' and location = '" + loc + "';";
+
+            MySqlConnection connst = new MySqlConnection("server=localhost;user id=root;database=harasara");
+            MySqlCommand cmd1 = new MySqlCommand(qry1, connst);
+            MySqlDataReader reader;
+
+            try
+            {
+                connst.Open();
+                reader = cmd1.ExecuteReader();
+                while (reader.Read())
+                {
+                    string iname = reader.GetString("productName");
+                    //coll1.Add(itemid);
+                    textBox5.Text = iname;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Database Error");
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            TextBox objTextBox = (TextBox)sender;
+            string theText = objTextBox.Text;
+            String loc = (String)comboBox2.SelectedItem;
+            string qry1 = "Select * from inventory_fd where productID = '" + theText + "' and location = '" + loc + "';";
+
+            MySqlConnection connst = new MySqlConnection("server=localhost;user id=root;database=harasara");
+            MySqlCommand cmd1 = new MySqlCommand(qry1, connst);
+            MySqlDataReader reader;
+
+            try
+            {
+                connst.Open();
+                reader = cmd1.ExecuteReader();
+                while (reader.Read())
+                {
+                    string iname = reader.GetString("productName");
+                    //coll1.Add(itemid);
+                    textBox6.Text = iname;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Database Error");
+            }
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            String stadate = dateTimePicker1.Text;
+            String enddate = dateTimePicker2.Text;
+            String loc = (String)comboBox4.SelectedItem;
+            String typ = (String)comboBox3.SelectedItem;
+
+            
+
+            dbconnect connect = new dbconnect();
+            connect.openconn();
+
+        
+
+            String qry4 = "SELECT * from fd_trans where location='" + loc + "' and type='" + typ + "' AND Date BETWEEN #'"+stadate+"'# AND #'"+enddate+"'#;";
+            MySqlCommand cmd3 = new MySqlCommand(qry4);
+
+            MySqlDataAdapter sda1 = new MySqlDataAdapter();
+            sda1.SelectCommand = cmd3;
+            DataTable dbdataset1 = new DataTable();
+            sda1.Fill(dbdataset1);
+            BindingSource bsource1 = new BindingSource();
+
+            bsource1.DataSource = dbdataset1;
+            dataGridView3.DataSource = bsource1;
+            sda1.Update(dbdataset1);
+
+
         }
     }
 }

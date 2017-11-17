@@ -32,6 +32,7 @@ namespace BMS_harasara
             conn.Close();
         }
 
+        //Execute INSERT DELETE UPDATE queries
         public void ExQuery(string inqry)
         {
             MySqlCommand cmd = conn.CreateCommand();
@@ -39,26 +40,37 @@ namespace BMS_harasara
             openconn();
             cmd.ExecuteNonQuery();
             closeconn();
-            /*MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=harasara");
-            MySqlCommand cmnd = new MySqlCommand(inqry, con);
-            MySqlDataReader myReader;
-            con.Open();
-            myReader = cmnd.ExecuteReader();
-            con.Close();*/
         }
+
+        //Get Values to DataGridViews
         public DataTable ReadValue(string qry)
         {
             string x = qry;
             DataTable dt = new DataTable();
-
             MySqlDataAdapter da = new MySqlDataAdapter(x,conn);
-
             da.Fill(dt);
-
-            
-
             return dt;
         }
+
+
+        /*public String[] GetValues(String inqry,String Key)
+        {
+            String x =inqry;
+            MySqlCommand cmd = new MySqlCommand(x, conn);
+
+            String []arr=new String[10];
+
+            MySqlDataReader reader;
+            reader = cmd.ExecuteReader();
+            int i=0;
+            while (reader.Read())
+            {
+                String outkey=reader.GetString(Key);
+                arr[i] = outkey;
+                i++;
+            }
+            return arr;
+        }*/
 
         public int retval(string qry,string coln)
         {

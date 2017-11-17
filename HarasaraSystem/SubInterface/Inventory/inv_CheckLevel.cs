@@ -14,6 +14,8 @@ namespace BMS_harasara
 {
     public partial class inv_CheckLevel : UserControl
     {
+        
+
         private static inv_CheckLevel _instance;
 
         public static inv_CheckLevel Instance
@@ -55,29 +57,31 @@ namespace BMS_harasara
             {
                 MessageBox.Show(ex.Message, "database error");
             }
+            /*dbconnect dbcon=new dbconnect();
+            String qry = "Select * From warehouse";
+            String Keyi="location";
+            String[] arr = new String[10];
+            arr=dbcon.GetValues(qry,Keyi);
+            int i = 0;
+            while(arr.Length<10){
+                comboBox1.Items.Add(arr[i]);
+                comboBox2.Items.Add(arr[i]);
+                i++;
+            }*/
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            dbconnect dbcon = new dbconnect();
+
             String loc = (String)comboBox1.SelectedItem;
             String qry3 = "SELECT * from inventory where location='" + loc + "' ";
-            MySqlConnection connst = new MySqlConnection("server=localhost;user id=root;database=harasara");
-            MySqlCommand cmd1 = new MySqlCommand(qry3, connst);
             
-            connst.Open();
-            
-            //MySqlConnection connst = new MySqlConnection("server=localhost;user id=root;database=bms_harasaradb");
-            MySqlCommand cmd2 = new MySqlCommand(qry3, connst);
-
-            MySqlDataAdapter sda = new MySqlDataAdapter();
-            sda.SelectCommand = cmd2;
-            DataTable dbdataset = new DataTable();
-            sda.Fill(dbdataset);
             BindingSource bsource = new BindingSource();
 
-            bsource.DataSource = dbdataset;
+            bsource.DataSource = dbcon.ReadValue(qry3);
+
             dataGridView1.DataSource = bsource;
-            sda.Update(dbdataset);
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -91,26 +95,17 @@ namespace BMS_harasara
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
+        {            
+            dbconnect dbcon = new dbconnect();
+
             String loc = (String)comboBox2.SelectedItem;
             String qry3 = "SELECT * from inventory_fd where location='" + loc + "' ";
-            MySqlConnection connst = new MySqlConnection("server=localhost;user id=root;database=harasara");
-            MySqlCommand cmd1 = new MySqlCommand(qry3, connst);
 
-            connst.Open();
-
-            //MySqlConnection connst = new MySqlConnection("server=localhost;user id=root;database=bms_harasaradb");
-            MySqlCommand cmd2 = new MySqlCommand(qry3, connst);
-
-            MySqlDataAdapter sda = new MySqlDataAdapter();
-            sda.SelectCommand = cmd2;
-            DataTable dbdataset = new DataTable();
-            sda.Fill(dbdataset);
             BindingSource bsource = new BindingSource();
 
-            bsource.DataSource = dbdataset;
+            bsource.DataSource = dbcon.ReadValue(qry3);
+
             dataGridView2.DataSource = bsource;
-            sda.Update(dbdataset);
         }
     }
 }
