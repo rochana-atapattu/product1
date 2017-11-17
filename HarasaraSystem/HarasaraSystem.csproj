@@ -156,6 +156,12 @@
       <DependentUpon>AccountsUC.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Finance\Database.cs" />
+    <Compile Include="SubInterface\Finance\EmailUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Finance\EmailUC.Designer.cs">
+      <DependentUpon>EmailUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubInterface\Finance\ExpenditureManagerUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -398,6 +404,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Finance\AccountsUC.resx">
       <DependentUpon>AccountsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Finance\EmailUC.resx">
+      <DependentUpon>EmailUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Finance\ExpenditureManagerUC.resx">
       <DependentUpon>ExpenditureManagerUC.cs</DependentUpon>
