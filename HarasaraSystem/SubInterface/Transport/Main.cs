@@ -133,6 +133,9 @@ namespace Transport
         private void bunifuThinButton3_Click(object sender, EventArgs e)
         {
             this.Hide();
+            MainMenu m1 = new MainMenu();
+            m1.GetMainMenu();
+            this.Close();
 
         }
     }

@@ -37,5 +37,15 @@ namespace HarasaraSystem.SubInterface.Inventory
         {
 
         }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

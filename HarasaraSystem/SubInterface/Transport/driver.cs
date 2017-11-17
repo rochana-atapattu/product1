@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace Transport
 {
@@ -341,5 +342,40 @@ namespace Transport
 
             }
         }
+
+        private void bunifuThinButton11_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dbconnect db = new dbconnect();
+
+            dt = db.ReadValue("Select * From driverdetails");
+            dataGridView1.DataSource = dt;
+
+            bunifuCustomTextbox4.Clear();
+            bunifuCustomTextbox2.Clear();
+            bunifuCustomTextbox5.Clear();
+            bunifuCustomTextbox1.Clear();
+            label1.Text = "";
+            label2.Text = "";
+            label3.Text = "";
+        }
+
+        private void bunifuThinButton3_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainMenu m1 = new MainMenu();
+            m1.GetMainMenu();
+            this.Close();
+        }
+
+       /* private void bunifuThinButton1_Click_1(object sender, EventArgs e)
+        {
+            String filename = @"C:\Users\Ender\Desktop\Viva work\HarasaraSystem\Driverhelp.txt";
+            using (StreamReader rdr = new StreamReader(filename))
+            {
+                String content = rdr.ReadToEnd();
+                textBox1.Text = content;
+            }
+        }*/
     }
 }

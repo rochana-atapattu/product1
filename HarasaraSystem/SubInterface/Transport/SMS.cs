@@ -29,7 +29,7 @@ namespace Transport
                 dbconnect db = new dbconnect();
 
                 
-                dt = db.ReadValue("Select employeename,employeeID,contactno From employee");
+                dt = db.ReadValue("Select employee_id,fname,mobile_no From employee");
                 dataGridView1.DataSource = dt;
             }
 
@@ -93,22 +93,22 @@ namespace Transport
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void bunifuImageButton3_Click(object sender, EventArgs e)
+     /*   private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
             //Set parameters
-            string username = "asviganegoda@gmail.com";
-            string password = "qda5";
-            string msgsender = "94772428281";
-            string destinationaddr = "94772428281";
+           // string username = "asviganegoda@gmail.com";
+           // string password = "qda5";
+           // string msgsender = "94772428281";
+           // string destinationaddr = "94772428281";
             //string msgsender = "94772428281";
             //string destinationaddr = "94772428281";
-            string message = "Please Change the route.";
+           // string message = "Please Change the route.";
 
             // Create ViaNettSMS object with username and password
-            ViaNettSMS s = new ViaNettSMS(username, password);
+           // ViaNettSMS s = new ViaNettSMS(username, password);
             // Declare Result object returned by the SendSMS function
-            ViaNettSMS.Result result;
-            try
+           // ViaNettSMS.Result result;
+          /*  try
             {
                 // Send SMS through HTTP API
                 //result = s.sendSMS(msgsender, destinationaddr, message);
@@ -120,7 +120,7 @@ namespace Transport
                 else
                 {
                     Debug.WriteLine("Received error: " + result.ErrorCode + " " + result.ErrorMessage);
-                }*/
+                }
             }
             catch (System.Net.WebException ex)
             {
@@ -128,13 +128,18 @@ namespace Transport
                 Debug.WriteLine(ex.Message);
             }
         }
-
+            */
         private void bunifuThinButton8_Click(object sender, EventArgs e)
         {
             this.Hide();
             Main m1 = new Main();
             m1.ShowDialog();
             this.Close();
+
+        }
+
+        private void SMS_Load(object sender, EventArgs e)
+        {
 
         }
     }
