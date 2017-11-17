@@ -159,7 +159,7 @@ namespace Transport
                     //MySqlCommand command = new MySqlCommand(insert, connnection);
                     MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=harasara");
                     //MySqlCommand cmnd = new MySqlCommand(insert, con);
-                    MySqlDataReader myreader;
+                  //  MySqlDataReader myreader;
                     con.Open();
                     //myreader = cmnd.ExecuteReader();
                     MessageBox.Show("Saved");
@@ -246,7 +246,7 @@ namespace Transport
             try
             {
 
-                dt = db.ReadValue("Select * From repair");
+                dt = db.ReadValue("Select * From vehiclerepair");
                 dataGridView1.DataSource = dt;
 
             }

@@ -34,7 +34,6 @@
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuThinButton4 = new WindowsFormsControlLibrary1.BunifuThinButton();
             this.bunifuThinButton3 = new WindowsFormsControlLibrary1.BunifuThinButton();
             this.bunifuThinButton2 = new WindowsFormsControlLibrary1.BunifuThinButton();
             this.bunifuThinButton1 = new WindowsFormsControlLibrary1.BunifuThinButton();
@@ -59,6 +58,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.bunifuThinButton11 = new WindowsFormsControlLibrary1.BunifuThinButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -82,7 +82,7 @@
             this.bunifuImageButton2.BackColor = System.Drawing.Color.SeaGreen;
             this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
             this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(892, 3);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(941, 3);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Size = new System.Drawing.Size(25, 21);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -96,7 +96,7 @@
             this.bunifuImageButton1.BackColor = System.Drawing.Color.SeaGreen;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(922, 3);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(971, 3);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(25, 21);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -109,7 +109,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.bunifuThinButton4);
             this.panel1.Controls.Add(this.bunifuThinButton3);
             this.panel1.Controls.Add(this.bunifuThinButton2);
             this.panel1.Controls.Add(this.bunifuThinButton1);
@@ -129,23 +128,6 @@
             this.pictureBox1.TabIndex = 69;
             this.pictureBox1.TabStop = false;
             // 
-            // bunifuThinButton4
-            // 
-            this.bunifuThinButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton4.BackgroundImage")));
-            this.bunifuThinButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuThinButton4.ButtonText = "Settings";
-            this.bunifuThinButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton4.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.bunifuThinButton4.ForeColorHoverState = System.Drawing.Color.White;
-            this.bunifuThinButton4.Iconimage = null;
-            this.bunifuThinButton4.IconVisible = true;
-            this.bunifuThinButton4.IconZoom = 90D;
-            this.bunifuThinButton4.ImageIconOverlay = false;
-            this.bunifuThinButton4.Location = new System.Drawing.Point(38, 379);
-            this.bunifuThinButton4.Name = "bunifuThinButton4";
-            this.bunifuThinButton4.Size = new System.Drawing.Size(121, 36);
-            this.bunifuThinButton4.TabIndex = 21;
-            // 
             // bunifuThinButton3
             // 
             this.bunifuThinButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton3.BackgroundImage")));
@@ -162,6 +144,7 @@
             this.bunifuThinButton3.Name = "bunifuThinButton3";
             this.bunifuThinButton3.Size = new System.Drawing.Size(121, 36);
             this.bunifuThinButton3.TabIndex = 20;
+            this.bunifuThinButton3.Click += new System.EventHandler(this.bunifuThinButton3_Click_1);
             // 
             // bunifuThinButton2
             // 
@@ -175,7 +158,7 @@
             this.bunifuThinButton2.IconVisible = true;
             this.bunifuThinButton2.IconZoom = 90D;
             this.bunifuThinButton2.ImageIconOverlay = false;
-            this.bunifuThinButton2.Location = new System.Drawing.Point(38, 226);
+            this.bunifuThinButton2.Location = new System.Drawing.Point(38, 260);
             this.bunifuThinButton2.Name = "bunifuThinButton2";
             this.bunifuThinButton2.Size = new System.Drawing.Size(121, 36);
             this.bunifuThinButton2.TabIndex = 19;
@@ -193,10 +176,11 @@
             this.bunifuThinButton1.IconVisible = true;
             this.bunifuThinButton1.IconZoom = 90D;
             this.bunifuThinButton1.ImageIconOverlay = false;
-            this.bunifuThinButton1.Location = new System.Drawing.Point(38, 330);
+            this.bunifuThinButton1.Location = new System.Drawing.Point(38, 340);
             this.bunifuThinButton1.Name = "bunifuThinButton1";
             this.bunifuThinButton1.Size = new System.Drawing.Size(121, 36);
             this.bunifuThinButton1.TabIndex = 18;
+         //   this.bunifuThinButton1.Click += new System.EventHandler(this.bunifuThinButton1_Click_1);
             // 
             // bunifuThinButton5
             // 
@@ -477,12 +461,33 @@
             this.label3.Size = new System.Drawing.Size(0, 15);
             this.label3.TabIndex = 71;
             // 
+            // bunifuThinButton11
+            // 
+            this.bunifuThinButton11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton11.BackgroundImage")));
+            this.bunifuThinButton11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuThinButton11.ButtonText = "Refresh";
+            this.bunifuThinButton11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton11.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton11.ForeColor = System.Drawing.Color.Honeydew;
+            this.bunifuThinButton11.ForeColorHoverState = System.Drawing.Color.SpringGreen;
+            this.bunifuThinButton11.Iconimage = null;
+            this.bunifuThinButton11.IconVisible = false;
+            this.bunifuThinButton11.IconZoom = 90D;
+            this.bunifuThinButton11.ImageIconOverlay = false;
+            this.bunifuThinButton11.Location = new System.Drawing.Point(650, 61);
+            this.bunifuThinButton11.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.bunifuThinButton11.Name = "bunifuThinButton11";
+            this.bunifuThinButton11.Size = new System.Drawing.Size(118, 35);
+            this.bunifuThinButton11.TabIndex = 72;
+            this.bunifuThinButton11.Click += new System.EventHandler(this.bunifuThinButton11_Click);
+            // 
             // driver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(1009, 602);
+            this.Controls.Add(this.bunifuThinButton11);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -541,7 +546,6 @@
         private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
-        private WindowsFormsControlLibrary1.BunifuThinButton bunifuThinButton4;
         private WindowsFormsControlLibrary1.BunifuThinButton bunifuThinButton3;
         private WindowsFormsControlLibrary1.BunifuThinButton bunifuThinButton2;
         private WindowsFormsControlLibrary1.BunifuThinButton bunifuThinButton1;
@@ -554,6 +558,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private WindowsFormsControlLibrary1.BunifuThinButton bunifuThinButton11;
 
     }
 }

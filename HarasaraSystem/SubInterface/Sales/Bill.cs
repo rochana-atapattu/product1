@@ -14,7 +14,7 @@ namespace HarasaraSystem.SubInterface.Sales
     public partial class Bill : Form
     {
         string pType="xx";
-       string cType="  ";
+       string cType=" ";
         public Bill(string cusName, string conNumber, string address, string Email, string OrID,string finalPrice)
         {
             InitializeComponent();
