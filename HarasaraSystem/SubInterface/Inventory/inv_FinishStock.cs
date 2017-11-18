@@ -365,27 +365,13 @@ namespace BMS_harasara
             String loc = (String)comboBox4.SelectedItem;
             String typ = (String)comboBox3.SelectedItem;
 
-            
+            dbconnect dbcon = new dbconnect();
 
-            dbconnect connect = new dbconnect();
-            connect.openconn();
+            String qry1 = "SELECT * FROM fd_trans WHERE location='"+loc+"' AND type='"+typ+"' AND Date BETWEEN '"+stadate+"' AND '"+enddate+"' ";
 
-        
-
-            String qry4 = "SELECT * from fd_trans where location='" + loc + "' and type='" + typ + "' AND Date BETWEEN #'"+stadate+"'# AND #'"+enddate+"'#;";
-            MySqlCommand cmd3 = new MySqlCommand(qry4);
-
-            MySqlDataAdapter sda1 = new MySqlDataAdapter();
-            sda1.SelectCommand = cmd3;
-            DataTable dbdataset1 = new DataTable();
-            sda1.Fill(dbdataset1);
-            BindingSource bsource1 = new BindingSource();
-
-            bsource1.DataSource = dbdataset1;
-            dataGridView3.DataSource = bsource1;
-            sda1.Update(dbdataset1);
-
-
+            BindingSource bsource = new BindingSource();
+            bsource.DataSource = dbcon.ReadValue(qry1);
+            dataGridView3.DataSource = bsource;
         }
     }
 }
