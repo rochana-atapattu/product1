@@ -303,5 +303,15 @@ namespace Transport
             lblSecond.Text = DateTime.Now.ToString("ss");
             lblDate.Text = DateTime.Now.ToString("MMM dd yyyy");
         }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void bunifuThinButton5_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -375,3 +375,4 @@ C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\Haras
 C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.pdb
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.EmailUC.resources
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csprojResolveAssemblyReference.cache
+C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\bin\Debug\Tulpep.NotificationWindow.dll

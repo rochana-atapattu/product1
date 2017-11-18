@@ -90,7 +90,7 @@
             this.panel2.Controls.Add(this.bunifuImageButton1);
             this.panel2.Location = new System.Drawing.Point(1, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(935, 26);
+            this.panel2.Size = new System.Drawing.Size(921, 26);
             this.panel2.TabIndex = 8;
             // 
             // lblDate
@@ -233,6 +233,7 @@
             this.bunifuThinButton5.Name = "bunifuThinButton5";
             this.bunifuThinButton5.Size = new System.Drawing.Size(121, 36);
             this.bunifuThinButton5.TabIndex = 22;
+            this.bunifuThinButton5.Click += new System.EventHandler(this.bunifuThinButton5_Click);
             // 
             // bunifuThinButton2
             // 
