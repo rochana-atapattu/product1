@@ -28,7 +28,7 @@ namespace Transport
 
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Environment.Exit(0);
         }
 
         private void bunifuThinButton2_Click(object sender, EventArgs e)

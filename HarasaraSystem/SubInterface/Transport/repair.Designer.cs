@@ -35,7 +35,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuThinButton4 = new WindowsFormsControlLibrary1.BunifuThinButton();
-            this.bunifuThinButton2 = new WindowsFormsControlLibrary1.BunifuThinButton();
             this.bunifuThinButton3 = new WindowsFormsControlLibrary1.BunifuThinButton();
             this.bunifuThinButton5 = new WindowsFormsControlLibrary1.BunifuThinButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -109,7 +108,6 @@
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.bunifuThinButton4);
-            this.panel1.Controls.Add(this.bunifuThinButton2);
             this.panel1.Controls.Add(this.bunifuThinButton3);
             this.panel1.Controls.Add(this.bunifuThinButton5);
             this.panel1.Location = new System.Drawing.Point(0, 28);
@@ -140,28 +138,11 @@
             this.bunifuThinButton4.IconVisible = true;
             this.bunifuThinButton4.IconZoom = 90D;
             this.bunifuThinButton4.ImageIconOverlay = false;
-            this.bunifuThinButton4.Location = new System.Drawing.Point(15, 193);
+            this.bunifuThinButton4.Location = new System.Drawing.Point(13, 192);
             this.bunifuThinButton4.Name = "bunifuThinButton4";
             this.bunifuThinButton4.Size = new System.Drawing.Size(121, 36);
             this.bunifuThinButton4.TabIndex = 25;
             this.bunifuThinButton4.Click += new System.EventHandler(this.bunifuThinButton4_Click_1);
-            // 
-            // bunifuThinButton2
-            // 
-            this.bunifuThinButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton2.BackgroundImage")));
-            this.bunifuThinButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuThinButton2.ButtonText = "Settings";
-            this.bunifuThinButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton2.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.bunifuThinButton2.ForeColorHoverState = System.Drawing.Color.White;
-            this.bunifuThinButton2.Iconimage = null;
-            this.bunifuThinButton2.IconVisible = true;
-            this.bunifuThinButton2.IconZoom = 90D;
-            this.bunifuThinButton2.ImageIconOverlay = false;
-            this.bunifuThinButton2.Location = new System.Drawing.Point(13, 329);
-            this.bunifuThinButton2.Name = "bunifuThinButton2";
-            this.bunifuThinButton2.Size = new System.Drawing.Size(121, 36);
-            this.bunifuThinButton2.TabIndex = 24;
             // 
             // bunifuThinButton3
             // 
@@ -175,7 +156,7 @@
             this.bunifuThinButton3.IconVisible = true;
             this.bunifuThinButton3.IconZoom = 90D;
             this.bunifuThinButton3.ImageIconOverlay = false;
-            this.bunifuThinButton3.Location = new System.Drawing.Point(13, 377);
+            this.bunifuThinButton3.Location = new System.Drawing.Point(13, 360);
             this.bunifuThinButton3.Name = "bunifuThinButton3";
             this.bunifuThinButton3.Size = new System.Drawing.Size(121, 36);
             this.bunifuThinButton3.TabIndex = 23;
@@ -424,6 +405,7 @@
             this.bunifuThinButton9.Name = "bunifuThinButton9";
             this.bunifuThinButton9.Size = new System.Drawing.Size(105, 35);
             this.bunifuThinButton9.TabIndex = 78;
+            this.bunifuThinButton9.Click += new System.EventHandler(this.bunifuThinButton9_Click);
             // 
             // bunifuThinButton10
             // 
@@ -451,6 +433,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 80;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // repair
             // 
@@ -510,7 +494,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
-        private WindowsFormsControlLibrary1.BunifuThinButton bunifuThinButton2;
         private WindowsFormsControlLibrary1.BunifuThinButton bunifuThinButton3;
         private WindowsFormsControlLibrary1.BunifuThinButton bunifuThinButton5;
         private WindowsFormsControlLibrary1.BunifuThinButton bunifuThinButton4;

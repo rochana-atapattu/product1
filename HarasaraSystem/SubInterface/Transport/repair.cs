@@ -155,14 +155,20 @@ namespace Transport
                 {
 
                     MySqlConnection connnection = new MySqlConnection("server=localhost;user id=root;database=harasara");
-                    //String insert = "INSERT INTO vehiclerepair(VehicleID, SubmittedDate,Estimation, DueDate,Notes) VALUES ('" + this.comboBox1 + "' '" + this.dateTimePicker1.Text + "' '" + this.bunifuCustomTextbox5.Text + "' '" + this.dateTimePicker2.Text + "''" + this.bunifuCustomTextbox2.Text + "')";
-                    //MySqlCommand command = new MySqlCommand(insert, connnection);
+                    String insert = "INSERT INTO vehiclerepair(VehicleID, SubmittedDate,Estimation, DueDate,Notes) VALUES ('" + this.textBox1 + "' '" + this.dateTimePicker1.Text + "' '" + this.bunifuCustomTextbox5.Text + "' '" + this.dateTimePicker2.Text + "''" + this.bunifuCustomTextbox2.Text + "')";
+                    String update = "UPDATE vehicles SET Availability = 'No' WHERE VehicleID = '"+this.textBox1.Text+"'";
+                    MySqlCommand command = new MySqlCommand(insert, connnection);
+                    MySqlCommand command2 = new MySqlCommand(update, connnection);
                     MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=harasara");
-                    //MySqlCommand cmnd = new MySqlCommand(insert, con);
-                  //  MySqlDataReader myreader;
+                    MySqlCommand cmnd = new MySqlCommand(insert, con);
+                    MySqlCommand cmnd2 = new MySqlCommand(update, con);
+
+                    MySqlDataReader myreader;
                     con.Open();
-                    //myreader = cmnd.ExecuteReader();
+                    myreader = cmnd.ExecuteReader();
+                    myreader = cmnd2.ExecuteReader();
                     MessageBox.Show("Saved");
+                    con.Close();
 
                 }
 
@@ -255,6 +261,28 @@ namespace Transport
             {
 
                 MessageBox.Show(ex.Message, "Error");
+
+            }
+        }
+
+        private void bunifuThinButton9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (char.IsLetterOrDigit(ch))
+            {
+
+                e.Handled = true;
 
             }
         }

@@ -71,6 +71,8 @@ namespace Transport
 
         private void bunifuThinButton8_Click(object sender, EventArgs e)
         {
+            
+            //add to route
             if (String.IsNullOrEmpty(bunifuCustomTextbox3.Text))
             {
                 String error = "Enter Distance.";
@@ -167,11 +169,41 @@ namespace Transport
 
         private void bunifuThinButton6_Click(object sender, EventArgs e)
         {
+            
+            //delete from route
+            MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=harasara");
 
+            try
+            {
+
+                //delete from table
+                String delete = " DELETE FROM route WHERE RouteID = '" + Convert.ToInt32(this.bunifuCustomTextbox1.Text) + "' ";
+
+                MySqlCommand command = new MySqlCommand(delete, connnection);
+
+                MySqlCommand cmnd = new MySqlCommand(delete, con);
+                MySqlDataReader myreader;
+                con.Open();
+                myreader = cmnd.ExecuteReader();
+                MessageBox.Show("Deleted Successfully", "Success", MessageBoxButtons.OK);
+
+
+
+            }
+
+
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error");
+
+
+            }
         }
 
         private void bunifuThinButton10_Click(object sender, EventArgs e)
         {
+            //update route
             MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=harasara");
 
             try
@@ -203,7 +235,53 @@ namespace Transport
 
         private void bunifuThinButton7_Click(object sender, EventArgs e)
         {
+            
+            //clearing form
+            bunifuCustomTextbox1.Clear();
+            bunifuCustomTextbox2.Clear();
+            bunifuCustomTextbox3.Clear();
+            bunifuCustomTextbox4.Clear();
+            label3.Text = "";
+            label4.Text = "";
+            label5.Text = "";
+        }
 
+        private void bunifuCustomTextbox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (char.IsLetterOrDigit(ch))
+            {
+
+                e.Handled = true;
+
+            }
+        }
+
+        private void bunifuThinButton1_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dbconnect db = new dbconnect();
+
+            dt = db.ReadValue("Select * From route");
+            dataGridView1.DataSource = dt;
+        }
+
+        private void bunifuThinButton11_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dbconnect db = new dbconnect();
+
+            dt = db.ReadValue("Select * From route");
+            dataGridView1.DataSource = dt;
+
+            bunifuCustomTextbox4.Clear();
+            bunifuCustomTextbox2.Clear();
+            bunifuCustomTextbox3.Clear();
+            bunifuCustomTextbox1.Clear();
+            label4.Text = "";
+            label5.Text = "";
+            label3.Text = "";
         }
     }
 }
