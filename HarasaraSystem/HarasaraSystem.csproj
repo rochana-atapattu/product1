@@ -36,10 +36,7 @@
       <HintPath>D:\SLIIT EDU\Year2 Semester 2\ITP\Bunifu_UI_v1.4.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\SLIIT EDU\Year2 Semester 2\ITP\bin\MySql.Data.dll</HintPath>
-    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -219,12 +216,33 @@
     <Compile Include="SubInterface\Inventory\IssueStock.Designer.cs">
       <DependentUpon>IssueStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubInterface\Production\Cutting.cs" />
+    <Compile Include="SubInterface\Production\DBAccess.cs" />
+    <Compile Include="SubInterface\Production\Drilling.cs" />
+    <Compile Include="SubInterface\Production\Finishing.cs" />
+    <Compile Include="SubInterface\Production\Fitting.cs" />
+    <Compile Include="SubInterface\Production\Manufacturing.cs" />
+    <Compile Include="SubInterface\Production\OrderProcessingUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Production\OrderProcessingUC.Designer.cs">
+      <DependentUpon>OrderProcessingUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Production\OrdersUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Production\OrdersUC.Designer.cs">
+      <DependentUpon>OrdersUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Production\Painting.cs" />
+    <Compile Include="SubInterface\Production\prepareOrder.cs" />
     <Compile Include="SubInterface\Production\ProductionSub.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SubInterface\Production\ProductionSub.designer.cs">
       <DependentUpon>ProductionSub.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubInterface\Production\splitOrder.cs" />
     <Compile Include="SubInterface\Sales\Bill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -382,6 +400,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Inventory\IssueStock.resx">
       <DependentUpon>IssueStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Production\OrderProcessingUC.resx">
+      <DependentUpon>OrderProcessingUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Production\OrdersUC.resx">
+      <DependentUpon>OrdersUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Production\ProductionSub.resx">
       <DependentUpon>ProductionSub.cs</DependentUpon>

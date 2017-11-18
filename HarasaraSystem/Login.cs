@@ -14,7 +14,7 @@ namespace HarasaraSystem
 {
     public partial class Login : Form
     {
-        MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=harasara");
+        MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=harasara2");
         MySqlCommand cmd;
         public Login(string ptn)
         {
