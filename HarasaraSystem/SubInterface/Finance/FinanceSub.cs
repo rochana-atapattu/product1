@@ -71,5 +71,19 @@ namespace HarasaraSystem.SubInterface.Finance
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Controls.Contains(EmailUC.eInstance))
+            {
+                panel3.Controls.Add(EmailUC.eInstance);
+                EmailUC.eInstance.Dock = DockStyle.Fill;
+                EmailUC.eInstance.BringToFront();
+            }
+            else
+            {
+                EmailUC.eInstance.BringToFront();
+            }
+        }
     }
 }
