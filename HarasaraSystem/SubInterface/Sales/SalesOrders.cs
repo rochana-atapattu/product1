@@ -28,7 +28,7 @@ namespace HarasaraSystem.SubInterface.Sales
             }
         }
 
-        MySqlConnection con = new MySqlConnection("server=localhost;user id=root");
+        MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=harasara");
         MySqlCommand cmd;
         MySqlCommand cmd1;
         MySqlCommand cmd2;
@@ -40,11 +40,10 @@ namespace HarasaraSystem.SubInterface.Sales
      
         public SalesOrders()
         {
-            
+
             InitializeComponent();
             databaseAccess d1 = new databaseAccess();
-            d1.AutoCompelte(textBox5,"select * from harasara.customer","customerName");
-            
+            d1.AutoCompleteText(textBox5,"select * from customer","customerName");
             
         }
      
@@ -57,7 +56,7 @@ namespace HarasaraSystem.SubInterface.Sales
         private void SalesOrders_Load(object sender, EventArgs e)
         {
 
-            string query="select * from harasara.slorders";
+            string query="select * from slorders";
           
             databaseAccess d1 = new databaseAccess();
             d1.displayData(query, dataGridView1);
@@ -67,7 +66,7 @@ namespace HarasaraSystem.SubInterface.Sales
         //Insert new Customer Details in to database
         public void getCustomerDetails()
         {
-            //con.Open();
+            con.Open();
 
             try {   
             string customer = textBox5.Text;
@@ -79,16 +78,17 @@ namespace HarasaraSystem.SubInterface.Sales
 
             cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into harasara.customer (customerName,contactNumber,Address,Email) values('"+customer+"','"+number+"','"+address+"','"+email+"')";
+            cmd.CommandText = "insert into customer (customerName,contactNumber,Address,Email) values('"+customer+"','"+number+"','"+address+"','"+email+"')";
             cmd.ExecuteNonQuery();
-
+            con.Close();
 
             }
             catch(Exception ex)
             {
                 CustomMsgBox.Show(ex.Message,"OK");
+                con.Close();
             }
-            //con.Close();
+            
 
         }
         //Insert customer provided order details in to the database
@@ -105,7 +105,7 @@ namespace HarasaraSystem.SubInterface.Sales
                 sum += Convert.ToDouble(dataGridView2.Rows[i].Cells[4].Value);
 
             }
-            string query="insert into harasara.slorders values ('"+orderID+"','"+textBox5.Text+"','"+label22.Text+"','"+sum+"','"+dateTimePicker1.Text+"')";
+            string query="insert into slorders values ('"+orderID+"','"+textBox5.Text+"','"+label22.Text+"','"+sum+"','"+dateTimePicker1.Text+"')";
             databaseAccess d1 = new databaseAccess();
             d1.InsertData(query);
             label24.Text = sum.ToString();
@@ -125,7 +125,7 @@ namespace HarasaraSystem.SubInterface.Sales
             
             cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select productID,Price  from harasara.finishedproducts where Category='"+comboBox1.Text+"' AND productName='"+comboBox3.Text+"' ";
+            cmd.CommandText = "select productID,Price  from finishedproducts where Category='"+comboBox1.Text+"' AND productName='"+comboBox3.Text+"' ";
             
             MySqlDataReader dr = cmd.ExecuteReader();
 
@@ -150,12 +150,12 @@ namespace HarasaraSystem.SubInterface.Sales
 
             cmd1 = con.CreateCommand();
             cmd1.CommandType = CommandType.Text;
-            cmd1.CommandText = "insert into harasara.products values ('"+prID +"','"+comboBox3.Text+"','"+pr+"','"+qu+"','"+totalp+"','"+comboBox1.Text+"','"+label20.Text+"')";
+            cmd1.CommandText = "insert into products values ('"+prID +"','"+comboBox3.Text+"','"+pr+"','"+qu+"','"+totalp+"','"+comboBox1.Text+"','"+label20.Text+"')";
             cmd1.ExecuteNonQuery();
             cmd2 = con.CreateCommand();
            
            cmd2.CommandType = CommandType.Text;
-           cmd2.CommandText = "select * from harasara.products where orderID='"+label20.Text+"' ";
+           cmd2.CommandText = "select * from products where orderID='"+label20.Text+"' ";
            cmd2.ExecuteNonQuery();
             
             
@@ -195,7 +195,7 @@ namespace HarasaraSystem.SubInterface.Sales
             
             cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select productName from harasara.finishedproducts where Category ='"+comboBox1.Text+"'";
+            cmd.CommandText = "select productName from finishedproducts where Category ='"+comboBox1.Text+"'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
@@ -226,7 +226,7 @@ namespace HarasaraSystem.SubInterface.Sales
                 cmd.CommandType = CommandType.Text;
 
 
-                cmd.CommandText = "select customerID From harasara.customer where customerName LIKE '"+cusText.Text + "%' OR contactNumber ='"+numText.Text+"%'";
+                cmd.CommandText = "select customerID from customer where customerName LIKE '"+cusText.Text + "%' OR contactNumber ='"+numText.Text+"%'";
                 MySqlDataReader dr = cmd.ExecuteReader();
 
 
@@ -243,7 +243,7 @@ namespace HarasaraSystem.SubInterface.Sales
 
                 cmd1 = con.CreateCommand();
                 cmd1.CommandType = CommandType.Text;
-                cmd1.CommandText = "select * from harasara.slorders where cusID ='"+vcustomerID+ "' ";
+                cmd1.CommandText = "select * from slorders where cusID ='"+vcustomerID+ "' ";
                 cmd1.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd1);
@@ -255,6 +255,7 @@ namespace HarasaraSystem.SubInterface.Sales
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                con.Close();
             }
         }
 
@@ -275,8 +276,8 @@ namespace HarasaraSystem.SubInterface.Sales
 
             label17.Text = ID.ToString();
             label7.Text = OrID.ToString();
-            string query="select * from harasara.customer where customerID='"+ID+"'";
-            string query1 = "select * from harasara.slorders where orderID='" + OrID + "' ";
+            string query="select * from customer where customerID='"+ID+"'";
+            string query1 = "select * from slorders where orderID='" + OrID + "' ";
 
             con.Open();
             cmd = con.CreateCommand();
@@ -323,9 +324,9 @@ namespace HarasaraSystem.SubInterface.Sales
         {
            int x=dataGridView1.SelectedCells[0].RowIndex;
             int ID=Convert.ToInt32(label7.Text);
-            string query="Delete from harasara.slorders where orderID='"+ID+"'";
-            string query2 = "Delete from harasara.products where orderID='" + ID + "'";
-            string query1 = "select * from harasara.slorders ";
+            string query="Delete from slorders where orderID='"+ID+"'";
+            string query2 = "Delete from products where orderID='" + ID + "'";
+            string query1 = "select * from slorders ";
             //string query1 = "Delete from harasara.products where ";
             databaseAccess d1=new databaseAccess();
             d1.deleteData(query);
@@ -358,13 +359,13 @@ namespace HarasaraSystem.SubInterface.Sales
 
         private void textBox5_Leave(object sender, EventArgs e)
         {
-            string query = "select * from harasara.customer where customerName='" + textBox5.Text + "' ";
+            string query = "select * from customer where customerName='" + textBox5.Text + "' ";
             databaseAccess d1 = new databaseAccess();
            
             if(label22.Text=="XXXXXX")
             {
-                string query1 = "select max(customerID) from harasara.customer";
-                string query2 = "select max(orderID) from harasara.slorders";
+                string query1 = "select max(customerID) from customer";
+                string query2 = "select max(orderID) from slorders";
                 con.Open();
                 cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
@@ -405,7 +406,7 @@ namespace HarasaraSystem.SubInterface.Sales
             }
             else
             {
-                string query2 = "select max(orderID) from harasara.slorders";
+                string query2 = "select max(orderID) from slorders";
                 con.Open();
                 cmd1 = con.CreateCommand();
                 cmd1.CommandType = CommandType.Text;
@@ -431,13 +432,13 @@ namespace HarasaraSystem.SubInterface.Sales
         {
             
             
-            Bill b1 = new Bill(cusText.Text, numText.Text, Address.Text, emailText.Text, label7.Text,label9.Text);
+            Bill b1 = new Bill(cusText.Text, numText.Text, Address.Text, emailText.Text, label7.Text,label9.Text,label17.Text,1);
             b1.Show();
         }
         //loading table when text on the Customer Text Changed
         private void cusText_TextChanged(object sender, EventArgs e)
         {
-            string query = "select * from harasara.slorders where cusName LIKE '" + cusText.Text + "%' ";
+            string query = "select * from slorders where cusName LIKE '" + cusText.Text + "%' ";
             databaseAccess d1 = new databaseAccess();
             d1.displayData(query, dataGridView1);
 
@@ -458,47 +459,44 @@ namespace HarasaraSystem.SubInterface.Sales
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            
-           string query = "select * from harasara.customer where customerName='"+textBox5.Text+"'";
-         //  string query1 = "select max(orderID) from harasara.slorders";
-            
-            
-           con.Open();
 
-            cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = query;
-
-            
-
-            MySqlDataReader dr = cmd.ExecuteReader();
+            string query = "select * from customer where customerName='" + textBox5.Text + "'";
+            //  string query1 = "select max(orderID) from harasara.slorders";
 
 
-            if (dr.HasRows)
+            con.Open();
+            try
             {
-                while (dr.Read())
+                cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = query;
+
+
+
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+
+                if (dr.HasRows)
                 {
-                    label22.Text = dr["customerID"].ToString();
-                    textBox7.Text = dr["contactNumber"].ToString();
-                    textBox6.Text=dr["Email"].ToString();
-                    richTextBox1.Text = dr["Address"].ToString();
-                    //pr = Convert.ToDouble(dr["Price"]);
-
-
+                    while (dr.Read())
+                    {
+                        label22.Text = dr["customerID"].ToString();
+                        textBox7.Text = dr["contactNumber"].ToString();
+                        textBox6.Text = dr["Email"].ToString();
+                        richTextBox1.Text = dr["Address"].ToString();
+                        //pr = Convert.ToDouble(dr["Price"]); 
+                    }
                 }
 
-               
-                
 
+                dr.Close();
+                con.Close();
             }
-            
-                 
-            dr.Close();
-
-
-
-
-            con.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                con.Close();
+            }
             
 
            
@@ -535,7 +533,7 @@ namespace HarasaraSystem.SubInterface.Sales
 
         private void Add1_Click(object sender, EventArgs e)
         {
-            string query="select * from harasara.slorders";
+            string query="select * from slorders";
             addOrderDetails();
             databaseAccess d1 = new databaseAccess();
             d1.displayData(query, dataGridView1);
@@ -548,7 +546,7 @@ namespace HarasaraSystem.SubInterface.Sales
             con.Open();
             cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select COUNT(*) from harasara.customer where customerID='"+label22.Text+"'";
+            cmd.CommandText = "select COUNT(*) from customer where customerID='"+label22.Text+"'";
 
             int recordCount=Convert.ToInt32( cmd.ExecuteScalar());
 
@@ -574,7 +572,7 @@ namespace HarasaraSystem.SubInterface.Sales
             }
             else
             {
-                Bill b1 = new Bill(textBox5.Text,textBox7.Text,richTextBox1.Text,textBox6.Text,label20.Text,label24.Text);
+               Bill b1 = new Bill(textBox5.Text, textBox7.Text, richTextBox1.Text,textBox6.Text,label20.Text,label24.Text,label22.Text,1);
                 b1.Show();
             }
         }

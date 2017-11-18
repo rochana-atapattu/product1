@@ -11,6 +11,21 @@
     <AssemblyName>HarasaraSystem</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -138,6 +153,12 @@
       <DependentUpon>AccountsUC.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Finance\Database.cs" />
+    <Compile Include="SubInterface\Finance\EmailUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Finance\EmailUC.Designer.cs">
+      <DependentUpon>EmailUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubInterface\Finance\ExpenditureManagerUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,24 +170,6 @@
     </Compile>
     <Compile Include="SubInterface\Finance\FinanceSub.designer.cs">
       <DependentUpon>FinanceSub.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SubInterface\Inventory\FinStock.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SubInterface\Inventory\FinStock.Designer.cs">
-      <DependentUpon>FinStock.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SubInterface\Inventory\AddStock.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SubInterface\Inventory\AddStock.Designer.cs">
-      <DependentUpon>AddStock.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SubInterface\Inventory\CheckLevel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SubInterface\Inventory\CheckLevel.Designer.cs">
-      <DependentUpon>CheckLevel.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Inventory\AddItem.cs">
       <SubType>UserControl</SubType>
@@ -204,17 +207,36 @@
     <Compile Include="SubInterface\Finance\ProfitLossUC_Main.Designer.cs">
       <DependentUpon>ProfitLossUC_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubInterface\Inventory\dbconnect.cs" />
     <Compile Include="SubInterface\Inventory\InventorySub.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SubInterface\Inventory\InventorySub.designer.cs">
       <DependentUpon>InventorySub.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubInterface\Inventory\IssueStock.cs">
+    <Compile Include="SubInterface\Inventory\inv_AddStock.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SubInterface\Inventory\IssueStock.Designer.cs">
-      <DependentUpon>IssueStock.cs</DependentUpon>
+    <Compile Include="SubInterface\Inventory\inv_AddStock.Designer.cs">
+      <DependentUpon>inv_AddStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Inventory\inv_CheckLevel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Inventory\inv_CheckLevel.Designer.cs">
+      <DependentUpon>inv_CheckLevel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Inventory\inv_FinishStock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Inventory\inv_FinishStock.Designer.cs">
+      <DependentUpon>inv_FinishStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Inventory\inv_IssueStock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Inventory\inv_IssueStock.Designer.cs">
+      <DependentUpon>inv_IssueStock.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Production\Cutting.cs" />
     <Compile Include="SubInterface\Production\DBAccess.cs" />
@@ -246,71 +268,98 @@
     <Compile Include="SubInterface\Sales\Bill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubInterface\Sales\Bill.designer.cs">
+    <Compile Include="SubInterface\Sales\Bill.Designer.cs">
       <DependentUpon>Bill.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Sales\CustomMsgBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubInterface\Sales\CustomMsgBox.designer.cs">
+    <Compile Include="SubInterface\Sales\CustomMsgBox.Designer.cs">
       <DependentUpon>CustomMsgBox.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Sales\databaseAccess.cs" />
     <Compile Include="SubInterface\Sales\payments.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SubInterface\Sales\payments.designer.cs">
+    <Compile Include="SubInterface\Sales\payments.Designer.cs">
       <DependentUpon>payments.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SubInterface\Sales\PurchaseBill.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubInterface\Sales\PurchaseBill.designer.cs">
-      <DependentUpon>PurchaseBill.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Sales\PurchasingOrders.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SubInterface\Sales\PurchasingOrders.designer.cs">
+    <Compile Include="SubInterface\Sales\PurchasingOrders.Designer.cs">
       <DependentUpon>PurchasingOrders.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SubInterface\Sales\Reports.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SubInterface\Sales\Reports.designer.cs">
-      <DependentUpon>Reports.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Sales\SalesOrders.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SubInterface\Sales\SalesOrders.designer.cs">
+    <Compile Include="SubInterface\Sales\SalesOrders.Designer.cs">
       <DependentUpon>SalesOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Sales\SalesSub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubInterface\Sales\SalesSub.designer.cs">
+    <Compile Include="SubInterface\Sales\SalesSub.Designer.cs">
       <DependentUpon>SalesSub.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Sales\setting.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SubInterface\Sales\setting.designer.cs">
+    <Compile Include="SubInterface\Sales\setting.Designer.cs">
       <DependentUpon>setting.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Sales\validation.cs" />
-    <Compile Include="SubInterface\Transport\TansportSub.cs">
+    <Compile Include="SubInterface\Transport\Database.cs" />
+    <Compile Include="SubInterface\Transport\dbconnect.cs" />
+    <Compile Include="SubInterface\Transport\driver.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubInterface\Transport\TansportSub.Designer.cs">
-      <DependentUpon>TansportSub.cs</DependentUpon>
+    <Compile Include="SubInterface\Transport\driver.Designer.cs">
+      <DependentUpon>driver.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubInterface\Transport\TransportSub.cs">
+    <Compile Include="SubInterface\Transport\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubInterface\Transport\TransportSub.designer.cs">
-      <DependentUpon>TransportSub.cs</DependentUpon>
+    <Compile Include="SubInterface\Transport\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubInterface\Transport\orderRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Transport\orderRoute.Designer.cs">
+      <DependentUpon>orderRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Transport\repair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Transport\repair.Designer.cs">
+      <DependentUpon>repair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Transport\report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Transport\report.Designer.cs">
+      <DependentUpon>report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Transport\route.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Transport\route.Designer.cs">
+      <DependentUpon>route.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Transport\SMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Transport\SMS.Designer.cs">
+      <DependentUpon>SMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Transport\vehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Transport\vehicle.Designer.cs">
+      <DependentUpon>vehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Transport\ViaNettSMS1.cs" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -362,20 +411,14 @@
     <EmbeddedResource Include="SubInterface\Finance\AccountsUC.resx">
       <DependentUpon>AccountsUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Finance\EmailUC.resx">
+      <DependentUpon>EmailUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Finance\ExpenditureManagerUC.resx">
       <DependentUpon>ExpenditureManagerUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Finance\FinanceSub.resx">
       <DependentUpon>FinanceSub.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubInterface\Inventory\FinStock.resx">
-      <DependentUpon>FinStock.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubInterface\Inventory\AddStock.resx">
-      <DependentUpon>AddStock.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubInterface\Inventory\CheckLevel.resx">
-      <DependentUpon>CheckLevel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Inventory\AddItem.resx">
       <DependentUpon>AddItem.cs</DependentUpon>
@@ -398,8 +441,17 @@
     <EmbeddedResource Include="SubInterface\Inventory\InventorySub.resx">
       <DependentUpon>InventorySub.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubInterface\Inventory\IssueStock.resx">
-      <DependentUpon>IssueStock.cs</DependentUpon>
+    <EmbeddedResource Include="SubInterface\Inventory\inv_AddStock.resx">
+      <DependentUpon>inv_AddStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Inventory\inv_CheckLevel.resx">
+      <DependentUpon>inv_CheckLevel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Inventory\inv_FinishStock.resx">
+      <DependentUpon>inv_FinishStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Inventory\inv_IssueStock.resx">
+      <DependentUpon>inv_IssueStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Production\OrderProcessingUC.resx">
       <DependentUpon>OrderProcessingUC.cs</DependentUpon>
@@ -419,14 +471,8 @@
     <EmbeddedResource Include="SubInterface\Sales\payments.resx">
       <DependentUpon>payments.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubInterface\Sales\PurchaseBill.resx">
-      <DependentUpon>PurchaseBill.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Sales\PurchasingOrders.resx">
       <DependentUpon>PurchasingOrders.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubInterface\Sales\Reports.resx">
-      <DependentUpon>Reports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Sales\SalesOrders.resx">
       <DependentUpon>SalesOrders.cs</DependentUpon>
@@ -437,12 +483,31 @@
     <EmbeddedResource Include="SubInterface\Sales\setting.resx">
       <DependentUpon>setting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubInterface\Transport\TansportSub.resx">
-      <DependentUpon>TansportSub.cs</DependentUpon>
+    <EmbeddedResource Include="SubInterface\Transport\driver.resx">
+      <DependentUpon>driver.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubInterface\Transport\TransportSub.resx">
-      <DependentUpon>TransportSub.cs</DependentUpon>
+    <EmbeddedResource Include="SubInterface\Transport\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Transport\orderRoute.resx">
+      <DependentUpon>orderRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Transport\repair.resx">
+      <DependentUpon>repair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Transport\report.resx">
+      <DependentUpon>report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Transport\route.resx">
+      <DependentUpon>route.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Transport\SMS.resx">
+      <DependentUpon>SMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Transport\vehicle.resx">
+      <DependentUpon>vehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -456,10 +521,27 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -8,6 +8,7 @@ using System.Data;
 using System.ComponentModel;
 using System.Windows.Forms;
 
+
 namespace HarasaraSystem.SubInterface.Sales
 {
     class databaseAccess
@@ -161,43 +162,38 @@ namespace HarasaraSystem.SubInterface.Sales
             }
 
         }
-        
-        
 
-        public void AutoCompelte(TextBox text,string query,string column1)
+
+        public void AutoCompleteText(TextBox text,string query,string colu)
         {
-            
-
             text.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             text.AutoCompleteSource = AutoCompleteSource.CustomSource;
             AutoCompleteStringCollection coll = new AutoCompleteStringCollection();
+            cmd = new MySqlCommand(query, con);
             MySqlDataReader myReader;
+
             try
             {
-
-
                 con.Open();
-                cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = query;
                 myReader = cmd.ExecuteReader();
-
                 while(myReader.Read())
                 {
-                   // string cName = myReader.GetString(column1);
-                   // coll.Add(cName);
+                    string cName = myReader.GetString(myReader.GetOrdinal(colu));
+                    coll.Add(cName);
                 }
-            }
-            catch(Exception ex)
-            {
-                CustomMsgBox.Show(ex.Message,"OK");
 
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+              
             }
             text.AutoCompleteCustomSource = coll;
-
             con.Close();
-        }
 
+        }
+      
 
         public void ComboBoxLoad(string Column,ComboBox cb,String query)
         {

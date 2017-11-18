@@ -84,19 +84,7 @@ namespace HarasaraSystem.SubInterface.Sales
 
         }
 
-        private void Reports_Click(object sender, EventArgs e)
-        {
-            if (!panel3.Controls.Contains(HarasaraSystem.SubInterface.Sales.Reports.Instance))
-            {
-                panel3.Controls.Add(HarasaraSystem.SubInterface.Sales.Reports.Instance);
-                HarasaraSystem.SubInterface.Sales.Reports.Instance.Dock = DockStyle.Fill;
-                HarasaraSystem.SubInterface.Sales.Reports.Instance.BringToFront();
-            }
-            else
-            {
-                HarasaraSystem.SubInterface.Sales.payments.Instance.BringToFront();
-            }
-        }
+        
 
         private void People_Click(object sender, EventArgs e)
         {
@@ -110,6 +98,21 @@ namespace HarasaraSystem.SubInterface.Sales
             {
                 HarasaraSystem.SubInterface.Sales.setting.Instance.BringToFront();
             }
+
+        }
+
+        private void lblDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
 
         }
     }
