@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(report));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuThinButton3 = new WindowsFormsControlLibrary1.BunifuThinButton();
             this.bunifuThinButton1 = new WindowsFormsControlLibrary1.BunifuThinButton();
@@ -46,6 +49,11 @@
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblSecond = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -56,13 +64,28 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Goldenrod;
+            this.panel2.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel2.Controls.Add(this.lblDate);
+            this.panel2.Controls.Add(this.lblSecond);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblTime);
             this.panel2.Controls.Add(this.bunifuImageButton2);
             this.panel2.Controls.Add(this.bunifuImageButton1);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1018, 26);
             this.panel2.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(480, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 20);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Report";
             // 
             // bunifuImageButton2
             // 
@@ -94,6 +117,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.bunifuThinButton3);
             this.panel1.Controls.Add(this.bunifuThinButton1);
@@ -102,6 +126,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(197, 581);
             this.panel1.TabIndex = 9;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(58, 162);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 20);
+            this.label7.TabIndex = 100;
+            this.label7.Text = "User123";
             // 
             // pictureBox1
             // 
@@ -160,7 +195,7 @@
             this.bunifuThinButton2.IconVisible = true;
             this.bunifuThinButton2.IconZoom = 90D;
             this.bunifuThinButton2.ImageIconOverlay = false;
-            this.bunifuThinButton2.Location = new System.Drawing.Point(38, 180);
+            this.bunifuThinButton2.Location = new System.Drawing.Point(38, 204);
             this.bunifuThinButton2.Name = "bunifuThinButton2";
             this.bunifuThinButton2.Size = new System.Drawing.Size(121, 36);
             this.bunifuThinButton2.TabIndex = 19;
@@ -180,14 +215,17 @@
             // bunifuDropdown1
             // 
             this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDropdown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.Items = new string[0];
-            this.bunifuDropdown1.Location = new System.Drawing.Point(227, 73);
+            this.bunifuDropdown1.Items = new string[] {
+        "Vehicle Repair ",
+        "Driver Details"};
+            this.bunifuDropdown1.Location = new System.Drawing.Point(218, 73);
             this.bunifuDropdown1.Name = "bunifuDropdown1";
             this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.bunifuDropdown1.selectedIndex = -1;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(142, 20);
+            this.bunifuDropdown1.Size = new System.Drawing.Size(151, 26);
             this.bunifuDropdown1.TabIndex = 22;
             this.bunifuDropdown1.onItemSelected += new System.EventHandler(this.bunifuDropdown1_onItemSelected);
             // 
@@ -241,23 +279,89 @@
             // bunifuDropdown2
             // 
             this.bunifuDropdown2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDropdown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuDropdown2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDropdown2.Items = new string[0];
+            this.bunifuDropdown2.Items = new string[] {
+        "Date",
+        "ID"};
             this.bunifuDropdown2.Location = new System.Drawing.Point(838, 71);
             this.bunifuDropdown2.Name = "bunifuDropdown2";
             this.bunifuDropdown2.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.bunifuDropdown2.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.bunifuDropdown2.selectedIndex = -1;
-            this.bunifuDropdown2.Size = new System.Drawing.Size(142, 20);
+            this.bunifuDropdown2.Size = new System.Drawing.Size(142, 28);
             this.bunifuDropdown2.TabIndex = 29;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(227, 140);
+            this.dataGridView1.Location = new System.Drawing.Point(227, 156);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(753, 287);
+            this.dataGridView1.Size = new System.Drawing.Size(753, 340);
             this.dataGridView1.TabIndex = 30;
+            // 
+            // bunifuFlatButton1
+            // 
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "Generate";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconZoom = 90D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(522, 98);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(142, 52);
+            this.bunifuFlatButton1.TabIndex = 73;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.Location = new System.Drawing.Point(691, 4);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(143, 20);
+            this.lblDate.TabIndex = 101;
+            this.lblDate.Text = "October 25 2017";
+            // 
+            // lblSecond
+            // 
+            this.lblSecond.AutoSize = true;
+            this.lblSecond.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSecond.ForeColor = System.Drawing.Color.White;
+            this.lblSecond.Location = new System.Drawing.Point(895, 4);
+            this.lblSecond.Name = "lblSecond";
+            this.lblSecond.Size = new System.Drawing.Size(34, 20);
+            this.lblSecond.TabIndex = 102;
+            this.lblSecond.Text = ":22";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(840, 4);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(59, 20);
+            this.lblTime.TabIndex = 103;
+            this.lblTime.Text = "22 :22";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // report
             // 
@@ -265,6 +369,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(1017, 508);
+            this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bunifuDropdown2);
             this.Controls.Add(this.bunifuCustomLabel4);
@@ -280,10 +385,13 @@
             this.Name = "report";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "report";
+            this.Load += new System.EventHandler(this.report_Load);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -310,5 +418,12 @@
         private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblSecond;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }

@@ -13,9 +13,15 @@ namespace Transport
 {
     public partial class orderRoute : Form
     {
+        public void SalesSub(string user)
+        {
+            InitializeComponent();
+            label7.Text = user;
+        }
         public orderRoute()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         MySqlConnection connnection = new MySqlConnection("server=localhost;user id=root;database=harasara");
@@ -165,6 +171,13 @@ namespace Transport
             webBrowser1.Navigate(add.ToString());
 
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("HH:mm");
+            lblSecond.Text = DateTime.Now.ToString("ss");
+            lblDate.Text = DateTime.Now.ToString("MMM dd yyyy");
         }
 
     

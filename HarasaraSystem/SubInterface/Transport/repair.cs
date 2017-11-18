@@ -13,10 +13,16 @@ namespace Transport
 {
     public partial class repair : Form
     {
+        public void SalesSub(string user)
+        {
+            InitializeComponent();
+            label7.Text = user;
+        }
         public repair()
         {
             InitializeComponent();
             fillcombo();
+            timer1.Start();
 
         }
        
@@ -155,14 +161,20 @@ namespace Transport
                 {
 
                     MySqlConnection connnection = new MySqlConnection("server=localhost;user id=root;database=harasara");
-                    //String insert = "INSERT INTO vehiclerepair(VehicleID, SubmittedDate,Estimation, DueDate,Notes) VALUES ('" + this.comboBox1 + "' '" + this.dateTimePicker1.Text + "' '" + this.bunifuCustomTextbox5.Text + "' '" + this.dateTimePicker2.Text + "''" + this.bunifuCustomTextbox2.Text + "')";
-                    //MySqlCommand command = new MySqlCommand(insert, connnection);
+                    String insert = "INSERT INTO vehiclerepair(VehicleID, SubmittedDate,Estimation, DueDate,Notes) VALUES ('" + this.textBox1 + "' '" + this.dateTimePicker1.Text + "' '" + this.bunifuCustomTextbox5.Text + "' '" + this.dateTimePicker2.Text + "''" + this.bunifuCustomTextbox2.Text + "')";
+                    String update = "UPDATE vehicles SET Availability = 'No' WHERE VehicleID = '"+this.textBox1.Text+"'";
+                    MySqlCommand command = new MySqlCommand(insert, connnection);
+                    MySqlCommand command2 = new MySqlCommand(update, connnection);
                     MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=harasara");
-                    //MySqlCommand cmnd = new MySqlCommand(insert, con);
-                  //  MySqlDataReader myreader;
+                    MySqlCommand cmnd = new MySqlCommand(insert, con);
+                    MySqlCommand cmnd2 = new MySqlCommand(update, con);
+
+                    MySqlDataReader myreader;
                     con.Open();
-                    //myreader = cmnd.ExecuteReader();
+                    myreader = cmnd.ExecuteReader();
+                    myreader = cmnd2.ExecuteReader();
                     MessageBox.Show("Saved");
+                    con.Close();
 
                 }
 
@@ -257,6 +269,42 @@ namespace Transport
                 MessageBox.Show(ex.Message, "Error");
 
             }
+        }
+
+        private void bunifuThinButton9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (char.IsLetterOrDigit(ch))
+            {
+
+                e.Handled = true;
+
+            }
+        }
+
+        private void bunifuThinButton3_Click(object sender, EventArgs e)
+        {
+            HarasaraSystem.MainMenu mm = new HarasaraSystem.MainMenu();
+            this.Hide();
+            mm.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("HH:mm");
+            lblSecond.Text = DateTime.Now.ToString("ss");
+            lblDate.Text = DateTime.Now.ToString("MMM dd yyyy");
         }
     }
 }

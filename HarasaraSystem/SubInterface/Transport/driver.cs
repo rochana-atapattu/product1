@@ -15,10 +15,16 @@ namespace Transport
 
     public partial class driver : Form
     {
+        public void SalesSub(string user)
+        {
+            InitializeComponent();
+            label7.Text = user;
+        }
            
         public driver()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         MySqlConnection connnection = new MySqlConnection("server=localhost;user id=root;database=harasara");
@@ -127,6 +133,7 @@ namespace Transport
                 label3.Text = error.ToString();
                 //MessageBox.Show("Enter Address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
             
             else
             {
@@ -362,10 +369,21 @@ namespace Transport
 
         private void bunifuThinButton3_Click_1(object sender, EventArgs e)
         {
+            HarasaraSystem.MainMenu mm = new HarasaraSystem.MainMenu();
             this.Hide();
-            MainMenu m1 = new MainMenu();
-            m1.GetMainMenu();
-            this.Close();
+            mm.Show();
+        }
+
+        private void bunifuCustomTextbox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("HH:mm");
+            lblSecond.Text = DateTime.Now.ToString("ss");
+            lblDate.Text = DateTime.Now.ToString("MMM dd yyyy");
         }
 
        /* private void bunifuThinButton1_Click_1(object sender, EventArgs e)

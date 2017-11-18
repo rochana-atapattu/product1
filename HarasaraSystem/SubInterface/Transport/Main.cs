@@ -13,9 +13,15 @@ namespace Transport
 {
     public partial class Main : Form
     {
+        public void SalesSub(string user)
+        {
+            InitializeComponent();
+            label7.Text = user;
+        }
         public Main()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -80,6 +86,9 @@ namespace Transport
 
         private void bunifuThinButton2_Click(object sender, EventArgs e)
         {
+            HarasaraSystem.MainMenu mm = new HarasaraSystem.MainMenu();
+            this.Hide();
+            mm.Show(); 
 
         }
 
@@ -132,11 +141,22 @@ namespace Transport
 
         private void bunifuThinButton3_Click(object sender, EventArgs e)
         {
+            HarasaraSystem.MainMenu mm = new HarasaraSystem.MainMenu();
             this.Hide();
-            MainMenu m1 = new MainMenu();
-            m1.GetMainMenu();
-            this.Close();
+            mm.Show();
 
+        }
+
+        private void bunifuThinButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("HH:mm");
+            lblSecond.Text = DateTime.Now.ToString("ss");
+            lblDate.Text = DateTime.Now.ToString("MMM dd yyyy");
         }
     }
 }

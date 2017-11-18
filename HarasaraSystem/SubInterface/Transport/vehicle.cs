@@ -13,9 +13,15 @@ namespace Transport
 {
     public partial class vehicle : Form
     {
+        public void SalesSub(string user)
+        {
+            InitializeComponent();
+            label7.Text = user;
+        }
         public vehicle()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         MySqlConnection connnection = new MySqlConnection("server=localhost;user id=root;database=harasara");
@@ -162,7 +168,7 @@ namespace Transport
 
                 MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=harasara");
 
-                String insert = "INSERT INTO vehicles (VehicleNumber,VehicleType,Milage,NoOfRepairs,Availability,Notes) VALUES ('" + this.bunifuCustomTextbox4.Text.ToString() + "','" + this.bunifuCustomTextbox3.Text.ToString() + "','" + Convert.ToInt32(this.bunifuCustomTextbox5.Text.ToString()) + "','" + Convert.ToInt32(this.bunifuCustomTextbox6.Text.ToString()) + "','" + this.bunifuCustomTextbox2.Text.ToString() + "','" + this.bunifuCustomTextbox4.Text.ToString() + "')";
+                String insert = "INSERT INTO vehicles (VehicleNumber,VehicleType,Milage,NoOfRepairs,Availability,Notes) VALUES ('" + this.bunifuCustomTextbox4.Text.ToString() + "','" + this.bunifuCustomTextbox3.Text.ToString() + "','" + Convert.ToInt32(this.bunifuCustomTextbox5.Text.ToString()) + "','" + Convert.ToInt32(this.bunifuCustomTextbox6.Text.ToString()) + "','" + this.bunifuCustomTextbox1.Text.ToString() + "','" + this.bunifuCustomTextbox2.Text.ToString() + "')";
                 MySqlCommand command = new MySqlCommand(insert, con);
 
                 MySqlDataReader myreader;
@@ -187,8 +193,35 @@ namespace Transport
         }
         private void bunifuThinButton6_Click(object sender, EventArgs e)
         {
-            //DataTable dt = new DataTable();
-            //dbconnect db = new dbconnect();
+           MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=harasara");
+
+                try
+                {
+
+                    //delete from table
+                    String delete = " DELETE FROM vehicles WHERE VehicleID = '" + Convert.ToInt32(this.bunifuCustomTextbox7.Text) + "' ";
+
+                    MySqlCommand command = new MySqlCommand(delete, connnection);
+
+                    MySqlCommand cmnd = new MySqlCommand(delete, con);
+                    MySqlDataReader myreader;
+                    con.Open();
+                    myreader = cmnd.ExecuteReader();
+                    MessageBox.Show("Deleted Successfully", "Success", MessageBoxButtons.OK);
+
+
+
+                }
+
+
+               
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error");
+
+
+            }
 
             
             
@@ -362,6 +395,20 @@ namespace Transport
 
                 }
             }
+        }
+
+        private void bunifuThinButton3_Click(object sender, EventArgs e)
+        {
+            HarasaraSystem.MainMenu mm = new HarasaraSystem.MainMenu();
+            this.Hide();
+            mm.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("HH:mm");
+            lblSecond.Text = DateTime.Now.ToString("ss");
+            lblDate.Text = DateTime.Now.ToString("MMM dd yyyy");
         }
     }
 }
