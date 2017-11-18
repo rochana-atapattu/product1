@@ -80,6 +80,7 @@
             this.lblDate.Size = new System.Drawing.Size(143, 20);
             this.lblDate.TabIndex = 1;
             this.lblDate.Text = "October 25 2017";
+            this.lblDate.Click += new System.EventHandler(this.lblDate_Click);
             // 
             // lblSecond
             // 
@@ -182,6 +183,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Log Out";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // People
             // 
@@ -220,6 +222,7 @@
             this.label4.Size = new System.Drawing.Size(74, 20);
             this.label4.TabIndex = 1;
             this.label4.Text = "user123";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 

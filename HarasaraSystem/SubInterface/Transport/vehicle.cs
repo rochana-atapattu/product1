@@ -13,9 +13,15 @@ namespace Transport
 {
     public partial class vehicle : Form
     {
+        public void SalesSub(string user)
+        {
+            InitializeComponent();
+            label7.Text = user;
+        }
         public vehicle()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         MySqlConnection connnection = new MySqlConnection("server=localhost;user id=root;database=harasara");
@@ -389,6 +395,20 @@ namespace Transport
 
                 }
             }
+        }
+
+        private void bunifuThinButton3_Click(object sender, EventArgs e)
+        {
+            HarasaraSystem.MainMenu mm = new HarasaraSystem.MainMenu();
+            this.Hide();
+            mm.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("HH:mm");
+            lblSecond.Text = DateTime.Now.ToString("ss");
+            lblDate.Text = DateTime.Now.ToString("MMM dd yyyy");
         }
     }
 }

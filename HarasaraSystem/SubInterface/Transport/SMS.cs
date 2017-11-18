@@ -16,9 +16,15 @@ namespace Transport
 {
     public partial class SMS : Form
     {
+        public void SalesSub(string user)
+        {
+            InitializeComponent();
+            label7.Text = user;
+        }
         public SMS()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -141,6 +147,20 @@ namespace Transport
         private void SMS_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void bunifuThinButton6_Click(object sender, EventArgs e)
+        {
+            HarasaraSystem.MainMenu mm = new HarasaraSystem.MainMenu();
+            this.Hide();
+            mm.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("HH:mm");
+            lblSecond.Text = DateTime.Now.ToString("ss");
+            lblDate.Text = DateTime.Now.ToString("MMM dd yyyy");
         }
 
         

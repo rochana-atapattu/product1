@@ -100,5 +100,20 @@ namespace HarasaraSystem.SubInterface.Sales
             }
 
         }
+
+        private void lblDate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
