@@ -428,3 +428,16 @@ C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\Haras
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.EmailUC.resources
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csprojResolveAssemblyReference.cache
 >>>>>>> 3f3817718c861e7247ecb30fcd1ff4d57b877421
+C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.EmailUC.resources
+C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\BMS_harasara.inv_AddStock.resources
+C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\BMS_harasara.inv_CheckLevel.resources
+C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\BMS_harasara.inv_FinishStock.resources
+C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\BMS_harasara.inv_IssueStock.resources
+C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\Transport.driver.resources
+C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\Transport.Main.resources
+C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\Transport.orderRoute.resources
+C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\Transport.repair.resources
+C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\Transport.report.resources
+C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\Transport.route.resources
+C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\Transport.SMS.resources
+C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\Transport.vehicle.resources

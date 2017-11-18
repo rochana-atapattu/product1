@@ -261,7 +261,7 @@
     <Compile Include="SubInterface\Production\ProductionSub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubInterface\Production\ProductionSub.designer.cs">
+    <Compile Include="SubInterface\Production\ProductionSub.Designer.cs">
       <DependentUpon>ProductionSub.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Production\splitOrder.cs" />
