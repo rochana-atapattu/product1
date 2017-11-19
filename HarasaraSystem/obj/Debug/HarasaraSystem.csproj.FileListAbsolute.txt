@@ -3,7 +3,6 @@ C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\bin\Debug\Harasar
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.pdb
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\bin\Debug\Tulpep.NotificationWindow.dll
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csprojResolveAssemblyReference.cache
-
 C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Login.resources
 C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.MainMenu.resources
 C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Properties.Resources.resources
@@ -216,7 +215,6 @@ C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\Transport.route.resources
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\Transport.SMS.resources
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\Transport.vehicle.resources
-
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Login.resources
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.MainMenu.resources
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Properties.Resources.resources
@@ -501,12 +499,10 @@ C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\Haras
 C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.AttendanceSystem.resources
 C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.leave_Details.resources
 C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.SMS.resources
-<<<<<<< HEAD
 C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe.manifest
 C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.application
 C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.exe.manifest
 C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.application
-=======
 C:\Users\Viraj Malaka\Desktop\New folder (2)\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe.config
 C:\Users\Viraj Malaka\Desktop\New folder (2)\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.exe
 C:\Users\Viraj Malaka\Desktop\New folder (2)\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.pdb
@@ -568,4 +564,3 @@ C:\Users\Viraj Malaka\Desktop\New folder (2)\HarasaraSystem\HarasaraSystem\obj\D
 C:\Users\Viraj Malaka\Desktop\New folder (2)\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe
 C:\Users\Viraj Malaka\Desktop\New folder (2)\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.pdb
 C:\Users\Viraj Malaka\Desktop\New folder (2)\HarasaraSystem\HarasaraSystem\bin\Debug\Tulpep.NotificationWindow.dll
->>>>>>> 9218a4e5548421df298c5f8741779e26bd15c122

@@ -59,14 +59,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HarasaraSystem.exe" size="1656832">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HarasaraSystem.exe" size="1653760">
       <assemblyIdentity name="HarasaraSystem" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XYas5e6kZ8xN/dA156SvdtjaCHc9oScd0GkL8RqtWIE=</dsig:DigestValue>
+        <dsig:DigestValue>1WUscUhN5u3We32Nt720nivHZbOFV8x8ISL+lsy1emI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
