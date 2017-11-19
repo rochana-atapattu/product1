@@ -3,8 +3,7 @@ C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\bin\Debug\Harasar
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.pdb
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\bin\Debug\Tulpep.NotificationWindow.dll
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csprojResolveAssemblyReference.cache
-<<<<<<< HEAD
-=======
+
 C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Login.resources
 C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.MainMenu.resources
 C:\Users\Nimesha\Desktop\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Properties.Resources.resources
@@ -217,7 +216,7 @@ C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\Transport.route.resources
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\Transport.SMS.resources
 C:\Users\Viraj Malaka\Desktop\New folder\HarasaraSystem\HarasaraSystem\obj\Debug\Transport.vehicle.resources
->>>>>>> 0450e7334b823841cb5d02a6f736f151f360b3e4
+
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Login.resources
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.MainMenu.resources
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.Properties.Resources.resources
