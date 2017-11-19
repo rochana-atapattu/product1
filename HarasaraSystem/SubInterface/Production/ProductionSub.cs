@@ -39,5 +39,39 @@ namespace HarasaraSystem.SubInterface.Production
         {
             timer1.Start();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Controls.Contains(HarasaraSystem.SubInterface.Production.OrdersUC.Instance))
+            {
+                panel3.Controls.Add(HarasaraSystem.SubInterface.Production.OrdersUC.Instance);
+                HarasaraSystem.SubInterface.Production.OrdersUC.Instance.Dock = DockStyle.Fill;
+                HarasaraSystem.SubInterface.Production.OrdersUC.Instance.BringToFront();
+            }
+            else
+            {
+                HarasaraSystem.SubInterface.Production.OrdersUC.Instance.BringToFront();
+            }
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Controls.Contains(HarasaraSystem.SubInterface.Production.OrderProcessingUC.Instance))
+            {
+                panel3.Controls.Add(HarasaraSystem.SubInterface.Production.OrderProcessingUC.Instance);
+                HarasaraSystem.SubInterface.Production.OrderProcessingUC.Instance.Dock = DockStyle.Fill;
+                HarasaraSystem.SubInterface.Production.OrderProcessingUC.Instance.BringToFront();
+            }
+            else
+            {
+                HarasaraSystem.SubInterface.Production.OrderProcessingUC.Instance.BringToFront();
+            }
+        }
     }
 }

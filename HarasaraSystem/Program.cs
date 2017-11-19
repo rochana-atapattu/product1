@@ -20,6 +20,8 @@ namespace HarasaraSystem
 
             
             Application.Run(new MainMenu());
+
+           
         }
     }
 }

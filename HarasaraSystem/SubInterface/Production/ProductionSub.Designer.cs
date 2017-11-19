@@ -111,9 +111,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(391, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(292, 20);
+            this.label2.Size = new System.Drawing.Size(194, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Sales and Purchasing Management";
+            this.label2.Text = "Production Managment";
             // 
             // label1
             // 
@@ -184,6 +184,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Log Out";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // bunifuFlatButton5
             // 
@@ -291,7 +292,7 @@
             this.bunifuFlatButton2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "     Bunifu Flat Button";
+            this.bunifuFlatButton2.ButtonText = "Manufacture Stat";
             this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
@@ -310,6 +311,7 @@
             this.bunifuFlatButton2.TabIndex = 0;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
             // bunifuFlatButton1
             // 
@@ -317,7 +319,7 @@
             this.bunifuFlatButton1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "     Bunifu Flat Button";
+            this.bunifuFlatButton1.ButtonText = "Orders";
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
@@ -336,6 +338,7 @@
             this.bunifuFlatButton1.TabIndex = 0;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // panel3
             // 
