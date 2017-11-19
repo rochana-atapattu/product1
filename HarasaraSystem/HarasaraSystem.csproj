@@ -55,6 +55,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -171,6 +172,7 @@
     <Compile Include="SubInterface\Finance\FinanceSub.designer.cs">
       <DependentUpon>FinanceSub.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubInterface\Finance\ViaNettSMS.cs" />
     <Compile Include="SubInterface\Inventory\AddItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
