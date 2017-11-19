@@ -31,7 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 49f3e517f9b42cbee591bcc04777c1978988a773
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
 
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
