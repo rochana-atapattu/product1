@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Tulpep.NotificationWindow;
 
 namespace Transport
 {
@@ -83,10 +84,7 @@ namespace Transport
 
         private void bunifuThinButton2_Click(object sender, EventArgs e)
         {
-            HarasaraSystem.MainMenu mm = new HarasaraSystem.MainMenu();
-            this.Hide();
-            mm.Show(); 
-
+           
         }
 
         private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
@@ -138,15 +136,19 @@ namespace Transport
 
         private void bunifuThinButton3_Click(object sender, EventArgs e)
         {
-            HarasaraSystem.MainMenu mm = new HarasaraSystem.MainMenu();
             this.Hide();
-            mm.Show();
+            HarasaraSystem.MainMenu mm = new HarasaraSystem.MainMenu();
+            mm.ShowDialog();
+            this.Close();
 
         }
 
         private void bunifuThinButton1_Click(object sender, EventArgs e)
         {
-
+            PopupNotifier popup = new PopupNotifier();
+            popup.TitleText = "Help";
+            popup.ContentText = "You can access to each of these subsections.\n To access please press the interface buttons";
+            popup.Popup();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

@@ -78,12 +78,28 @@ namespace HarasaraSystem
             this.Hide();
         }
 
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
             SubInterface.Employee.AttendanceSystem load = new SubInterface.Employee.AttendanceSystem();
             load.Show();
             this.Hide();
       
+
         }
        
 

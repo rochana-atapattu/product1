@@ -104,8 +104,8 @@ namespace Transport
                                  "src=" + textBox1.Text + "&" +
                                  "dst=" + textBox1.Text + "&" +
                                  "msg=" + System.Web.HttpUtility.UrlEncode(bunifuCustomTextbox2.Text, System.Text.Encoding.GetEncoding("ISO-8859-1")) + "&" +
-                                  "username=" + System.Web.HttpUtility.UrlEncode("binuramultimedia@gmail.com") + "&" +
-                                  "password=" + System.Web.HttpUtility.UrlEncode("cbdyd");
+                                  "username=" + System.Web.HttpUtility.UrlEncode("lithirafiverr@gmail.com") + "&" +
+                                  "password=" + System.Web.HttpUtility.UrlEncode("p2dqo");
                     string result = client.DownloadString(url);
                     if (result.Contains("Ok"))
                         MessageBox.Show("Message send failure.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
