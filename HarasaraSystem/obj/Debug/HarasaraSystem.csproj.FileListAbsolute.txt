@@ -419,11 +419,7 @@ C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\Haras
 C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.pdb
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.EmailUC.resources
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.csprojResolveAssemblyReference.cache
-<<<<<<< HEAD
-=======
 C:\Users\Ender\Desktop\Viva work\HarasaraSystem\HarasaraSystem\bin\Debug\Tulpep.NotificationWindow.dll
->>>>>>> 3f3817718c861e7247ecb30fcd1ff4d57b877421
->>>>>>> 3583d5e3c29c6eee41b6bc039bdb2417704d22fb
 C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.EmailUC.resources
 C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\BMS_harasara.inv_AddStock.resources
 C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\BMS_harasara.inv_CheckLevel.resources
@@ -437,10 +433,8 @@ C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\De
 C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\Transport.route.resources
 C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\Transport.SMS.resources
 C:\Users\Rochana\Desktop\Git\2017.11.16 NEW\HarasaraSystem\HarasaraSystem\obj\Debug\Transport.vehicle.resources
-<<<<<<< HEAD
 C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Production.OrderProcessingUC.resources
 C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Production.OrdersUC.resources
-=======
 C:\Users\kavindu\Desktop\Gitpart4\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe.config
 C:\Users\kavindu\Desktop\Gitpart4\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.exe
 C:\Users\kavindu\Desktop\Gitpart4\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.pdb
@@ -498,4 +492,11 @@ C:\Users\kavindu\Desktop\Gitpart4\HarasaraSystem\HarasaraSystem\bin\Debug\Harasa
 >>>>>>> 7c88188feea50ce8da74a12886b94520a0d1f6b9
 >>>>>>> 0e5103e9f19fb36ea900743a09af417aa22b3c1c
 C:\Users\kavindu\Desktop\Gitpart4\HarasaraSystem\HarasaraSystem\bin\Debug\Tulpep.NotificationWindow.dll
->>>>>>> 3583d5e3c29c6eee41b6bc039bdb2417704d22fb
+C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\bin\Debug\Tulpep.NotificationWindow.dll
+C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Administration.Machines.resources
+C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Administration.promo.resources
+C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Administration.SystemAdmins.resources
+C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Sales.SalesMainSub.resources
+C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.AttendanceSystem.resources
+C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.leave_Details.resources
+C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.SMS.resources

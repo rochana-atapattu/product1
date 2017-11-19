@@ -101,18 +101,13 @@ namespace HarasaraSystem.SubInterface.Sales
 
         }
 
-        private void lblDate_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
+            CustomMsgBox.Show(" Thank You For Your Service Today Nimesha ", "OK");
 
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
+            MainMenu m1 = new MainMenu();
+            m1.Show();
+            this.Hide();
 
         }
     }

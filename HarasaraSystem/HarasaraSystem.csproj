@@ -87,8 +87,27 @@
     <Compile Include="SubInterface\Administration\AdministrationSub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubInterface\Administration\AdministrationSub.designer.cs">
+    <Compile Include="SubInterface\Administration\AdministrationSub.Designer.cs">
       <DependentUpon>AdministrationSub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Administration\DBconnect.cs" />
+    <Compile Include="SubInterface\Administration\Machines.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Administration\Machines.Designer.cs">
+      <DependentUpon>Machines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Administration\promo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Administration\promo.Designer.cs">
+      <DependentUpon>promo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Administration\SystemAdmins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Administration\SystemAdmins.Designer.cs">
+      <DependentUpon>SystemAdmins.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Employee\attendance.cs">
       <SubType>UserControl</SubType>
@@ -96,6 +115,13 @@
     <Compile Include="SubInterface\Employee\attendance.Designer.cs">
       <DependentUpon>attendance.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubInterface\Employee\AttendanceSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Employee\AttendanceSystem.Designer.cs">
+      <DependentUpon>AttendanceSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Employee\DBAccess.cs" />
     <Compile Include="SubInterface\Employee\details.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -105,7 +131,7 @@
     <Compile Include="SubInterface\Employee\EmployeeSub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubInterface\Employee\EmployeeSub.designer.cs">
+    <Compile Include="SubInterface\Employee\EmployeeSub.Designer.cs">
       <DependentUpon>EmployeeSub.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Employee\leave.cs">
@@ -120,11 +146,11 @@
     <Compile Include="SubInterface\Employee\leaverequest.Designer.cs">
       <DependentUpon>leaverequest.cs</DependentUpon>
     </Compile>
-    <Compile Include="SubInterface\Employee\notifications.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="SubInterface\Employee\leave_Details.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SubInterface\Employee\notifications.Designer.cs">
-      <DependentUpon>notifications.cs</DependentUpon>
+    <Compile Include="SubInterface\Employee\leave_Details.Designer.cs">
+      <DependentUpon>leave_Details.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Employee\payrolls.cs">
       <SubType>UserControl</SubType>
@@ -137,6 +163,12 @@
     </Compile>
     <Compile Include="SubInterface\Employee\search.Designer.cs">
       <DependentUpon>search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubInterface\Employee\SMS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubInterface\Employee\SMS.Designer.cs">
+      <DependentUpon>SMS.cs</DependentUpon>
     </Compile>
     <Compile Include="SubInterface\Finance\AccountHistory.cs">
       <SubType>UserControl</SubType>
@@ -383,8 +415,20 @@
     <EmbeddedResource Include="SubInterface\Administration\AdministrationSub.resx">
       <DependentUpon>AdministrationSub.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Administration\Machines.resx">
+      <DependentUpon>Machines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Administration\promo.resx">
+      <DependentUpon>promo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Administration\SystemAdmins.resx">
+      <DependentUpon>SystemAdmins.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Employee\attendance.resx">
       <DependentUpon>attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Employee\AttendanceSystem.resx">
+      <DependentUpon>AttendanceSystem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Employee\details.resx">
       <DependentUpon>details.cs</DependentUpon>
@@ -398,14 +442,17 @@
     <EmbeddedResource Include="SubInterface\Employee\leaverequest.resx">
       <DependentUpon>leaverequest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubInterface\Employee\notifications.resx">
-      <DependentUpon>notifications.cs</DependentUpon>
+    <EmbeddedResource Include="SubInterface\Employee\leave_Details.resx">
+      <DependentUpon>leave_Details.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Employee\payrolls.resx">
       <DependentUpon>payrolls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Employee\search.resx">
       <DependentUpon>search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Employee\SMS.resx">
+      <DependentUpon>SMS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubInterface\Finance\AccountHistory.resx">
       <DependentUpon>AccountHistory.cs</DependentUpon>
@@ -479,6 +526,7 @@
     <EmbeddedResource Include="SubInterface\Sales\PurchasingOrders.resx">
       <DependentUpon>PurchasingOrders.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubInterface\Sales\SalesMainSub.resx" />
     <EmbeddedResource Include="SubInterface\Sales\SalesOrders.resx">
       <DependentUpon>SalesOrders.cs</DependentUpon>
     </EmbeddedResource>

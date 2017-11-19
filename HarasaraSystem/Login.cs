@@ -14,13 +14,14 @@ namespace HarasaraSystem
 {
     public partial class Login : Form
     {
-        MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=harasara2");
+        MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=harasara");
         MySqlCommand cmd;
         public Login(string ptn)
         {
             InitializeComponent();
 
             position.Text = ptn;
+            textBox2.PasswordChar = '*';
             
         }
 
@@ -39,7 +40,7 @@ namespace HarasaraSystem
 
                 if (x==1)
                 {
-                    if (position.Text == "Sales Manager")
+                    if (position.Text == "Sales")
                     {
                         SalesSub s1 = new SalesSub(textBox1.Text);
                         s1.Show();
