@@ -35,8 +35,6 @@
             this.addBill = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.invoiceBill = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cusBill = new System.Windows.Forms.Label();
             this.printB = new System.Windows.Forms.Button();
@@ -72,8 +70,6 @@
             this.panel1.Controls.Add(this.addBill);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.invoiceBill);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.cusBill);
             this.panel1.Location = new System.Drawing.Point(0, 28);
@@ -120,7 +116,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label2.Location = new System.Drawing.Point(541, 44);
+            this.label2.Location = new System.Drawing.Point(542, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 18);
             this.label2.TabIndex = 0;
@@ -132,43 +128,19 @@
             this.invoiceBill.AutoSize = true;
             this.invoiceBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.invoiceBill.ForeColor = System.Drawing.Color.SeaGreen;
-            this.invoiceBill.Location = new System.Drawing.Point(474, 44);
+            this.invoiceBill.Location = new System.Drawing.Point(484, 44);
             this.invoiceBill.Name = "invoiceBill";
             this.invoiceBill.Size = new System.Drawing.Size(67, 18);
             this.invoiceBill.TabIndex = 0;
             this.invoiceBill.Text = "Number";
             this.invoiceBill.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label8.Location = new System.Drawing.Point(474, 110);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 18);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "XXXXXX";
-            this.label8.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label7.Location = new System.Drawing.Point(474, 78);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 18);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Customer ID";
-            this.label7.Click += new System.EventHandler(this.label1_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label5.Location = new System.Drawing.Point(474, 9);
+            this.label5.Location = new System.Drawing.Point(484, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 18);
             this.label5.TabIndex = 0;
@@ -216,7 +188,7 @@
             this.BillProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BillProducts.Location = new System.Drawing.Point(12, 191);
             this.BillProducts.Name = "BillProducts";
-            this.BillProducts.Size = new System.Drawing.Size(440, 277);
+            this.BillProducts.Size = new System.Drawing.Size(450, 277);
             this.BillProducts.TabIndex = 2;
             // 
             // PriceL
@@ -440,7 +412,5 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
     }
 }

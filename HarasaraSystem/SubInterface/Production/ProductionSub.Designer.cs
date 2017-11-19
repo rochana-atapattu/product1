@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductionSub));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuCalendar1 = new Bunifu.Framework.UI.BunifuCalendar();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblSecond = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
@@ -46,18 +47,29 @@
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.AddProduct = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.gvUser = new System.Windows.Forms.DataGridView();
+            this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstimatedDays = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductImage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvUser)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panel1.Controls.Add(this.bunifuCalendar1);
             this.panel1.Controls.Add(this.lblDate);
             this.panel1.Controls.Add(this.lblSecond);
             this.panel1.Controls.Add(this.lblTime);
@@ -68,26 +80,39 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1300, 30);
+            this.panel1.Size = new System.Drawing.Size(1181, 51);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // bunifuCalendar1
+            // 
+            this.bunifuCalendar1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.bunifuCalendar1.BorderRadius = 0;
+            this.bunifuCalendar1.ForeColor = System.Drawing.Color.White;
+            this.bunifuCalendar1.Location = new System.Drawing.Point(820, 15);
+            this.bunifuCalendar1.Name = "bunifuCalendar1";
+            this.bunifuCalendar1.Size = new System.Drawing.Size(243, 23);
+            this.bunifuCalendar1.TabIndex = 2;
+            this.bunifuCalendar1.Value = new System.DateTime(2017, 11, 17, 21, 44, 54, 566);
             // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(898, 6);
+            this.lblDate.Location = new System.Drawing.Point(887, 16);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(143, 20);
             this.lblDate.TabIndex = 1;
             this.lblDate.Text = "October 25 2017";
+            this.lblDate.Click += new System.EventHandler(this.lblDate_Click);
             // 
             // lblSecond
             // 
             this.lblSecond.AutoSize = true;
             this.lblSecond.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSecond.ForeColor = System.Drawing.Color.White;
-            this.lblSecond.Location = new System.Drawing.Point(1141, 6);
+            this.lblSecond.Location = new System.Drawing.Point(1139, 15);
             this.lblSecond.Name = "lblSecond";
             this.lblSecond.Size = new System.Drawing.Size(34, 20);
             this.lblSecond.TabIndex = 1;
@@ -96,9 +121,10 @@
             // lblTime
             // 
             this.lblTime.AutoSize = true;
+            this.lblTime.BackColor = System.Drawing.Color.SeaGreen;
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(1086, 6);
+            this.lblTime.Location = new System.Drawing.Point(1084, 15);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(59, 20);
             this.lblTime.TabIndex = 1;
@@ -107,22 +133,23 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(391, 6);
+            this.label2.Location = new System.Drawing.Point(400, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(194, 20);
+            this.label2.Size = new System.Drawing.Size(388, 27);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Production Managment";
+            this.label2.Text = "Sales and Purchasing Management";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 3);
+            this.label1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.label1.Font = new System.Drawing.Font("Britannic Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(6, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 20);
+            this.label1.Size = new System.Drawing.Size(364, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "Harasara Industries (Pvt) Ltd";
             // 
@@ -158,6 +185,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.bunifuFlatButton5);
             this.panel2.Controls.Add(this.label4);
@@ -165,10 +193,10 @@
             this.panel2.Controls.Add(this.bunifuFlatButton4);
             this.panel2.Controls.Add(this.bunifuFlatButton3);
             this.panel2.Controls.Add(this.bunifuFlatButton2);
-            this.panel2.Controls.Add(this.bunifuFlatButton1);
-            this.panel2.Location = new System.Drawing.Point(0, 29);
+            this.panel2.Controls.Add(this.AddProduct);
+            this.panel2.Location = new System.Drawing.Point(0, 48);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(209, 635);
+            this.panel2.Size = new System.Drawing.Size(210, 612);
             this.panel2.TabIndex = 1;
             // 
             // button1
@@ -178,13 +206,12 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(45, 114);
+            this.button1.Location = new System.Drawing.Point(43, 114);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 38);
             this.button1.TabIndex = 0;
             this.button1.Text = "Log Out";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // bunifuFlatButton5
             // 
@@ -217,7 +244,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(59, 61);
+            this.label4.Location = new System.Drawing.Point(67, 60);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 20);
             this.label4.TabIndex = 1;
@@ -228,11 +255,12 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(41, 27);
+            this.label3.Location = new System.Drawing.Point(49, 28);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Logged User";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // bunifuFlatButton4
             // 
@@ -292,7 +320,7 @@
             this.bunifuFlatButton2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "Manufacture Stat";
+            this.bunifuFlatButton2.ButtonText = "     Bunifu Flat Button";
             this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
@@ -311,42 +339,102 @@
             this.bunifuFlatButton2.TabIndex = 0;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
-            // bunifuFlatButton1
+            // AddProduct
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.DarkSeaGreen;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Orders";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 193);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.DarkSeaGreen;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(244, 63);
-            this.bunifuFlatButton1.TabIndex = 0;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.AddProduct.Activecolor = System.Drawing.Color.DarkSeaGreen;
+            this.AddProduct.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.AddProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddProduct.BorderRadius = 0;
+            this.AddProduct.ButtonText = "Add Product";
+            this.AddProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddProduct.Iconcolor = System.Drawing.Color.Transparent;
+            this.AddProduct.Iconimage = ((System.Drawing.Image)(resources.GetObject("AddProduct.Iconimage")));
+            this.AddProduct.Iconimage_right = null;
+            this.AddProduct.Iconimage_right_Selected = null;
+            this.AddProduct.Iconimage_Selected = null;
+            this.AddProduct.IconZoom = 90D;
+            this.AddProduct.IsTab = false;
+            this.AddProduct.Location = new System.Drawing.Point(0, 193);
+            this.AddProduct.Name = "AddProduct";
+            this.AddProduct.Normalcolor = System.Drawing.Color.DarkSeaGreen;
+            this.AddProduct.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.AddProduct.OnHoverTextColor = System.Drawing.Color.White;
+            this.AddProduct.selected = false;
+            this.AddProduct.Size = new System.Drawing.Size(244, 63);
+            this.AddProduct.TabIndex = 0;
+            this.AddProduct.Textcolor = System.Drawing.Color.White;
+            this.AddProduct.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddProduct.Click += new System.EventHandler(this.AddProduct_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.Location = new System.Drawing.Point(215, 32);
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.gvUser);
+            this.panel3.Location = new System.Drawing.Point(210, 48);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1082, 616);
+            this.panel3.Size = new System.Drawing.Size(971, 612);
             this.panel3.TabIndex = 2;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // gvUser
+            // 
+            this.gvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductId,
+            this.ProductName,
+            this.UnitPrice,
+            this.EstimatedDays,
+            this.ProductCategory,
+            this.ProductImage});
+            this.gvUser.Location = new System.Drawing.Point(15, 72);
+            this.gvUser.Name = "gvUser";
+            this.gvUser.Size = new System.Drawing.Size(941, 337);
+            this.gvUser.TabIndex = 0;
+            this.gvUser.Visible = false;
+            this.gvUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvUser_CellContentClick);
+            // 
+            // ProductId
+            // 
+            this.ProductId.DataPropertyName = "ProductId";
+            this.ProductId.HeaderText = "ID";
+            this.ProductId.Name = "ProductId";
+            this.ProductId.Width = 150;
+            // 
+            // ProductName
+            // 
+            this.ProductName.DataPropertyName = "ProductName";
+            this.ProductName.HeaderText = "Name";
+            this.ProductName.Name = "ProductName";
+            this.ProductName.Width = 200;
+            // 
+            // UnitPrice
+            // 
+            this.UnitPrice.DataPropertyName = "UnitPrice";
+            this.UnitPrice.HeaderText = "Price";
+            this.UnitPrice.Name = "UnitPrice";
+            // 
+            // EstimatedDays
+            // 
+            this.EstimatedDays.DataPropertyName = "EstimatedDays";
+            this.EstimatedDays.HeaderText = "Estimated Days";
+            this.EstimatedDays.Name = "EstimatedDays";
+            // 
+            // ProductCategory
+            // 
+            this.ProductCategory.DataPropertyName = "ProductCategory";
+            this.ProductCategory.HeaderText = "Category";
+            this.ProductCategory.Name = "ProductCategory";
+            this.ProductCategory.Width = 150;
+            // 
+            // ProductImage
+            // 
+            this.ProductImage.DataPropertyName = "ProductImage";
+            this.ProductImage.HeaderText = "Image";
+            this.ProductImage.Name = "ProductImage";
+            this.ProductImage.Width = 200;
             // 
             // timer1
             // 
@@ -358,7 +446,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1300, 660);
+            this.ClientSize = new System.Drawing.Size(1181, 660);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -373,6 +461,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gvUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -383,7 +473,7 @@
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton AddProduct;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
@@ -398,5 +488,14 @@
         private System.Windows.Forms.Label lblSecond;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.DataGridView gvUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EstimatedDays;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductCategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductImage;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Bunifu.Framework.UI.BunifuCalendar bunifuCalendar1;
     }
 }

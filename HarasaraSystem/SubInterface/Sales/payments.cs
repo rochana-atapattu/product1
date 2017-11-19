@@ -29,58 +29,37 @@ namespace HarasaraSystem.SubInterface.Sales
         {
             InitializeComponent();
 
-            
+            //string query = "select customerName from harasara.customer";
         }
 
-      
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
-       
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
 
         private void payments_Load(object sender, EventArgs e)
         {
-
             databaseAccess d1 = new databaseAccess();
-            string query1 = "select * from payments";
-            string query2 = "select * from customer";
-            string query3 = "select * from supplier";
-            string query4 = "select * from purchasepayments";
-            d1.displayData(query1, dataGridView1);
-            d1.displayData(query4, dataGridView3);
-            d1.ComboBoxLoad("customerName", comboBox1, query2);
-            d1.ComboBoxLoad("supplierName", comboBox9, query3);
 
-            
+
+            string query = "select *  from harasara.payments";
+
+            d1.displayData(query, dataGridView1);
         }
-
-        private void comboBox1_TextChanged(object sender, EventArgs e)
-        {
-            string query = "select contactNumber from customer where customerName='" + comboBox1.Text + "'";
-            string query2="select customerID from customer where customerName='"+comboBox1.Text+"'";
-            databaseAccess d1 = new databaseAccess();
-            textBox5.Text=d1.getString(query);
-            string cusID = d1.getString(query2);
-
-            string query3="select * from payments where customerID='"+cusID+"'";
-            d1.displayData(query3, dataGridView1);
-
-          
-
-           
-        }
-
-        private void comboBox9_TextChanged(object sender, EventArgs e)
-        {
-            databaseAccess d1=new databaseAccess();
-            
-            string query = "select contactNumber from supplier where supplierName='"+comboBox9.Text+"'";
-            textBox3.Text = d1.getString(query);
-            string query2 = "select SupID  from supplier where supplierName='"+comboBox9.Text+"'";
-
-            string supID = d1.getString(query2);
-            string query3 = "select * from  purchasepayments where SupplierID='"+supID+"'";
-            d1.displayData(query3, dataGridView3);
-        }
-
-        
     }
 }
