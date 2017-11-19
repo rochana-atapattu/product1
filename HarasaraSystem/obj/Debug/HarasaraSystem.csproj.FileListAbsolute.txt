@@ -564,3 +564,4 @@ C:\Users\Viraj Malaka\Desktop\New folder (2)\HarasaraSystem\HarasaraSystem\obj\D
 C:\Users\Viraj Malaka\Desktop\New folder (2)\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe
 C:\Users\Viraj Malaka\Desktop\New folder (2)\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.pdb
 C:\Users\Viraj Malaka\Desktop\New folder (2)\HarasaraSystem\HarasaraSystem\bin\Debug\Tulpep.NotificationWindow.dll
+C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Finance.FinanceReportUC.resources

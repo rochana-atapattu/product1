@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="HarasaraSystem.exe.manifest" size="5099">
+    <dependentAssembly dependencyType="install" codebase="HarasaraSystem.exe.manifest" size="11340">
       <assemblyIdentity name="HarasaraSystem.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xCjytzlEs5H6dwHjhT+O3cdpxpLgjBuk3e1NGpzUdXE=</dsig:DigestValue>
+        <dsig:DigestValue>uztHTcvQ4KoRPUuOEkw8jTw/IA3zLegokbixBhEEM9Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

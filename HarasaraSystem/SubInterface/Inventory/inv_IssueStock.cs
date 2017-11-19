@@ -245,5 +245,10 @@ namespace BMS_harasara
                 MessageBox.Show(ex.Message, "database error");
             }
         }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

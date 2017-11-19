@@ -92,5 +92,19 @@ namespace HarasaraSystem.SubInterface.Finance
             this.Hide();
             mm.Show();
         }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Controls.Contains(FinanceReportUC.Instance_fr))
+            {
+                panel3.Controls.Add(FinanceReportUC.Instance_fr);
+                FinanceReportUC.Instance_fr.Dock = DockStyle.Fill;
+                FinanceReportUC.Instance_fr.BringToFront();
+            }
+            else
+            {
+                FinanceReportUC.Instance_fr.BringToFront();
+            }
+        }
     }
 }
