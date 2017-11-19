@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HarasaraSystem.SubInterface.Administration
-
 {
     public partial class AdministrationSub : Form
     {
@@ -26,7 +25,7 @@ namespace HarasaraSystem.SubInterface.Administration
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -41,13 +40,13 @@ namespace HarasaraSystem.SubInterface.Administration
             timer1.Start();
         }
 
-<<<<<<< HEAD
+
         private void button1_Click(object sender, EventArgs e)
         {
             MainMenu m = new MainMenu();
             m.Show();
             this.Hide();
-       
+
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
@@ -60,12 +59,12 @@ namespace HarasaraSystem.SubInterface.Administration
             }
 
             else
-                SystemAdmins.Instance.BringToFront(); 
+                SystemAdmins.Instance.BringToFront();
         }
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
-             if (!panel3.Controls.Contains(Machines.Instance))
+            if (!panel3.Controls.Contains(Machines.Instance))
             {
                 panel3.Controls.Add(Machines.Instance);
                 Machines.Instance.Dock = DockStyle.Fill;
@@ -73,7 +72,7 @@ namespace HarasaraSystem.SubInterface.Administration
             }
 
             else
-                Machines.Instance.BringToFront(); 
+                Machines.Instance.BringToFront();
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
@@ -86,19 +85,20 @@ namespace HarasaraSystem.SubInterface.Administration
             }
 
             else
-                promo.Instance.BringToFront(); 
+                promo.Instance.BringToFront();
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
 
         }
-        }
-=======
+
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
->>>>>>> 184c2815955e13adcce79d75275bec5fa1887f3c
+
     }
+}
 

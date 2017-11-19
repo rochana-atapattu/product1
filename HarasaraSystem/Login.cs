@@ -40,7 +40,7 @@ namespace HarasaraSystem
 
                 if (x==1)
                 {
-                    if (position.Text == "Sales")
+                    if (position.Text == "Sales Manager")
                     {
                         SalesSub s1 = new SalesSub(textBox1.Text);
                         s1.Show();
