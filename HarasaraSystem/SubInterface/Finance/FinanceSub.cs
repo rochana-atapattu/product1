@@ -71,6 +71,7 @@ namespace HarasaraSystem.SubInterface.Finance
         {
             this.WindowState = FormWindowState.Minimized;
         }
+<<<<<<< HEAD
 
         private void bunifuFlatButton6_Click(object sender, EventArgs e)
         {
@@ -85,5 +86,7 @@ namespace HarasaraSystem.SubInterface.Finance
                 EmailUC.eInstance.BringToFront();
             }
         }
+=======
+>>>>>>> c6538202052fcdf8a6f23292e83b227b8cdf31a7
     }
 }

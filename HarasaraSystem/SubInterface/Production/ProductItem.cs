@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace HarasaraSystem.SubInterface.Production
 {
-    interface Manufacturing
+    public class ProductItem
     {
-        void updateProgress();
+
+     public static String ItemId { set; get; }
+     String ProductNo { set; get; }
+     String Qty { set;get;}
     }
 }

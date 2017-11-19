@@ -92,6 +92,10 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(685, 317);
             this.panel3.TabIndex = 3;
+<<<<<<< HEAD
+=======
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+>>>>>>> c6538202052fcdf8a6f23292e83b227b8cdf31a7
             // 
             // btnAddProduct
             // 

@@ -43,6 +43,7 @@
             this.People = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.Reports = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Payments = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Purchasings = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SalesOrders = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -162,6 +163,7 @@
             this.panel2.Controls.Add(this.People);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.Reports);
             this.panel2.Controls.Add(this.Payments);
             this.panel2.Controls.Add(this.Purchasings);
             this.panel2.Controls.Add(this.SalesOrders);
@@ -183,7 +185,6 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Log Out";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // People
             // 
@@ -200,7 +201,11 @@
             this.People.Iconimage_Selected = null;
             this.People.IconZoom = 90D;
             this.People.IsTab = false;
+<<<<<<< HEAD
             this.People.Location = new System.Drawing.Point(0, 409);
+=======
+            this.People.Location = new System.Drawing.Point(0, 469);
+>>>>>>> c6538202052fcdf8a6f23292e83b227b8cdf31a7
             this.People.Name = "People";
             this.People.Normalcolor = System.Drawing.Color.DarkSeaGreen;
             this.People.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -234,6 +239,33 @@
             this.label3.Size = new System.Drawing.Size(112, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Logged User";
+            // 
+            // Reports
+            // 
+            this.Reports.Activecolor = System.Drawing.Color.DarkSeaGreen;
+            this.Reports.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.Reports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Reports.BorderRadius = 0;
+            this.Reports.ButtonText = "Reports";
+            this.Reports.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Reports.Iconcolor = System.Drawing.Color.Transparent;
+            this.Reports.Iconimage = ((System.Drawing.Image)(resources.GetObject("Reports.Iconimage")));
+            this.Reports.Iconimage_right = null;
+            this.Reports.Iconimage_right_Selected = null;
+            this.Reports.Iconimage_Selected = null;
+            this.Reports.IconZoom = 90D;
+            this.Reports.IsTab = false;
+            this.Reports.Location = new System.Drawing.Point(0, 400);
+            this.Reports.Name = "Reports";
+            this.Reports.Normalcolor = System.Drawing.Color.DarkSeaGreen;
+            this.Reports.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.Reports.OnHoverTextColor = System.Drawing.Color.White;
+            this.Reports.selected = false;
+            this.Reports.Size = new System.Drawing.Size(209, 63);
+            this.Reports.TabIndex = 0;
+            this.Reports.Textcolor = System.Drawing.Color.White;
+            this.Reports.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reports.Click += new System.EventHandler(this.Reports_Click);
             // 
             // Payments
             // 
@@ -362,6 +394,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton SalesOrders;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuFlatButton People;
+        private Bunifu.Framework.UI.BunifuFlatButton Reports;
         private Bunifu.Framework.UI.BunifuFlatButton Payments;
         private Bunifu.Framework.UI.BunifuFlatButton Purchasings;
         private System.Windows.Forms.Label label2;

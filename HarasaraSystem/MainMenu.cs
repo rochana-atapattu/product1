@@ -26,11 +26,16 @@ namespace HarasaraSystem
 
         private void Transport_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
            /* Login m1 = new Login("Transport");
             m1.Show();
             this.Hide();*/
             Transport.Main ins = new Transport.Main();
             ins.Show();
+=======
+            Login m1 = new Login("Transport");
+            m1.Show();
+>>>>>>> c6538202052fcdf8a6f23292e83b227b8cdf31a7
             this.Hide();
         }
 

@@ -12,17 +12,6 @@ namespace HarasaraSystem.SubInterface.Inventory
 {
     public partial class AddItem : UserControl
     {
-        private static AddItem _instance;
-
-        public static AddItem Instance
-        {
-            get
-            {
-                if (_instance == null)
-                    _instance = new AddItem();
-                return _instance;
-            }
-        }
         public AddItem()
         {
             InitializeComponent();
@@ -37,6 +26,7 @@ namespace HarasaraSystem.SubInterface.Inventory
         {
 
         }
+<<<<<<< HEAD
 
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -47,5 +37,7 @@ namespace HarasaraSystem.SubInterface.Inventory
         {
 
         }
+=======
+>>>>>>> c6538202052fcdf8a6f23292e83b227b8cdf31a7
     }
 }

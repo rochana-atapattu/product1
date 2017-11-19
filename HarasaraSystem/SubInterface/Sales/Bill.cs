@@ -14,21 +14,8 @@ namespace HarasaraSystem.SubInterface.Sales
     public partial class Bill : Form
     {
         string pType="xx";
-        string cType;
-        private string supplierName;
-        private string conNumber;
-        private string add;
-        private string p;
-        private int order;
-        private double Price;
-        private string supID;
-        
-
-        
-
-
-       
-        public Bill(string cusName, string conNumber, string address, string Email, string OrID,string finalPrice,string ID,int nu)
+       string cType="  ";
+        public Bill(string cusName, string conNumber, string address, string Email, string OrID,string finalPrice)
         {
             InitializeComponent();
             radioButton3.Enabled = false;
@@ -42,6 +29,7 @@ namespace HarasaraSystem.SubInterface.Sales
             invoiceBill.Text = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString();
             label2.Text = OrID;
             label1.Text = finalPrice;
+<<<<<<< HEAD
             label8.Text = ID;
             if(nu==2)
             {
@@ -67,21 +55,18 @@ namespace HarasaraSystem.SubInterface.Sales
                
                
             }
+=======
+            
+
+            string query = "select * from harasara.products where orderID='"+OrID+"'";
+            databaseAccess db1=new databaseAccess();
+            db1.displayData(query, BillProducts);
+
+           // string query1= "select price from harasara.slorders where orderID='" + OrID + "' ";
+>>>>>>> c6538202052fcdf8a6f23292e83b227b8cdf31a7
 
            
 
-        }
-
-        public Bill(string supplierName, string conNumber, string add, string p, int order, double Price, string supID)
-        {
-            // TODO: Complete member initialization
-            this.supplierName = supplierName;
-            this.conNumber = conNumber;
-            this.add = add;
-            this.p = p;
-            this.order = order;
-            this.Price = Price;
-            this.supID = supID;
         }
         
         private void label1_Click(object sender, EventArgs e)
@@ -91,8 +76,12 @@ namespace HarasaraSystem.SubInterface.Sales
 
         private void PayB_Click(object sender, EventArgs e)
         {
-            if (label7.Text == "SupplierID")
+            databaseAccess d1 = new databaseAccess();
+            string pID = "SL" + invoiceBill.Text+label2.Text;
+            string Card="Cash";
+            if (pType =="Cash")
             {
+<<<<<<< HEAD
 
                 databaseAccess d2 = new databaseAccess();
 
@@ -110,11 +99,19 @@ namespace HarasaraSystem.SubInterface.Sales
                     d2.InsertData(query);
                 }
 
+=======
+                string query = "insert into harasara.payments(PaymentID,date,type,CardNumber,orderID,Price) values('" + pID + "','" + DateTime.Now.Date.ToString("yyyy-MM-dd") + "','" + pType + "','"+Card+"','" + label2.Text + "','" + Convert.ToDouble(label1.Text) + "') ";
+                d1.InsertData(query);
+>>>>>>> c6538202052fcdf8a6f23292e83b227b8cdf31a7
 
             }
-            else
+            else if (pType == "Credit")
             {
+               
+                string query = "insert into harasara.payments(PaymentID,date,type,CardNumber,orderID,Price) values('" + pID + "','" + DateTime.Now.Date.ToString("yyyy-MM-dd") + "','" + pType + "','" + textBox1.Text + "','" + label2.Text + "','" + Convert.ToDouble(label1.Text) + "') ";
+                d1.InsertData(query);
 
+<<<<<<< HEAD
                     databaseAccess d1 = new databaseAccess();
                     string pID = "SL" + invoiceBill.Text + label2.Text;
 
@@ -135,7 +132,13 @@ namespace HarasaraSystem.SubInterface.Sales
                             string dlQuery = "Delete from harasara.slorders where orderID='" + label2.Text + "'";
                             d1.deleterow(dlQuery);
                             CustomMsgBox.Show("Payment was successfull", "OK");
+=======
+>>>>>>> c6538202052fcdf8a6f23292e83b227b8cdf31a7
             }
+
+            string dlQuery="Delete from harasara.slorders where orderID='" + label2.Text + "'";
+            d1.deleterow(dlQuery);
+            CustomMsgBox.Show("Payment was successfull","OK");
            
            
         }
@@ -147,10 +150,14 @@ namespace HarasaraSystem.SubInterface.Sales
 
         private void Bill_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
            // invoiceBill.Text = DateTime.Now.Year.ToString()+DateTime.Now.Month.ToString();
 
 
             
+=======
+            //YearandMonth.Text = DateTime.Now.Year.ToString()+DateTime.Now.Month.ToString();
+>>>>>>> c6538202052fcdf8a6f23292e83b227b8cdf31a7
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
