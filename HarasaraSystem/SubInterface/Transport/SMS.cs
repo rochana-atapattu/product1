@@ -163,6 +163,25 @@ namespace Transport
             lblDate.Text = DateTime.Now.ToString("MMM dd yyyy");
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                dbconnect db = new dbconnect();
+
+
+                dt = db.ReadValue("Select customerID,CustomerName,contactNumber From customer");
+                dataGridView1.DataSource = dt;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+
+            }
+        }
+
         
     }
 }
