@@ -14,15 +14,12 @@ namespace Transport
 {
     public partial class route : Form
     {
-        public void SalesSub(string user)
-        {
-            InitializeComponent();
-            label7.Text = user;
-        }
-        public route()
+       
+        public route(string user)
         {
             InitializeComponent();
             timer1.Start();
+            label7.Text = user;
         }
 
         MySqlConnection connnection = new MySqlConnection("server=localhost;user id=root;database=harasara");
@@ -35,7 +32,7 @@ namespace Transport
         private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Main m1 = new Main();
+            Main m1 = new Main("");
             m1.ShowDialog();
             this.Close();
         }
@@ -49,7 +46,7 @@ namespace Transport
         private void bunifuThinButton2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Main m1 = new Main();
+            Main m1 = new Main("");
             m1.ShowDialog();
             this.Close();
         }
@@ -57,7 +54,7 @@ namespace Transport
         private void bunifuImageButton3_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            orderRoute or1 = new orderRoute();
+            orderRoute or1 = new orderRoute(label7.Text);
             or1.ShowDialog();
             this.Close();
         }
@@ -65,7 +62,7 @@ namespace Transport
         private void bunifuThinButton2_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Main m1 = new Main();
+            Main m1 = new Main(label7.Text);
             m1.ShowDialog();
             this.Close();
         }

@@ -40,6 +40,7 @@
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblSecond = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.bunifuCustomTextbox3 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
@@ -79,6 +79,7 @@
             this.bunifuThinButton3.Name = "bunifuThinButton3";
             this.bunifuThinButton3.Size = new System.Drawing.Size(121, 36);
             this.bunifuThinButton3.TabIndex = 23;
+            this.bunifuThinButton3.Click += new System.EventHandler(this.bunifuThinButton3_Click);
             // 
             // bunifuThinButton1
             // 
@@ -200,6 +201,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1247, 26);
             this.panel2.TabIndex = 65;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(10, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(241, 20);
+            this.label2.TabIndex = 84;
+            this.label2.Text = "Harasara Industries (Pvt) Ltd";
             // 
             // lblDate
             // 
@@ -356,17 +368,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(10, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(241, 20);
-            this.label2.TabIndex = 84;
-            this.label2.Text = "Harasara Industries (Pvt) Ltd";
             // 
             // orderRoute
             // 

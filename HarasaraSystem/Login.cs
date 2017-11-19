@@ -14,7 +14,7 @@ namespace HarasaraSystem
 {
     public partial class Login : Form
     {
-        MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=harasara2");
+        MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=harasara");
         MySqlCommand cmd;
         public Login(string ptn)
         {
@@ -79,9 +79,9 @@ namespace HarasaraSystem
                         this.Hide();
                     }
 
-                    else
+                    else if (position.Text == "Transport")
                     {
-                        Transport.Main t1 = new Transport.Main();
+                        Transport.Main t1 = new Transport.Main(textBox1.Text);
                         t1.Show();
                         this.Hide();
                     }
@@ -109,6 +109,11 @@ namespace HarasaraSystem
             MainMenu m1 = new MainMenu();
             m1.Show();
             this.Hide();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

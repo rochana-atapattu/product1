@@ -1,30 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.Common;
-using System.Net;
-using System.IO;
-using System.Diagnostics;
+using System.Web;
+
 
 namespace Transport
 {
     public partial class SMS : Form
     {
-        public void SalesSub(string user)
-        {
-            InitializeComponent();
-            label7.Text = user;
-        }
-        public SMS()
+       
+        public SMS(string user)
         {
             InitializeComponent();
             timer1.Start();
+            label7.Text = user;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -101,44 +96,34 @@ namespace Transport
 
       private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
-            //Set parameters
-           string username = "asviganegoda@gmail.com";
-            string password = "qda5";
-            string msgsender = textBox1.Text.ToString();
-            string destinationaddr = textBox1.Text.ToString();
-            
-           string message = bunifuCustomTextbox2.Text.ToString();
+            using (System.Net.WebClient client = new System.Net.WebClient())
+            {
+                try
+                {
+                    string url = "http://smsc.vianett.no/v3/send.ashx?" +
+                                 "src=" + textBox1.Text + "&" +
+                                 "dst=" + textBox1.Text + "&" +
+                                 "msg=" + System.Web.HttpUtility.UrlEncode(bunifuCustomTextbox2.Text, System.Text.Encoding.GetEncoding("ISO-8859-1")) + "&" +
+                                  "username=" + System.Web.HttpUtility.UrlEncode("binuramultimedia@gmail.com") + "&" +
+                                  "password=" + System.Web.HttpUtility.UrlEncode("cbdyd");
+                    string result = client.DownloadString(url);
+                    if (result.Contains("Ok"))
+                        MessageBox.Show("Message send failure.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("Your message has been succcesfully sent.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
-            // Create ViaNettSMS object with username and password
-            ViaNettSMS s = new ViaNettSMS(username, password);
-           //  Declare Result object returned by the SendSMS function
-            ViaNettSMS.Result result;
-            /*try
-            {
-                //Send SMS through HTTP API
-                result = s.sendSMS(msgsender, destinationaddr, message);
-                 //Show Send SMS response
-                if (result.Success)
+                catch (Exception ex)
                 {
-                    Debug.WriteLine("Message successfully sent");
-                }
-                else
-                {
-                    Debug.WriteLine("Received error: " + result.ErrorCode + " " + result.ErrorMessage);
+                    MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (System.Net.WebException ex)
-            {
-                //Catch error occurred while connecting to server.
-                Debug.WriteLine(ex.Message);
-            }
-             */
         }
             
         private void bunifuThinButton8_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Main m1 = new Main();
+            Main m1 = new Main(label7.Text);
             m1.ShowDialog();
             this.Close();
 

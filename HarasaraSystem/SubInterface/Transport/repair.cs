@@ -13,16 +13,13 @@ namespace Transport
 {
     public partial class repair : Form
     {
-        public void SalesSub(string user)
-        {
-            InitializeComponent();
-            label7.Text = user;
-        }
-        public repair()
+
+        public repair(String user)
         {
             InitializeComponent();
             fillcombo();
             timer1.Start();
+            label7.Text = user;
 
         }
        
@@ -65,17 +62,13 @@ namespace Transport
 
             }
         
-          
-
-
-
-        
+                  
         private void bunifuThinButton4_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            /*this.Hide();
             driver d1 = new driver();
             d1.ShowDialog();
-            this.Close();
+            this.Close();*/
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -86,7 +79,7 @@ namespace Transport
         private void bunifuThinButton4_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            vehicle v1 = new vehicle();
+            vehicle v1 = new vehicle(label7.Text);
             v1.ShowDialog();
             this.Close();
         }

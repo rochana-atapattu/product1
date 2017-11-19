@@ -29,7 +29,7 @@ namespace HarasaraSystem
            /* Login m1 = new Login("Transport");
             m1.Show();
             this.Hide();*/
-            Transport.Main ins = new Transport.Main();
+            Login ins = new Login("Transport");
             ins.Show();
             this.Hide();
         }

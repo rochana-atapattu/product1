@@ -40,5 +40,10 @@ namespace HarasaraSystem.SubInterface.Administration
         {
             timer1.Start();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
