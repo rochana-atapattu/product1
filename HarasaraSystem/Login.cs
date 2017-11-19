@@ -21,6 +21,7 @@ namespace HarasaraSystem
             InitializeComponent();
 
             position.Text = ptn;
+            textBox2.PasswordChar = '*';
             
         }
 
