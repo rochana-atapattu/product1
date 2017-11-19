@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-<<<<<<< HEAD
-=======
+
+
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
->>>>>>> 0450e7334b823841cb5d02a6f736f151f360b3e4
+
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.production = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Finance = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -42,11 +42,10 @@
             this.Leave = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Transport = new Bunifu.Framework.UI.BunifuFlatButton();
             this.employees = new Bunifu.Framework.UI.BunifuFlatButton();
-<<<<<<< HEAD
+
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-=======
->>>>>>> 0450e7334b823841cb5d02a6f736f151f360b3e4
+
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -56,12 +55,12 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-<<<<<<< HEAD
+
             this.bunifuGradientPanel1.Controls.Add(this.bunifuImageButton2);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuImageButton1);
-=======
+
             this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton3);
->>>>>>> 0450e7334b823841cb5d02a6f736f151f360b3e4
+
             this.bunifuGradientPanel1.Controls.Add(this.bunifuFlatButton2);
             this.bunifuGradientPanel1.Controls.Add(this.production);
             this.bunifuGradientPanel1.Controls.Add(this.Finance);
@@ -389,7 +388,7 @@
             this.employees.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employees.Click += new System.EventHandler(this.employees_Click);
             // 
-<<<<<<< HEAD
+
             // bunifuImageButton2
             // 
             this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
@@ -418,8 +417,7 @@
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
-=======
->>>>>>> 0450e7334b823841cb5d02a6f736f151f360b3e4
+
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -451,12 +449,12 @@
         private Bunifu.Framework.UI.BunifuFlatButton Finance;
         private Bunifu.Framework.UI.BunifuFlatButton production;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-<<<<<<< HEAD
+
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-=======
+
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
->>>>>>> 0450e7334b823841cb5d02a6f736f151f360b3e4
+
 
 
     }

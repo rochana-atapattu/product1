@@ -259,7 +259,7 @@ namespace Transport
         {
             char ch = e.KeyChar;
 
-            if (!char.IsLetter(ch) && ch != 8 && ch != 46)
+            if (!char.IsLetter(ch) && ch == 8 && ch == 46)
             {
                 e.Handled = true;
 
