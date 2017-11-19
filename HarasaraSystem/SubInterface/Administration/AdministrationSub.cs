@@ -41,6 +41,7 @@ namespace HarasaraSystem.SubInterface.Administration
             timer1.Start();
         }
 
+<<<<<<< HEAD
         private void button1_Click(object sender, EventArgs e)
         {
             MainMenu m = new MainMenu();
@@ -93,5 +94,11 @@ namespace HarasaraSystem.SubInterface.Administration
 
         }
         }
+=======
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+>>>>>>> 184c2815955e13adcce79d75275bec5fa1887f3c
     }
 

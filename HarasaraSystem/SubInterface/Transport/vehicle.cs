@@ -13,15 +13,12 @@ namespace Transport
 {
     public partial class vehicle : Form
     {
-        public void SalesSub(string user)
-        {
-            InitializeComponent();
-            label7.Text = user;
-        }
-        public vehicle()
+        
+        public vehicle(String user)
         {
             InitializeComponent();
             timer1.Start();
+            label7.Text = user;
         }
 
         MySqlConnection connnection = new MySqlConnection("server=localhost;user id=root;database=harasara");
@@ -39,7 +36,7 @@ namespace Transport
         private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Main m1 = new Main();
+            Main m1 = new Main("");
             m1.ShowDialog();
             this.Close();
         }
@@ -52,7 +49,7 @@ namespace Transport
         private void bunifuThinButton4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Main m1 = new Main();
+            Main m1 = new Main(label7.Text);
             m1.ShowDialog();
             this.Close();
         }
@@ -60,7 +57,7 @@ namespace Transport
         private void bunifuTileButton2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            repair re1 = new repair();
+            repair re1 = new repair(label7.Text);
             re1.ShowDialog();
             this.Close();
 

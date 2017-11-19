@@ -13,21 +13,18 @@ namespace Transport
 {
     public partial class report : Form
     {
-        public void SalesSub(string user)
-        {
-            InitializeComponent();
-            label7.Text = user;
-        }
-        public report()
+       
+        public report(string user)
         {
             InitializeComponent();
             timer1.Start();
+            label7.Text = user;
         }
 
         private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Main m1 = new Main();
+            Main m1 = new Main(label7.Text);
             m1.ShowDialog();
             this.Close();
         }
@@ -40,7 +37,7 @@ namespace Transport
         private void bunifuThinButton2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Main m1 = new Main();
+            Main m1 = new Main("");
             m1.ShowDialog();
             this.Close();
         }
@@ -48,7 +45,7 @@ namespace Transport
         private void bunifuThinButton2_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Main m1 = new Main();
+            Main m1 = new Main(label7.Text);
             m1.ShowDialog();
             this.Close();
         }
@@ -93,11 +90,23 @@ namespace Transport
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            dbconnect db = new dbconnect();
 
-            dt = db.ReadValue("Select * From route");
-            dataGridView1.DataSource = dt;
+            if ((string)comboBox1.SelectedItem == "Vehicle repair")
+            {
+                DataTable dt = new DataTable();
+                dbconnect db = new dbconnect();
+
+                dt = db.ReadValue("Select * From vehiclerepair where SubmittedDate between '" + dateTimePicker1.Text + "' and '" + dateTimePicker2.Text + "'");
+                dataGridView1.DataSource = dt;
+            }
+            else if ((string)comboBox1.SelectedItem == "Driver details")
+            {
+                DataTable dt = new DataTable();
+                dbconnect db = new dbconnect();
+
+                dt = db.ReadValue("Select * From driverdetails where DOB between '" + dateTimePicker1.Text + "' and '" + dateTimePicker2.Text + "'");
+                dataGridView1.DataSource = dt;
+            }  
         }
     }
 }

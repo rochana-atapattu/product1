@@ -13,14 +13,11 @@ namespace Transport
 {
     public partial class Main : Form
     {
-        public void SalesSub(string user)
+        
+        public Main(string user)
         {
             InitializeComponent();
             label7.Text = user;
-        }
-        public Main()
-        {
-            InitializeComponent();
             timer1.Start();
         }
 
@@ -52,7 +49,7 @@ namespace Transport
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            vehicle v1 = new vehicle();
+            vehicle v1 = new vehicle(label7.Text);
             v1.ShowDialog();
             this.Close();
         }
@@ -60,7 +57,7 @@ namespace Transport
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            report r1 = new report();
+            report r1 = new report(label7.Text);
             r1.ShowDialog();
             this.Close();
             
@@ -70,7 +67,7 @@ namespace Transport
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            driver d1 = new driver();
+            driver d1 = new driver(label7.Text);
             d1.ShowDialog();
             this.Close();
 
@@ -79,7 +76,7 @@ namespace Transport
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            route ro1 = new route();
+            route ro1 = new route(label7.Text);
             ro1.ShowDialog();
             this.Close();
         }
@@ -95,7 +92,7 @@ namespace Transport
         private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            vehicle ve1 = new vehicle();
+            vehicle ve1 = new vehicle(label7.Text);
             ve1.ShowDialog();
             this.Close();
         }
@@ -113,7 +110,7 @@ namespace Transport
         private void bunifuFlatButton1_Click_2(object sender, EventArgs e)
         {
             this.Hide();
-            driver d2 = new driver();
+            driver d2 = new driver(label7.Text);
             d2.ShowDialog();
             this.Close();
         }
@@ -121,7 +118,7 @@ namespace Transport
         private void bunifuFlatButton2_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            vehicle v1 = new vehicle();
+            vehicle v1 = new vehicle(label7.Text);
             v1.ShowDialog();
             this.Close();
         }
@@ -129,7 +126,7 @@ namespace Transport
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SMS v1 = new SMS();
+            SMS v1 = new SMS(label7.Text);
             v1.ShowDialog();
             this.Close();
         }

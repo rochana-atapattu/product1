@@ -28,6 +28,12 @@ namespace HarasaraSystem
         {
             Login m1 = new Login("Transport");
             m1.Show();
+<<<<<<< HEAD
+=======
+            this.Hide();*/
+            Login ins = new Login("Transport");
+            ins.Show();
+>>>>>>> 184c2815955e13adcce79d75275bec5fa1887f3c
             this.Hide();
         }
 
