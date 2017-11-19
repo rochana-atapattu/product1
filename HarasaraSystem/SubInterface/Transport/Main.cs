@@ -136,9 +136,10 @@ namespace Transport
 
         private void bunifuThinButton3_Click(object sender, EventArgs e)
         {
-            HarasaraSystem.MainMenu mm = new HarasaraSystem.MainMenu();
             this.Hide();
-            mm.Show();
+            HarasaraSystem.MainMenu mm = new HarasaraSystem.MainMenu();
+            mm.ShowDialog();
+            this.Close();
 
         }
 
