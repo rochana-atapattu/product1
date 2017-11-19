@@ -12,12 +12,10 @@ using MySql.Data.MySqlClient;
 namespace HarasaraSystem.SubInterface.Sales
 {
     public partial class PurchasingOrders : UserControl
-    {
+ {
 
-        MySqlConnection con = new MySqlConnection("server=localhost;user id=root;database=harasara");
-    
-
-
+        MySqlConnection con = new MySqlConnection("server=localhost;user id=root");
+        MySqlCommand cmd;
 
         private static PurchasingOrders _instance;
 
@@ -35,176 +33,135 @@ namespace HarasaraSystem.SubInterface.Sales
         public PurchasingOrders()
         {
             InitializeComponent();
+        }
 
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PurchasingOrders_Load(object sender, EventArgs e)
+        {
+            string query = "select item_id,name,type,price from harasara.inventory where count=rol";
             databaseAccess d1 = new databaseAccess();
-            d1.AutoCompleteText(textBox1,"select * from supplier","supplierName");
-            d1.AutoCompleteText(textBox3,"select * from supplier", "supplierName");
+            d1.displayData(query, dataGridView1);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
         {
-            databaseAccess d1=new databaseAccess();
-
-            string query = "select count(*) from supplier where supplierName='" + textBox1.Text + "'";
-            
-
-            if(1==d1.getValue(query))
-            {
-                string supID = "select SupID from supplier  where supplierName='" + textBox1.Text + "'";
-                
-                label9.Text = d1.getString(supID);
-
-                string items = "select * from itemsandsupplier where SupID='"+label9.Text+"'";
-                d1.ComboBoxLoad("ItemDescription", comboBox1, items);
-
-
-
-
-            }
-            else
-            {
-                label9.Text = null;
-            }
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            label8.Text = "XXXX";
-            textBox1.Text = "         ";
-            label9.Text = "XXXXXXX";
-            label10.Text = "XXXXXX";
-            textBox2.Text = "    ";
-            comboBox1.Text = "     ";
+            int Index = dataGridView1.SelectedRows[0].Index;
 
+            int ItemID = Convert.ToInt32(dataGridView1.Rows[Index].Cells[0].Value);
+
+            string query = "select distinct(SupID) from harasara.itemsandsupplier where ItemNo='" + ItemID + "'";
+            databaseAccess d1 = new databaseAccess();
+            d1.ComboBoxLoad("SupID", comboBox1, query);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            databaseAccess d1=new databaseAccess();
-            string itemNo = "select ItemNo from itemsandsupplier where ItemDescription='" + comboBox1.Text + "'";
-
-            
-            label10.Text = d1.getString(itemNo);
-            string query = "select price from inventory where item_id ='" + label10.Text + "'";
-
-            label14.Text = d1.getString(query);
-
-           // string itemPrice="select price from inventory where "
-        }
-
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            Char ch = e.KeyChar;
-            validation v1 = new validation();
-            v1.validatedigitCharacters(ch, label11);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            double tprice = (Convert.ToDouble(label14.Text)) * (Convert.ToInt32(textBox2.Text));
-         string query = "insert into ordereditems values ('"+Convert.ToInt32(label8.Text)+"','"+Convert.ToInt32(label10.Text)+"','"+comboBox1.Text+"','"+Convert.ToDouble(label14.Text)+"','"+Convert.ToInt32(textBox2.Text)+"','"+tprice+"','"+label9.Text+"','"+dateTimePicker1.Text+"')";
-         databaseAccess d1 = new databaseAccess();
-         d1.InsertData(query);
-         string query2 = "select * from ordereditems where orderId='" + label8.Text + "' ";
-
-
-         d1.displayData(query2, dataGridView1);
-        }
-
-        private void textBox1_Leave(object sender, EventArgs e)
-        {
-            string query="select max(orderID) from ordereditems";
+            string query = "select distinct supplierName from harasara.supplier where SupID='" + comboBox1.Text + "'";
 
             databaseAccess d1 = new databaseAccess();
+            label4.Text=  d1.getString(query);
+        }
 
-            label8.Text= (d1.getValue(query)+ 1).ToString();
+        private void quantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validation v1 = new validation();
+
+            char tt = e.KeyChar;
+
+            v1.validatedigitCharacters(tt, error);
+        }
+
+        private void Add_Click(object sender, EventArgs e)
+        {
+            if(String.IsNullOrWhiteSpace(quantity.Text) )
+            {
+                error.ForeColor = Color.Red;
+                error.Text = "Please,Input Qunantity";
+            }
+            else if(String.IsNullOrWhiteSpace(comboBox1.Text))
+            {
+                error.ForeColor = Color.Red;
+                error.Text = "Select Supplier";
+            }
+            else
+            {
+                databaseAccess d1 = new databaseAccess();
+                int qu = Convert.ToInt32(quantity.Text);
+                int Index = dataGridView1.SelectedRows[0].Index;
+                int itemID = Convert.ToInt32(dataGridView1.Rows[Index].Cells[0].Value);
+                string desc = dataGridView1.Rows[Index].Cells[1].Value.ToString();
+                double price = Convert.ToDouble(dataGridView1.Rows[Index].Cells[3].Value);
+
+                double tPrice = qu*price;
+                
+                string query = "insert into harasara.ordereditems (ItemNo,ItemDescription,Price,Quantity,TotalPrice,SupplierId,Date)values ('"+itemID+"','"+desc+"','"+price+"','"+qu+"','"+tPrice+"','"+comboBox1.Text+"','"+dateTimePicker1.Text+"')";
+                d1.InsertData(query);
+                d1.deleteSelectedRow(dataGridView1);
+                string query1 = "select * from harasara.ordereditems where Date='"+dateTimePicker1.Text+"'";
+                d1.displayData(query1,dataGridView2);
+
+
+
+               
+
+
+
+            }
+
+
+
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-             databaseAccess d1 = new databaseAccess();
-            string total = "select sum(TotalPrice) from ordereditems where orderID='" + Convert.ToInt32(label8.Text) + "'";
-
-            double finalPrice = d1.getValue(total);
-            string query = "insert into purchaseorders values ('"+Convert.ToInt32(label8.Text)+"','"+label9.Text+"','"+finalPrice+"','"+dateTimePicker1.Text+"')";
-           
-            d1.InsertData(query);
-            CustomMsgBox.Show("Your order is succefully processed", "OK");
-
-            
-
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            databaseAccess d1 = new databaseAccess();
-            string query = "select count(*) from supplier where supplierName='" + textBox3.Text + "'";
-
-            int count = d1.getValue(query);
-
-            if(count==1)
-            {
-                string supID = "select SupID from supplier where supplierName='"+textBox3.Text+"'";
-
-                label18.Text = d1.getString(supID);
-
-                string query2 = " select * from purchaseorders where SupplierId='" + label18.Text + "'";
-
-                d1.displayData(query2, dataGridView1);
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            string number="select contactNumber from supplier where SupID='"+label9.Text+"'";
-            string add="select Address from supplier where SupID='"+label9.Text+"'";
-            string acNum = "select AccountNumber from supplier where SupID='" + label9.Text + "'";
-            string FINAL="select Price from purchaseorders where OrderId='"+label8.Text+"'";
-
             databaseAccess d1=new databaseAccess();
-            string conNum=d1.getString(number);
-            string Add=d1.getString(add);
-            string acc = d1.getString(acNum);
-            string price=d1.getString(FINAL);
-            Bill b = new Bill(textBox1.Text ,conNum, Add,acc, label8.Text ,price, label9.Text,2);
-            b.Show();
+            con.Open();
+            cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            
+            string query = "select SupplierId,sum(TotalPrice) from harasara.ordereditems where Date='" + dateTimePicker1.Text + "'  group by SupplierId";
+
+            cmd.CommandText = query;
+
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+            foreach(DataRow dr in dt.Rows)
+            {
+                string id = dr[0].ToString();
+                double ppp = Convert.ToDouble(dr[1]);
+
+                string query1 = "insert into harasara.purchaseorders (SupplierId,Price,Date) values ('"+id+"','"+ppp+"','"+dateTimePicker1.Text+"')";
+                d1.InsertData(query1);
+            }
+
+            string query2 = "select * from harasara.purchaseorders";
+
+            d1.displayData(query2, dataGridView3);
 
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void Pay_Click(object sender, EventArgs e)
         {
-            int i = dataGridView1.SelectedCells[0].RowIndex;
-            string ID = (dataGridView1.Rows[i].Cells[1].Value).ToString();
-            int OrID = Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value);
-            double price = Convert.ToDouble(dataGridView1.Rows[i].Cells[2].Value);
-
-            label8.Text = OrID.ToString();
-            label9.Text = ID;
-
-            databaseAccess d1 = new databaseAccess();
-           string query="select supplierName from supplier where SupID='"+label9.Text+"'";
-           textBox1.Text = d1.getString(query);
-           label21.Text = price.ToString();
+          
         }
 
-        private void PurchasingOrders_Load(object sender, EventArgs e)
-        {
-            string query = "select item_id,name,count  from inventory where count=rol";
+       
+                                   
+                                   
 
-            databaseAccess d1 = new databaseAccess();
-            d1.displayData(query, dataGridView2);
+
         }
-
-        
-
-    }
+    
 }

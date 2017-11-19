@@ -71,40 +71,5 @@ namespace HarasaraSystem.SubInterface.Finance
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        private void bunifuFlatButton6_Click(object sender, EventArgs e)
-        {
-            if (!panel3.Controls.Contains(EmailUC.eInstance))
-            {
-                panel3.Controls.Add(EmailUC.eInstance);
-                EmailUC.eInstance.Dock = DockStyle.Fill;
-                EmailUC.eInstance.BringToFront();
-            }
-            else
-            {
-                EmailUC.eInstance.BringToFront();
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            MainMenu mm = new MainMenu();
-            this.Hide();
-            mm.Show();
-        }
-
-        private void bunifuFlatButton5_Click(object sender, EventArgs e)
-        {
-            if (!panel3.Controls.Contains(FinanceReportUC.Instance_fr))
-            {
-                panel3.Controls.Add(FinanceReportUC.Instance_fr);
-                FinanceReportUC.Instance_fr.Dock = DockStyle.Fill;
-                FinanceReportUC.Instance_fr.BringToFront();
-            }
-            else
-            {
-                FinanceReportUC.Instance_fr.BringToFront();
-            }
-        }
     }
 }
