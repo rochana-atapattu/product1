@@ -14,14 +14,11 @@ namespace HarasaraSystem.SubInterface.Production
     {
 
         DBAccess db = new DBAccess();
-        public static String ppid;
         public AddProduct()
         {
             InitializeComponent();
         }
-        
 
-        
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
             
@@ -32,24 +29,19 @@ namespace HarasaraSystem.SubInterface.Production
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
-            //if (!panel3.Controls.Contains(HarasaraSystem.SubInterface.Production.ProductItems.Instance))
-            //{
-            //    HarasaraSystem.SubInterface.Production.ProductItems.Instance.pid = txtPId.Text;
-            //    panel3.Controls.Add(HarasaraSystem.SubInterface.Production.ProductItems.Instance);
-            //    HarasaraSystem.SubInterface.Production.ProductItems.Instance.Dock = DockStyle.Fill;
-            //    HarasaraSystem.SubInterface.Production.ProductItems.Instance.BringToFront();
-                
-            //}
-            //else
-            //{
-            //    HarasaraSystem.SubInterface.Production.ProductItems.Instance.pid = txtPId.Text;
-            //    HarasaraSystem.SubInterface.Production.ProductItems.Instance.BringToFront();
-            //}
-            ppid = txtPId.Text;
-            ProductItems pi = new ProductItems();
-            pi.ShowDialog();
+            String pid = txtPId.Text;
             
-          }
+            if (!panel3.Controls.Contains(HarasaraSystem.SubInterface.Production.ProductItems.Instance))
+            {
+                panel3.Controls.Add(HarasaraSystem.SubInterface.Production.ProductItems.Instance);
+                HarasaraSystem.SubInterface.Production.ProductItems.Instance.Dock = DockStyle.Fill;
+                HarasaraSystem.SubInterface.Production.ProductItems.Instance.BringToFront();
+            }
+            else
+            {
+                HarasaraSystem.SubInterface.Production.ProductItems.Instance.BringToFront();
+            }
+        }
 
         private void btnAddProduct_Click_1(object sender, EventArgs e)
         {
@@ -60,23 +52,7 @@ namespace HarasaraSystem.SubInterface.Production
             txtUPrice.Text = "";
             txtEDays.Text = "";
             txtPCategory.Text = "";
-            
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-            
-        }
-
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            txtPimage.Text = "";
         }
     }
 }

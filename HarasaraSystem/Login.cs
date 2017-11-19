@@ -81,7 +81,7 @@ namespace HarasaraSystem
 
                     else
                     {
-                        HarasaraSystem.SubInterface.Transport.TransportSub t1 = new SubInterface.Transport.TransportSub(textBox1.Text);
+                        Transport.Main t1 = new Transport.Main();
                         t1.Show();
                         this.Hide();
                     }
@@ -98,7 +98,7 @@ namespace HarasaraSystem
             }
                
 
-           /* HarasaraSystem.SubInterface.Finance.FinanceSub f1 = new SubInterface.Finance.FinanceSub(textBox1.Text);
+            /*HarasaraSystem.SubInterface.Finance.FinanceSub f1 = new SubInterface.Finance.FinanceSub(textBox1.Text);
             f1.Show();
             this.Hide();*/
 

@@ -12,6 +12,17 @@ namespace HarasaraSystem.SubInterface.Inventory
 {
     public partial class AddItem : UserControl
     {
+        private static AddItem _instance;
+
+        public static AddItem Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new AddItem();
+                return _instance;
+            }
+        }
         public AddItem()
         {
             InitializeComponent();
@@ -23,6 +34,16 @@ namespace HarasaraSystem.SubInterface.Inventory
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

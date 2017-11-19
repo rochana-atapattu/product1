@@ -30,85 +30,60 @@ namespace HarasaraSystem.SubInterface.Sales
         {
             InitializeComponent();
             databaseAccess d1 = new databaseAccess();
-            d1.AutoCompelte(textBox6, "select * from harasara.supplier", "SupID");
+            d1.AutoCompleteText(textBox1,"select * from supplier","supplierName");
+            d1.AutoCompleteText(textBox4, "select * from customer", "customerName");
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string query = "insert into harasara.itemsandsupplier (SupID,ItemNo,ItemDescription) values ('"+textBox6.Text+"','"+Convert.ToInt32(comboBox1.Text)+"','"+label10.Text+"')";
-            string query1="select * from harasara.itemsandsupplier";
+            string query = "insert into itemsandsupplier (SupID,ItemNo,ItemDescription) values ('"+textBox6.Text+"','"+label10.Text+"','"+comboBox1.Text+"') ";
+            string query2="select * from itemsandsupplier";
+
             databaseAccess d1 = new databaseAccess();
             d1.InsertData(query);
-            d1.displayData(query1, dataGridView1);
-
+            d1.displayData(query2, dataGridView1);
+           
         }
 
         private void setting_Load(object sender, EventArgs e)
         {
-            string query = "select * from harasara.inventory ";
+            databaseAccess d2 = new databaseAccess();
+            d2.ComboBoxLoad("name",comboBox1, "select * from inventory");
 
-            databaseAccess d1 = new databaseAccess();
-            d1.ComboBoxLoad("item_id", comboBox1, query);
 
          
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string query = "select name from harasara.inventory where item_id='" + comboBox1.Text + "'";
+            string query = "select item_id from harasara.inventory where name='" + comboBox1.Text + "'";
             databaseAccess d1 = new databaseAccess();
             label10.Text=d1.getString(query);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            databaseAccess d1 = new databaseAccess();
-            string query1="select count(*) from harasara.supplier where SupID='"+textBox6.Text+"'";
+            CustomMsgBox.Show("  Completed ", "OK");
 
-            if (0 == d1.getValue(query1))
-            {
-
-
-
-
-                string query = "insert into harasara.supplier (SupID,supplierName,contactNumber,Address,Bank,AccountNumber) values ('" + textBox6.Text + "','" + textBox1.Text + "','" + textBox2.Text + "','" + richTextBox2.Text + "','"+comboBox2.Text+"','"+textBox7.Text+"')";
-
-
-                d1.InsertData(query);
-                CustomMsgBox.Show("Added New Supplier ", "OK");
-
-            }
-
+            textBox6.Text = null;
+            textBox1.Text = null;
+            textBox2.Text = null;
+            richTextBox2.Text = null;
+            comboBox1.Text = null;
+            comboBox2.Text = null;
+            textBox7.Text = null;
+            label10.Text = "XXXXXXX";
         }
 
         private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Char x = e.KeyChar;
-
-            if(x != 8)
-            {
-                
-            }
+           
         }
 
         private void textBox6_Leave(object sender, EventArgs e)
         {
-            databaseAccess d1 = new databaseAccess();
-            string query0 = "select count(*) from harasara.supplier where SupID='" + textBox6.Text + "'";
-            if (1 == d1.getValue(query0))
-            {
-                string query = "select supplierName from harasara.supplier where SupID='" + textBox6.Text + "'";
-                string query1 = "select contactNumber from harasara.supplier where SupID='" + textBox6.Text + "'";
-                string query2 = "select Address from harasara.supplier where SupID='" + textBox6.Text + "'";
-                string query3 = "select Bank from harasara.supplier where SupID='" + textBox6.Text + "'";
-                string query4 = "select AccountNumber from harasara.supplier where SupID='" + textBox6.Text + "'";
-
-                textBox1.Text = d1.getString(query);
-                textBox2.Text = d1.getString(query1);
-                comboBox2.Text = d1.getString(query3);
-                textBox7.Text = d1.getString(query4);
-                richTextBox2.Text = d1.getString(query2);
-            }
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -118,9 +93,80 @@ namespace HarasaraSystem.SubInterface.Sales
 
         private void update_Click(object sender, EventArgs e)
         {
+            string query = "UPDATE supplier SET  supplierName='"+textBox1.Text+"', contactNumber='"+textBox2.Text+"', Address='"+richTextBox2.Text+"',Bank='"+comboBox2.Text+"',AccountNumber='"+textBox7.Text+"' where SupID='"+textBox6.Text+"'";
             databaseAccess d1 = new databaseAccess();
-           string query = "update harasara.supplier set (supplierName='"+textBox1.Text+"',contactNumber='"+textBox2.Text+"',Address='"+richTextBox2.Text+"',Bank='"+comboBox2.Text+"',AccountNumber='"+textBox7.Text+"')";
-           d1.InsertData(query);
+            d1.InsertData(query);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            databaseAccess d1 = new databaseAccess();
+
+            string query = "select count(*) from supplier where supplierName='" + textBox1.Text + "'";
+            if (1==(d1.getValue(query)))
+            {
+            string supID = "select SupID from supplier  where supplierName='"+textBox1.Text+"'";
+            string contactNumber = "select contactNumber from supplier  where supplierName='" + textBox1.Text + "'";
+            string Address= "select Address from supplier  where supplierName='" + textBox1.Text + "'";
+            string Bank = "select Bank from supplier where supplierName='" + textBox1.Text + "'";
+            string AccountNumber = "select AccountNumber from supplier  where supplierName='" + textBox1.Text + "'";
+            
+            textBox6.Text = d1.getString(supID);
+            textBox2.Text = d1.getString(contactNumber);
+            richTextBox2.Text = d1.getString(Address);
+            comboBox2.Text = d1.getString(Bank);
+            textBox7.Text = d1.getString(AccountNumber);
+             
+            string query2="select * from itemsandsupplier where  SupID='"+textBox6+"'";
+            d1.displayData(query2, dataGridView1);
+         
+
+            }
+            else
+            {
+                textBox6.Text = null;
+                textBox2.Text = null;
+                richTextBox2.Text = null;
+                comboBox2.Text = null;
+                textBox7.Text = null;
+            }
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox6.Text = null;
+            textBox1.Text = null;
+            textBox2.Text = null;
+            richTextBox2.Text = null;
+            comboBox1.Text = null;
+            comboBox2.Text = null;
+            textBox7.Text = null;
+            label10.Text = "XXXXXXX";
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            string query="select count(*) from customer where customerName='"+textBox4.Text+"'";
+            databaseAccess d1 = new databaseAccess();
+            if(1  ==(d1.getValue(query)))
+            {
+                string ID = "select customerID from customer where customerName='"+textBox4.Text+"'";
+                string number = "select contactNumber from customer where customerName='"+textBox4.Text+"'";
+                string Address = "select Address from customer where customerName='"+textBox4.Text+"'";
+
+                textBox3.Text = d1.getString(ID);
+                textBox5.Text = d1.getString(number);
+                richTextBox1.Text = d1.getString(Address);
+
+            }
+            else
+            {
+                textBox3.Text = null;
+                textBox5.Text = null;
+                richTextBox1.Text = null;
+            }
         }
     }
 }
