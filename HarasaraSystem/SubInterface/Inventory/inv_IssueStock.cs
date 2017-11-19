@@ -30,7 +30,15 @@ namespace BMS_harasara
         {
             InitializeComponent();
             fillcombo1();
-            
+            fillreorders();
+        }
+
+        void fillreorders()
+        {
+            string query = "select item_id,name,count  from inventory where count=rol";
+
+            BMS_harasara.dbconnect d1 = new BMS_harasara.dbconnect();
+            d1.displayData(query, dataGridView2);
         }
 
         void fillcombo1()

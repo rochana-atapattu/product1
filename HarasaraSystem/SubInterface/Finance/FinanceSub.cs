@@ -85,5 +85,12 @@ namespace HarasaraSystem.SubInterface.Finance
                 EmailUC.eInstance.BringToFront();
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MainMenu mm = new MainMenu();
+            this.Hide();
+            mm.Show();
+        }
     }
 }

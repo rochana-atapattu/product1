@@ -499,3 +499,7 @@ C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\Haras
 C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.AttendanceSystem.resources
 C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.leave_Details.resources
 C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.SubInterface.Employee.SMS.resources
+C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.exe.manifest
+C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\bin\Debug\HarasaraSystem.application
+C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.exe.manifest
+C:\Users\Viraj Malaka\Desktop\nime\HarasaraSystem\HarasaraSystem\obj\Debug\HarasaraSystem.application
