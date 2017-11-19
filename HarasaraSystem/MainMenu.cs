@@ -27,16 +27,20 @@ namespace HarasaraSystem
         private void Transport_Click(object sender, EventArgs e)
         {
            /* Login m1 = new Login("Transport");
-            m1.Show();
-            this.Hide();*/
+            m1.Show();**/
+
+            this.Hide();
             Login ins = new Login("Transport");
             ins.Show();
+
             this.Hide();
         }
 
         private void Leave_Click(object sender, EventArgs e)
         {
-
+            SubInterface.Employee.leaverequest load = new SubInterface.Employee.leaverequest();
+            load.Show();
+            this.Hide();
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
@@ -48,21 +52,16 @@ namespace HarasaraSystem
 
         private void Inventory_Click(object sender, EventArgs e)
         {
-            /*Login m1 = new Login("Inventory");
+            Login m1 = new Login("Inventory");
             m1.Show();
-            this.Hide();*/
-            SubInterface.Inventory.InventorySub ins = new SubInterface.Inventory.InventorySub("");
-            ins.Show();
             this.Hide();
         }
 
         private void Finance_Click(object sender, EventArgs e)
         {
-           Login m1 = new Login("Finance");
+            Login m1 = new Login("Finance");
             m1.Show();
             this.Hide();
-            
-            
         }
 
         private void production_Click(object sender, EventArgs e)
@@ -79,6 +78,7 @@ namespace HarasaraSystem
             this.Hide();
         }
 
+<<<<<<< HEAD
         private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -92,6 +92,14 @@ namespace HarasaraSystem
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+=======
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            SubInterface.Employee.AttendanceSystem load = new SubInterface.Employee.AttendanceSystem();
+            load.Show();
+            this.Hide();
+      
+>>>>>>> 0450e7334b823841cb5d02a6f736f151f360b3e4
         }
        
 

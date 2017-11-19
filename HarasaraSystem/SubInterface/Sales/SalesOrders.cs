@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Web;
 
 namespace HarasaraSystem.SubInterface.Sales
 {
@@ -365,7 +366,7 @@ namespace HarasaraSystem.SubInterface.Sales
             if(label22.Text=="XXXXXX")
             {
                 string query1 = "select max(customerID) from customer";
-                string query2 = "select max(orderID) from slorders";
+                string query2 = "select max(orderID) from products";
                 con.Open();
                 cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
@@ -406,7 +407,7 @@ namespace HarasaraSystem.SubInterface.Sales
             }
             else
             {
-                string query2 = "select max(orderID) from slorders";
+                string query2 = "select max(orderID) from products";
                 con.Open();
                 cmd1 = con.CreateCommand();
                 cmd1.CommandType = CommandType.Text;
@@ -453,7 +454,7 @@ namespace HarasaraSystem.SubInterface.Sales
         private void textBox7_Leave(object sender, EventArgs e)
         {
             validation v1 = new validation();
-            v1.contactNumberValidation(textBox7.Text, label26);
+           // v1.contactNumberValidation(textBox7.Text, label26);
 
         }
 
@@ -533,10 +534,10 @@ namespace HarasaraSystem.SubInterface.Sales
 
         private void Add1_Click(object sender, EventArgs e)
         {
-            string query="select * from slorders";
+            string query="select * from products where orderID='"+label20.Text+"'";
             addOrderDetails();
             databaseAccess d1 = new databaseAccess();
-            d1.displayData(query, dataGridView1);
+            d1.displayData(query, dataGridView2);
            
         }
         //RECORRECT
@@ -549,8 +550,8 @@ namespace HarasaraSystem.SubInterface.Sales
             cmd.CommandText = "select COUNT(*) from customer where customerID='"+label22.Text+"'";
 
             int recordCount=Convert.ToInt32( cmd.ExecuteScalar());
-
-            if(recordCount==1)
+            con.Close();
+            if(1==recordCount)
             {
                 getOrderdetails();
             }
@@ -559,7 +560,38 @@ namespace HarasaraSystem.SubInterface.Sales
                 getCustomerDetails();
                 getOrderdetails();
             }
-            con.Close();
+
+
+            using (System.Net.WebClient client =new System.Net.WebClient())
+            {
+            try
+            {
+                string url = " http://smsc.vianett.no/v3/send.ashx? " +
+                "src=" + textBox7.Text + "&" +
+                "dst=" + textBox7.Text + "&" +
+                "msg=" + System.Web.HttpUtility.UrlEncode("You have successfully ordered ", System.Text.Encoding.GetEncoding("ISO-8859-1")) + "&" +
+                "username=" + System.Web.HttpUtility.UrlEncode("dakheela95@gmail.com") + "&" +
+                "password=" + System.Web.HttpUtility.UrlEncode("ztd7");
+
+                string result = client.DownloadString(url);
+                if(result.Contains("OK"))
+                {
+
+                    CustomMsgBox.Show("Message was received to the customer", "OK");
+                }
+                else
+                {
+                    CustomMsgBox.Show("Failed", "OK");
+                }
+               
+
+            }
+            catch (Exception ex)
+            {
+                CustomMsgBox.Show(ex.Message,"OK");
+
+            }
+            }
 
 
         }
@@ -575,6 +607,30 @@ namespace HarasaraSystem.SubInterface.Sales
                Bill b1 = new Bill(textBox5.Text, textBox7.Text, richTextBox1.Text,textBox6.Text,label20.Text,label24.Text,label22.Text,1);
                 b1.Show();
             }
+        }
+
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            label17.Text = "XXXXXX";
+            cusText.Text = "   ";
+            numText.Text = "   ";
+            emailText.Text = "   ";
+            label7.Text = "   ";
+            label9.Text = "   ";
+
+        }
+
+        private void Reset1_Click(object sender, EventArgs e)
+        {
+            label22.Text = "XXXXXX";
+            textBox5.Text = "   ";
+            textBox7.Text = "      ";
+            textBox6.Text = "    ";
+            richTextBox1.Text = "        ";
+            comboBox1.Text = "   ";
+            comboBox3.Text = "     ";
+            textBox1.Text = "     ";
+
         }
 
        

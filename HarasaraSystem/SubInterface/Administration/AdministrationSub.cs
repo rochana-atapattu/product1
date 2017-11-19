@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HarasaraSystem.SubInterface.Administration
-
 {
     public partial class AdministrationSub : Form
     {
@@ -26,7 +25,7 @@ namespace HarasaraSystem.SubInterface.Administration
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -41,9 +40,65 @@ namespace HarasaraSystem.SubInterface.Administration
             timer1.Start();
         }
 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainMenu m = new MainMenu();
+            m.Show();
+            this.Hide();
+
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Controls.Contains(SystemAdmins.Instance))
+            {
+                panel3.Controls.Add(SystemAdmins.Instance);
+                SystemAdmins.Instance.Dock = DockStyle.Fill;
+                SystemAdmins.Instance.BringToFront();
+            }
+
+            else
+                SystemAdmins.Instance.BringToFront();
+        }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Controls.Contains(Machines.Instance))
+            {
+                panel3.Controls.Add(Machines.Instance);
+                Machines.Instance.Dock = DockStyle.Fill;
+                Machines.Instance.BringToFront();
+            }
+
+            else
+                Machines.Instance.BringToFront();
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Controls.Contains(promo.Instance))
+            {
+                panel3.Controls.Add(promo.Instance);
+                promo.Instance.Dock = DockStyle.Fill;
+                promo.Instance.BringToFront();
+            }
+
+            else
+                promo.Instance.BringToFront();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
     }
 }
+
