@@ -78,7 +78,7 @@ namespace HarasaraSystem
             this.Hide();
         }
 
-<<<<<<< HEAD
+
         private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -92,14 +92,14 @@ namespace HarasaraSystem
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
-=======
+        }
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
             SubInterface.Employee.AttendanceSystem load = new SubInterface.Employee.AttendanceSystem();
             load.Show();
             this.Hide();
       
->>>>>>> 0450e7334b823841cb5d02a6f736f151f360b3e4
+
         }
        
 
