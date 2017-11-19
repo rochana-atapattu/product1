@@ -12,8 +12,6 @@ namespace HarasaraSystem.SubInterface.Production
 {
     public partial class ProductionSub : Form
     {
-
-        DBAccess dbaccess = new DBAccess();
         public ProductionSub(string pt)
         {
             InitializeComponent();
@@ -40,46 +38,40 @@ namespace HarasaraSystem.SubInterface.Production
         private void SalesSub_Load(object sender, EventArgs e)
         {
             timer1.Start();
+        }
 
-            try
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Controls.Contains(HarasaraSystem.SubInterface.Production.OrdersUC.Instance))
             {
-                gvUser.AutoGenerateColumns = false;
-                string sql = "SELECT ProductId,ProductName,UnitPrice,EstimatedDays,ProductCategory,ProductImage FROM Product";
-                DataTable dt = dbaccess.Select(sql);
-                gvUser.DataSource = dt;
+                panel3.Controls.Add(HarasaraSystem.SubInterface.Production.OrdersUC.Instance);
+                HarasaraSystem.SubInterface.Production.OrdersUC.Instance.Dock = DockStyle.Fill;
+                HarasaraSystem.SubInterface.Production.OrdersUC.Instance.BringToFront();
             }
-            catch (Exception)
+            else
             {
-
-                throw;
+                HarasaraSystem.SubInterface.Production.OrdersUC.Instance.BringToFront();
             }
-
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void AddProduct_Click(object sender, EventArgs e)
-        {
-            AddProduct ap = new AddProduct();
-           ap.Show();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void gvUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+            if (!panel3.Controls.Contains(HarasaraSystem.SubInterface.Production.OrderProcessingUC.Instance))
+            {
+                panel3.Controls.Add(HarasaraSystem.SubInterface.Production.OrderProcessingUC.Instance);
+                HarasaraSystem.SubInterface.Production.OrderProcessingUC.Instance.Dock = DockStyle.Fill;
+                HarasaraSystem.SubInterface.Production.OrderProcessingUC.Instance.BringToFront();
+            }
+            else
+            {
+                HarasaraSystem.SubInterface.Production.OrderProcessingUC.Instance.BringToFront();
+            }
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)

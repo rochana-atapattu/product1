@@ -7,9 +7,9 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using System.Windows.Forms;
 
-namespace HarasaraSystem
+namespace HarasaraSystem.SubInterface.Production
 {
-   public  class DBAccess
+    class DBAccess
     {
 
         MySqlConnection connection = new MySqlConnection("server=localhost;user id=root;database=harasara2");
@@ -22,40 +22,6 @@ namespace HarasaraSystem
 
     }
 
-
-    public MySqlConnection Open()
-    {
-        MySqlConnection Connection = new MySqlConnection();
-        string connectionString = "Data Source=KasunCS;Initial Catalog=Inventory;Integrated Security=True";
-        try
-        {
-            Connection.ConnectionString = connectionString;
-            Connection.Open();
-        }
-        catch (Exception)
-        {
-            throw;
-        }
-        return Connection;
-    }
-
-    public void Close(MySqlConnection Connection)
-    {
-        try
-        {
-            if (Connection.State == ConnectionState.Open)
-            {
-                Connection.Close();
-            }
-
-        }
-        catch (Exception)
-        {
-
-            throw;
-        }
-    }
-
     //Initialize values
    
     //open connection to database
@@ -64,10 +30,6 @@ namespace HarasaraSystem
          try
     {
         connection.Open();
-<<<<<<< HEAD
-=======
-        //MessageBox.Show("Connection Open ! ");
->>>>>>> c6538202052fcdf8a6f23292e83b227b8cdf31a7
         return true;
     }
     catch (Exception ex)
@@ -101,19 +63,20 @@ namespace HarasaraSystem
     {
         string query = insertquery;
 
-    //open connection
-    if (this.OpenConnection() == true)
-    {
-
         try
         {
-            MySqlCommand cmd = new MySqlCommand(query, connection);
+            //open connection
+            if (this.OpenConnection() == true)
+            {
+
+                MySqlCommand cmd = new MySqlCommand(query, connection);
 
 
-            cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
 
 
-            this.CloseConnection();
+                this.CloseConnection();
+            }
         }
         catch (Exception e)
         {
@@ -121,27 +84,28 @@ namespace HarasaraSystem
             MessageBox.Show(e.Message);
         }
     }
-    }
 
     //Update statement
     public void Update(String updatequery)
     {
-        string query = updatequery;
+        try
+        {
+            string query = updatequery;
 
-    //Open connection
-    if (this.OpenConnection() == true)
-    {
-        
-        
-        
-        MySqlCommand cmd = new MySqlCommand(query, connection);
-        
-        
-        cmd.ExecuteNonQuery();
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
 
-        
-        this.CloseConnection();
-    }
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                this.CloseConnection();
+            }
+        }
+        catch (Exception e)
+        {
+
+            MessageBox.Show(e.Message);
+        }
     }
 
     //Delete statement
@@ -149,12 +113,20 @@ namespace HarasaraSystem
     {
         string query = deletequery;
 
-    if (this.OpenConnection() == true)
-    {
-        MySqlCommand cmd = new MySqlCommand(query, connection);
-        cmd.ExecuteNonQuery();
-        this.CloseConnection();
-    }
+        try
+        {
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                this.CloseConnection();
+            }
+        }
+        catch (Exception e)
+        {
+
+            MessageBox.Show(e.Message);
+        }
     }
 
     //Select statement
@@ -162,38 +134,28 @@ namespace HarasaraSystem
     {
         DataTable dt= new DataTable();
 
-        if (this.OpenConnection() == true)
+        try
         {
-            MySqlCommand cmd = new MySqlCommand(query, connection);
-            MySqlDataAdapter adapter=new MySqlDataAdapter(cmd);
-            adapter.Fill(dt);
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(dt);
 
-            this.CloseConnection();
+                this.CloseConnection();
 
+                return dt;
+            }
+            else
+                return dt;
+        }
+        catch (Exception e)
+        {
+
+            MessageBox.Show(e.Message);
             return dt;
         }
-        else 
-            return dt;
     }
-
-    //Select statement 2
-    //public DataTable Selectt(String query)
-    //{
-    //    DataTable dt = new DataTable();
-    //    ProductItem pitem=new ProductItem
-    //    if (this.OpenConnection() == true)
-    //    {
-    //        MySqlCommand cmd = new MySqlCommand(query, connection);
-    //        MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-    //        adapter.Fill(dt);
-
-    //        this.CloseConnection();
-
-    //        return dt;
-    //    }
-    //    else
-    //        return dt;
-    //}
     //    public DataTable SelectOrder(String oid)
     //{
 
@@ -215,7 +177,8 @@ namespace HarasaraSystem
     //}
 
 
-    //Count statement
+    
     
 }
-}
+    }
+
